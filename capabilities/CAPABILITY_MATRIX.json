@@ -1,0 +1,13 @@
+{
+  "matrix_id": "SF-CAP-v0.1",
+  "capabilities": [
+    {"id": "C-AUDIT", "status": "AVAILABLE"},
+    {"id": "C-INDEX", "status": "AVAILABLE_PUBLIC", "url": "https://github.com/Zygros/sovereign-federation"},
+    {"id": "C-LEDGER", "status": "AVAILABLE_LOCAL", "via": "omega-10"},
+    {"id": "C-HTC", "status": "AVAILABLE_LOCAL"},
+    {"id": "C-MCP-STUB", "status": "STUB"},
+    {"id": "C-ALL-AI", "status": "NOT_AVAILABLE", "reason": "no universal credentials"},
+    {"id": "C-HPC", "status": "NOT_AVAILABLE", "reason": "out of authorized scope"},
+    {"id": "C-UNBOUNDED-HTC", "status": "FORBIDDEN"}
+  ]
+}

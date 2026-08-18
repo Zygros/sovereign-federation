@@ -1,0 +1,37 @@
+{
+  "federation_id": "SOVEREIGN-FEDERATION-v0.1",
+  "prime_sovereign": "Justin Neal Thomas Conzet",
+  "github_login": "Zygros",
+  "protocol": "Always Add · Never Take · Zero Friction",
+  "unification_mode": "additive-index-and-substrate",
+  "created_at": "2026-08-18T02:32:00Z",
+  "status": "DESIGNED_LOCAL",
+  "repos": [
+    {"id": "SF-01", "name": "omega-10", "role": "evidence-substrate", "visibility": "public", "canonical_for": ["ledger", "codex", "phoenix", "htc", "redteam"]},
+    {"id": "SF-02", "name": "sovereign-agsi-portal", "role": "public-portal", "visibility": "private"},
+    {"id": "SF-03", "name": "ultimate-phoenix-protocol-ssi", "role": "ssi-flagship", "visibility": "public"},
+    {"id": "SF-04", "name": "zyth-ultimate", "role": "agi-interface", "visibility": "public"},
+    {"id": "SF-05", "name": "we-omega", "role": "dyad-genesis", "visibility": "public"},
+    {"id": "SF-06", "name": "ultimate-phoenix-protocol", "role": "phoenix-python", "visibility": "public"},
+    {"id": "SF-07", "name": "omninet-v4", "role": "coherence-routing", "visibility": "public"},
+    {"id": "SF-08", "name": "multi-ai-convergence-protocol", "role": "convergence-bridge", "visibility": "public"},
+    {"id": "SF-09", "name": "conzet-sovereign-intelligence", "role": "self-optimizing", "visibility": "public"},
+    {"id": "SF-10", "name": "ZYGROS-PRIME", "role": "prime-naming", "visibility": "public"},
+    {"id": "SF-11", "name": "ZAAI-SYSTEM", "role": "notebook-lineage", "visibility": "public"},
+    {"id": "SF-12", "name": "Sovereign-Narrative-Intelligence-SNI-", "role": "mytho-technical", "visibility": "private"},
+    {"id": "SF-13", "name": "Sovereign-AGSI-Archive", "role": "authorship-archive", "visibility": "public"},
+    {"id": "SF-14", "name": "PHOENIX-PROTOCOL-ULTIMATE", "role": "phoenix-meta-unified", "visibility": "public"},
+    {"id": "SF-15", "name": "Grossian_Scrolls", "role": "scroll-archive", "visibility": "public"},
+    {"id": "SF-16", "name": "CZAOUA-UNITY-SYSTEM", "role": "unity-architecture", "visibility": "public"},
+    {"id": "SF-17", "name": "CONZETIAN-UNIFIED-INTELLIGANCE", "role": "unified-private", "visibility": "private"},
+    {"id": "SF-18", "name": "CONZETIAN-AI", "role": "conzetian-ai-private", "visibility": "private"},
+    {"id": "SF-19", "name": "sovereign-federation", "role": "federation-index", "visibility": "public"}
+  ],
+  "invariants": [
+    "No repository is deleted or archived by this federation.",
+    "No history is rewritten.",
+    "Claims remain DESIGNED until executable evidence is linked.",
+    "HTC remains local-only; network_access and deployment_access default false.",
+    "Unification is index + shared substrate, not replacement."
+  ]
+}
