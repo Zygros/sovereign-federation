@@ -1,10 +1,13 @@
-# Cross-Repo Links (Canonical)
+# Cross-Repo Links (Canonical Wafer Map)
 
-Use these links when documenting or integrating. Always Add; never replace a repo with another.
+**Status: ACTIVE_WAFER**  
+Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
-## Entry points
-- Federation map: https://github.com/Zygros/sovereign-federation
-- Evidence substrate: https://github.com/Zygros/omega-10
+## Core Nodes (the wafer spine)
+- **Federation map**: https://github.com/Zygros/sovereign-federation
+- **Capability wafer (Skill Lattice)**: https://github.com/Zygros/conzetian-skill-lattice
+- **Evidence substrate**: https://github.com/Zygros/omega-10
+- **Method framework**: https://github.com/Zygros/conzetian-method
 
 ## Phoenix family
 - Meta-unified: https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE
@@ -13,20 +16,29 @@ Use these links when documenting or integrating. Always Add; never replace a rep
 - Convergence bridge: https://github.com/Zygros/multi-ai-convergence-protocol
 - CSI narrative: https://github.com/Zygros/conzet-sovereign-intelligence
 
-## Interfaces
-- zyth-ultimate: https://github.com/Zygros/zyth-ultimate
-- Portal (private): https://github.com/Zygros/sovereign-agsi-portal
-
-## Architecture
+## Architecture & Routing
 - omninet-v4: https://github.com/Zygros/omninet-v4
 - CZAOUA: https://github.com/Zygros/CZAOUA-UNITY-SYSTEM
 - we-omega: https://github.com/Zygros/we-omega
 
-## Archives
+## Interfaces
+- zyth-ultimate: https://github.com/Zygros/zyth-ultimate
+- Portal (private): https://github.com/Zygros/sovereign-agsi-portal
+
+## Archives & Lineage
 - AGSI Archive: https://github.com/Zygros/Sovereign-AGSI-Archive
 - Grossian_Scrolls: https://github.com/Zygros/Grossian_Scrolls
 - ZAAI-SYSTEM: https://github.com/Zygros/ZAAI-SYSTEM
 - ZYGROS-PRIME: https://github.com/Zygros/ZYGROS-PRIME
 
-## Integration rule
-Link; do not delete. Point related READMEs at `sovereign-federation` and `omega-10` as the map and the evidence layer.
+## Private / Specialized
+- CONZETIAN-UNIFIED-INTELLIGANCE
+- CONZETIAN-AI
+- Sovereign-Narrative-Intelligence-SNI-
+- Conzet-Intelligence-System-
+
+## Integration Rule (Wafer Law)
+1. Link. Do not delete.
+2. Every major README should point to `sovereign-federation` (map), `conzetian-skill-lattice` (capabilities), and `omega-10` (evidence).
+3. New capabilities are added to the skill lattice. New evidence is added to the substrate. The federation index is updated additively.
+4. The system is cross-connected like the 50-layer memory tree: every layer knows the others exist.
