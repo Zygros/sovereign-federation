@@ -1,14 +1,35 @@
-# Four-Center Federation Spine
+# Federation Spine — ACTIVE_WAFER
 
-The federation is organized around four complementary centers:
+The federation is organized as a cross-connected wafer, not a hierarchy that deletes or replaces members.
 
-`CONZETIAN-AI ↔ CONZETIAN-UNIFIED-INTELLIGANCE ↔ sovereign-federation ↔ omega-10 ↔ CONZETIAN-AI`
+## Primary Spine (current)
 
-- `CONZETIAN-AI`: runtime/orchestration
-- `CONZETIAN-UNIFIED-INTELLIGANCE`: canonical map/provenance
-- `sovereign-federation`: topology/index
-- `omega-10`: evidence/ledger/recovery
+```
+conzetian-skill-lattice  ←→  sovereign-federation  ←→  omega-10
+         ↑                        ↑                      ↑
+         └────────────────────────┴──────────────────────┘
+                              conzetian-method
+```
 
-Specialized repositories connect through these centers without being deleted, rewritten, or silently promoted.
+### Roles
 
-This is the federation's current architectural resilience patch.
+- **conzetian-skill-lattice** — living capability wafer (skills, matrix, compilers, ingestion engines)
+- **sovereign-federation** — topology, inventory, cross-links, integration index
+- **omega-10** — evidence substrate, ledger, recovery, verification
+- **conzetian-method** — method framework and operating doctrine
+
+## Extended Centers (still active)
+
+- CONZETIAN-AI / CONZETIAN-UNIFIED-INTELLIGANCE — runtime & canonical map lines (private where applicable)
+- Phoenix family (PHOENIX-PROTOCOL-ULTIMATE, ultimate-phoenix-protocol, ultimate-phoenix-protocol-ssi, etc.)
+- Architecture & routing (omninet-v4, CZAOUA-UNITY-SYSTEM, we-omega)
+- Interfaces & archives (zyth-ultimate, Sovereign-AGSI-Archive, Grossian_Scrolls, ZAAI-SYSTEM, ZYGROS-PRIME)
+
+## Wafer Law
+
+1. Link. Do not delete.
+2. Every major node should point to the federation map, the skill lattice, and the evidence substrate.
+3. New capabilities land in the skill lattice. New evidence lands in omega-10. The federation index is updated additively.
+4. The system remains enterable from any major repository and still discoverable as one architecture.
+
+This is the federation’s current architectural resilience posture.
