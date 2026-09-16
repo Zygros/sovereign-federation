@@ -39,6 +39,7 @@ The system is cross-connected like the 50-layer memory tree: every layer knows t
 
 - `FEDERATION_INDEX.json` — full repo inventory + core nodes + invariants
 - `docs/CROSS_LINKS.md` — canonical wafer map
+- `docs/README_AUDIT_2026-09-16.md` — federation-wide README audit and quality gate
 - `FEDERATION_SPINE.md` — four-center resilience view
 - `capabilities/`, `protocols/`, `gaps/`, `mcp/` — supporting matrices
 
@@ -49,6 +50,12 @@ The system is cross-connected like the 50-layer memory tree: every layer knows t
 3. Claims remain DESIGNED until executable evidence is linked.
 4. Unification is index + shared substrate + bidirectional links, not replacement.
 5. Always Add. Never Take.
+
+## README Quality Gate
+
+The federation README layer now follows an evidence-first standard: clear purpose, reproducible setup where applicable, explicit claim status, security boundaries, provenance, and dated audit receipts. See `docs/README_AUDIT_2026-09-16.md` for the full inventory and findings.
+
+A README quality gate does not certify the underlying code, scientific claims, security posture, or production readiness. Those require independent evidence at the capability level.
 
 ## License
 
