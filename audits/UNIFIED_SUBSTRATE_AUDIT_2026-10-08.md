@@ -229,3 +229,18 @@ Required test campaign once a pinned runtime and safe staging environment exist:
 ### Final disposition
 
 The repository inventory and selected security remediations are materially advanced, but the requested final integration is **not yet complete**. Current evidence supports: pinned inventory metadata; a passing master-repository audit workflow; passing federation audit workflow; passing ZYGROS-PRIME hygiene/audit/claim-audit jobs; and six previously passing Conzetian AI unit tests. Current evidence does **not** support: a fully green Conzetian AI workflow, a fully green ZYGROS-PRIME PR matrix, a running Phoenix Bot, a connected live federation, or successful multi-node stress/consensus testing. Keep the review PRs open and do not mark the overall system production-ready until those gates have verifiable results.
+
+
+## Omega reference harness execution update — 2026-10-09
+
+### Deterministic protocol tests
+- Added `omega_mesh/reference_node.py`, a local reference model for envelope validation, test-only signing, payload hashes, an in-memory hash-chain ledger, quorum decisions, and idempotency.
+- Added `tests/test_omega_mesh_reference.py` covering valid envelopes, payload tampering, unknown/stale issuers, ledger mutation detection, quorum/verifier acceptance and rejection, quorum loss, duplicate/unrecognized voters, and idempotency.
+- GitHub Actions run **37891303079** completed successfully. The run's pytest output reported **7 passed**. It also emitted a pytest collection warning because the helper class was named `TestIdentity`.
+- Follow-up commits `33abea069d62c981e45eccbae2ecef422bbd8486` and `1aaadadec92b1f79b814d986384ccf352cf6f1c2` rename that helper to `DeterministicIdentity` to remove the accidental test-class naming collision. CI for this warning-removal revision has not yet been confirmed at the time of this update.
+
+### Scope limits
+This is a deterministic local protocol harness, not a deployed network. HMAC is test-only and is not a substitute for production asymmetric signatures. The hash-chain ledger is in-memory and does not prove durable immutability. No external nodes were provisioned; no load/soak/fault-injection or end-to-end distributed consensus test was run.
+
+### Current disposition
+The reference harness has an initial green CI run with seven passing tests. The warning-removal follow-up is committed and awaits fresh CI evidence. Credential revocation, the Conzetian AI dataset finding, the ZYGROS-PRIME Python matrix, and the missing production Phoenix runtime remain separate open gates.
