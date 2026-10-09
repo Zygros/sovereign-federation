@@ -37,7 +37,7 @@ class Envelope:
     signature: str
 
 
-class TestIdentity:
+class DeterministicIdentity:
     """Deterministic test-only signer; never use shared HMAC keys as mesh identities."""
 
     def __init__(self, node_id: str, secret: bytes) -> None:
@@ -58,7 +58,7 @@ class TestIdentity:
         return Envelope(**body, payload=payload, signature=self.sign(body))
 
 
-def verify_envelope(envelope: Envelope, identities: dict[str, TestIdentity], *, now: int, max_age: int = 300) -> None:
+def verify_envelope(envelope: Envelope, identities: dict[str, DeterministicIdentity], *, now: int, max_age: int = 300) -> None:
     identity = identities.get(envelope.issuer)
     if identity is None:
         raise ProtocolError("unknown issuer")
