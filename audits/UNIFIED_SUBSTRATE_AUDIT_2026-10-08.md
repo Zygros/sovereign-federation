@@ -157,3 +157,27 @@ Latest proposed CI commit: `8f1f86801e5d1360012ee87ea14f2c9011b50e40`. Its CI ou
 ### Phoenix Bot
 
 The canonical executable bot remains unidentified. The adapter contract is design-only. Do not enable bot actions until the source, runtime, authorization boundary, and test harness are identified.
+
+
+## Follow-up execution update — repository pins, Phoenix candidate, and security
+
+### Repository inventory and source pins
+- Completed recursive Git tree metadata collection for all 25 repositories; all 25 returned non-truncated trees.
+- Added `audits/REPOSITORY_COMMIT_PINS_2026-10-09.json` with default branches, observed visibility, head commit SHAs, and tree blob counts. The snapshot pins source states; it is not a test attestation.
+- The large `CONZETIAN-UNIFIED-INTELLIGANCE` repository contains a vendored `source-repositories/` snapshot of other projects. Treat those as copies, not live synchronized checkouts.
+- `multi-ai-convergence-protocol` contains tracked `node_modules/` package manifests. Review whether these dependencies are intentionally vendored.
+- `Conzet-Intelligence-System-` uses Gradle Kotlin build files; it needs Android-specific validation. `agents` is a large multi-package upstream-style repository and needs a monorepo-aware test strategy.
+
+### Phoenix Bot candidate and actual blockers
+A plausible Telegram control-center entry point was found in `ZYGROS-PRIME/deploy_phoenix.sh`. It prompts for two Telegram bot tokens and a chat ID, then calls `python phoenix_control_center.py`. However, `phoenix_control_center.py` is absent from the current default-branch tree. The related `deploy_both.sh` also references `ghost_v24_control.py` and `ghost_v25_experimental.py`, which are absent from the root tree.
+
+Therefore, a Telegram-oriented deployment design exists, but the canonical Phoenix Bot runtime is not yet identified as executable. A draft PR now adds fail-fast checks so the launchers cannot proceed as though deployment succeeded when the runtime files are missing: https://github.com/Zygros/ZYGROS-PRIME/pull/5. This does not implement the missing runtime.
+
+### Credential exposure and containment
+- A Telegram bot token was found in a public archived note in `ZYGROS-PRIME`. A redaction was merged into the current default-branch file in commit `6d839812229774ec1d4a4d5ba7c4ffcd4464c9fb`. The token must still be revoked through @BotFather; the merge does not revoke it or erase prior Git history.
+- A stale hardcoded GitHub-token-like value and the Telegram token were also found in vendored copies inside the public `CONZETIAN-UNIFIED-INTELLIGANCE` repository. Both current-file copies were redacted in commit `1862986aea238ed0c091320d15ccb2fc9a7a843b`. Any valid or potentially exposed credentials must be revoked/rotated; history may retain prior values.
+- Conzetian AI's dataset `data/unified-repo-dataset.jsonl` is approximately 81.7 MB and still triggers the secret-pattern scanner. The workflow now prints only the matching file path, not matching line content. A security issue tracks controlled regeneration/sanitization: rotate any exposed credential, preserve provenance, and keep the scan fail-closed.
+- The Conzetian AI CI repair achieved **6 passing Python tests**, but the overall workflow remains **failed** because the dataset secret-pattern scan is still finding a match. Do not report the workflow as green.
+
+### Evidence boundary
+These actions establish current-file redactions, not credential revocation. The credential owner must complete out-of-band revocation. The bot integration remains blocked on recovering/implementing the canonical runtime and then validating it in a dry-run environment.
