@@ -134,7 +134,7 @@
       "name": "CONZETIAN-UNIFIED-INTELLIGANCE",
       "visibility": "public",
       "default_branch": "main",
-      "head_sha": "1862986aea238ed0c091320d15ccb2fc9a7a843b",
+      "head_sha": "2e457a240d6effefb39b0590fc1833f7d2d3067e",
       "tree_blob_count": 8249
     },
     {
@@ -195,7 +195,7 @@
     },
     {
       "repo": "CONZETIAN-UNIFIED-INTELLIGANCE",
-      "status": "stale vendored GitHub and Telegram credential copies redacted in merged commit 1862986aea238ed0c091320d15ccb2fc9a7a843b",
+      "status": "stale vendored GitHub and Telegram credential copies and local shell history redacted in merged commits 1862986aea238ed0c091320d15ccb2fc9a7a843b and 2e457a240d6effefb39b0590fc1833f7d2d3067e",
       "remaining": "revoke/rotate exposed credentials if valid; prior history may retain values"
     },
     {
