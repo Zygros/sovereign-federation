@@ -188,3 +188,44 @@ These actions establish current-file redactions, not credential revocation. The 
 - The inventory pin file was refreshed to point to the latest master commit `2e457a240d6effefb39b0590fc1833f7d2d3067e`.
 - The ZYGROS-PRIME deployment-preflight PR also adjusts the quality gate to validate the two shell launchers and compile canonical Python sources while excluding `Downloaded/`, `Unpacked/`, and `source-repositories/` historical/vendor snapshots. Its CI is pending at this checkpoint; earlier CI showed the archive-wide compile step fails on malformed or truncated historical Python files, so the narrower gate must be validated before merge.
 - The deployment-preflight changes remain a draft PR until the new shell syntax checks and workflow results are reviewed.
+
+
+## Master verification checkpoint — 2026-10-09
+
+### Confirmed CI results
+
+- `ZYGROS-PRIME` deployment-preflight draft PR #5: the **hygiene job passed**, including credential-pattern scanning, shell syntax validation, and canonical-source compilation. The **audit job passed**, and the **claim-audit job passed**, including evidence-bundle provenance attestation.
+- The same PR's Python matrix is **not green**. Python 3.11 and 3.10 jobs failed at Flake8 before pytest; Python 3.8 and 3.9 jobs were cancelled. The log shows the lint command still traverses archival `Downloaded/` and `Unpacked/` snapshots and reports malformed historical exports. Therefore, passing the new hygiene job does not yet validate the whole PR, and no merge is recommended until the remaining matrix workflow is reconciled or explicitly scoped to canonical code.
+- `CONZETIAN-UNIFIED-INTELLIGANCE` current-default-branch audit workflow passed on commit `2e457a240d6effefb39b0590fc1833f7d2d3067e`. This is workflow evidence for its configured checks, not a comprehensive review of every nested vendored source.
+- `sovereign-federation` audit workflow passed for the latest audit branch run, including Python/federation checks, Node audit, and secret-pattern scan.
+- `CONZETIAN-AI` Phoenix Audit remains **failed** at the secret-pattern step for `data/unified-repo-dataset.jsonl`. The earlier Python test stage passed six tests, but the end-to-end workflow is not green. The fail-closed finding remains open; do not suppress the match or truncate the dataset.
+
+### Phoenix Bot integration verdict
+
+**NOT VERIFIED / BLOCKED.** The repository documents a Telegram-oriented control-center deployment, but the referenced `phoenix_control_center.py` runtime is absent from the current `ZYGROS-PRIME` default-branch tree. The related Ghost runtime files are also absent. No bot process, live Telegram session, messaging round-trip, command authorization, idempotency behavior, or recovery test was demonstrated. The adapter contract remains design-only. The deployment-preflight PR is a useful fail-fast guard, not the bot implementation.
+
+### Stress and multi-agent consensus verdict
+
+**NOT RUN as an end-to-end distributed test.** This pass queried GitHub workflow results and repository metadata; it did not launch agents across actual nodes, provision external services, run load/soak/fault-injection tests, or establish live cross-provider consensus. A successful repository audit workflow is not a distributed stress-test result.
+
+Required test campaign once a pinned runtime and safe staging environment exist:
+1. Deterministic unit/contract tests for event schemas, provenance, authorization, idempotency, and evidence append.
+2. Concurrency tests with bounded parallelism and explicit queue/back-pressure limits.
+3. Load ramps at 1x, 2x, and 5x expected traffic, recording throughput, p50/p95/p99 latency, error rate, memory, CPU, and queue depth.
+4. Soak run with periodic health checks and no secret values in telemetry.
+5. Fault injection: provider timeout, transport disconnect, malformed/duplicate/replayed event, expired authorization, partial tool failure, and restart during a pending operation.
+6. Multi-agent consensus tests with independent implementations, adversarial/conflicting proposals, quorum loss, stale evidence, and verifier disagreement. Record per-agent decisions and require evidence-linked consensus; never equate agreement with correctness.
+7. Dry-run external actions first. Human approval remains mandatory for external messaging, financial actions, destructive operations, or privilege changes unless a separately reviewed policy authorizes them.
+
+### Priority register
+
+- **P0 — credential containment:** revoke any exposed Telegram token through `@BotFather`; rotate any exposed GitHub credential if valid. Current-file redaction does not revoke credentials or remove old Git history.
+- **P0 — Conzetian AI dataset:** investigate and sanitize/regenerate the large JSONL artifact in a controlled, provenance-preserving operation; keep secret scanning fail-closed and prevent matching content from appearing in logs.
+- **P0 — canonical Phoenix runtime:** recover the authoritative source, pin its commit, establish ownership/license, inspect permission boundaries, and add mock-transport dry-run tests.
+- **P1 — CI workflow alignment:** scope legacy Flake8/lint/test workflows to canonical code without discarding historical artifacts; keep archival code separately inventoried and scanned.
+- **P1 — cross-repository contracts:** validate schema compatibility and evidence envelopes between Conzetian AI, the federation index, the skill lattice, and Omega-10.
+- **P2 — distributed validation:** run the load, soak, fault-injection, and multi-agent consensus campaign only after P0/P1 gates pass; append raw results, environment, commit pins, and artifact hashes.
+
+### Final disposition
+
+The repository inventory and selected security remediations are materially advanced, but the requested final integration is **not yet complete**. Current evidence supports: pinned inventory metadata; a passing master-repository audit workflow; passing federation audit workflow; passing ZYGROS-PRIME hygiene/audit/claim-audit jobs; and six previously passing Conzetian AI unit tests. Current evidence does **not** support: a fully green Conzetian AI workflow, a fully green ZYGROS-PRIME PR matrix, a running Phoenix Bot, a connected live federation, or successful multi-node stress/consensus testing. Keep the review PRs open and do not mark the overall system production-ready until those gates have verifiable results.
