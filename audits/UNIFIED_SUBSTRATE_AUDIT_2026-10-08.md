@@ -129,3 +129,31 @@ Before connecting a bot, identify its canonical repository/path, runtime (Telegr
 - Not completed: full source-level audit of every file in all 25 repositories; Phoenix Bot runtime integration; live network federation.
 
 This is a new additive audit artifact. It does not overwrite the historical federation index or integration ledger.
+
+
+## Follow-up execution update — 2026-10-09
+
+### Repository-tree sweep
+
+A recursive Git tree metadata sweep was completed for all 25 listed repositories. GitHub reported non-truncated trees in this sweep. This was a tree/manifest/workflow inventory, not a full review of every source file or a build/test run for every repository.
+
+Notable observations:
+- All 25 repositories expose a `.phoenix/CROSSCONNECT.json` file, but that metadata does not establish live endpoint connectivity.
+- Most repositories have a `.github/workflows/phoenix-audit.yml`; a few use other workflows or no workflow. Workflow presence does not establish that it is currently green.
+- `CONZETIAN-UNIFIED-INTELLIGANCE` contains a very large vendored `source-repositories/` corpus with copies of other repositories. Treat this as an archival snapshot until commit provenance and synchronization policy are established; it is not proof the copies track live upstream repositories.
+- `ZYGROS-PRIME` contains thousands of paths and nested package/build manifests, reinforcing the need for canonical-root and provenance mapping before any broad upgrade.
+- `multi-ai-convergence-protocol` has `node_modules/` package manifests in its tracked tree. Confirm whether these are intentionally vendored or should be replaced with lockfile-based dependency installation in a separate reviewed change.
+- The `agents` repository contains many nested LiveKit package manifests. Audit it as an upstream-style multi-package monorepo, not as a single small application.
+- `Conzet-Intelligence-System-` contains Gradle Kotlin build files, so its audit must include Android/Gradle-specific checks rather than assuming a Python-only workflow is sufficient.
+
+### Conzetian AI CI follow-up
+
+The proposed CI change installed the src-layout package and the Python test suite passed: **6 passed**. The run then failed at the secret-pattern scan, which matched a record in `data/unified-repo-dataset.jsonl`. The workflow log showed the matching record content, creating an avoidable risk of copying secret-like material into CI logs.
+
+A second additive change on the same review branch changes the scanner to list matching file paths only and never print matching content. This preserves fail-closed behavior; it does not waive or suppress the match. The credential's validity is not established by this audit. The repository owner should determine whether a real credential was embedded, revoke/rotate it if exposure is confirmed, and sanitize the current tracked artifact with a documented redaction while preserving an append-only evidence record. Because Git history may retain an exposed secret, revocation is more important than merely removing it from the current file.
+
+Latest proposed CI commit: `8f1f86801e5d1360012ee87ea14f2c9011b50e40`. Its CI outcome must be checked independently; do not treat the earlier six passing tests as a fully green workflow.
+
+### Phoenix Bot
+
+The canonical executable bot remains unidentified. The adapter contract is design-only. Do not enable bot actions until the source, runtime, authorization boundary, and test harness are identified.
