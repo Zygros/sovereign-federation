@@ -181,3 +181,10 @@ Therefore, a Telegram-oriented deployment design exists, but the canonical Phoen
 
 ### Evidence boundary
 These actions establish current-file redactions, not credential revocation. The credential owner must complete out-of-band revocation. The bot integration remains blocked on recovering/implementing the canonical runtime and then validating it in a dry-run environment.
+
+
+### Latest validation checkpoint — 2026-10-09
+- The public `CONZETIAN-UNIFIED-INTELLIGANCE` audit workflow completed successfully after the current-file redactions, including the vendored shell-history redaction. This validates that workflow's current checks on that commit; it does not prove all 8,249 tracked files are secure or every nested project passes its own tests.
+- The inventory pin file was refreshed to point to the latest master commit `2e457a240d6effefb39b0590fc1833f7d2d3067e`.
+- The ZYGROS-PRIME deployment-preflight PR also adjusts the quality gate to validate the two shell launchers and compile canonical Python sources while excluding `Downloaded/`, `Unpacked/`, and `source-repositories/` historical/vendor snapshots. Its CI is pending at this checkpoint; earlier CI showed the archive-wide compile step fails on malformed or truncated historical Python files, so the narrower gate must be validated before merge.
+- The deployment-preflight changes remain a draft PR until the new shell syntax checks and workflow results are reviewed.
