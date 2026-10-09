@@ -6,7 +6,7 @@ from omega_mesh.reference_node import (
     AppendOnlyLedger,
     IdempotencyGuard,
     ProtocolError,
-    TestIdentity,
+    DeterministicIdentity,
     decide_quorum,
     verify_envelope,
 )
@@ -14,9 +14,9 @@ from omega_mesh.reference_node import (
 
 def identities():
     nodes = {
-        "node-a": TestIdentity("node-a", b"test-key-a"),
-        "node-b": TestIdentity("node-b", b"test-key-b"),
-        "node-c": TestIdentity("node-c", b"test-key-c"),
+        "node-a": DeterministicIdentity("node-a", b"test-key-a"),
+        "node-b": DeterministicIdentity("node-b", b"test-key-b"),
+        "node-c": DeterministicIdentity("node-c", b"test-key-c"),
     }
     return nodes
 
