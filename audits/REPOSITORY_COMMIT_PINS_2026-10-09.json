@@ -1,0 +1,207 @@
+{
+  "snapshot_date_utc": "2026-10-09",
+  "owner": "Zygros",
+  "method": "GitHub API default-branch commit lookup plus recursive Git tree metadata sweep",
+  "repository_count": 25,
+  "tree_metadata_sweep": {
+    "completed": true,
+    "non_truncated_trees": 25,
+    "source_files_fully_reviewed": false,
+    "all_tests_run": false
+  },
+  "note": "Commit SHAs pin the default-branch state observed during this audit pass. They are not signatures, deployment attestations, or proof that tests passed. Two default branches had security-redaction commits merged during this pass; their current commit SHAs are listed.",
+  "repositories": [
+    {
+      "name": "Grossian_Scrolls",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "acaee90595580d6636df3bf6470f7baece072180",
+      "tree_blob_count": 411
+    },
+    {
+      "name": "ZAAI-SYSTEM",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "ebde25b7fd3e230a5fbb8fc7c6b099d1d2796903",
+      "tree_blob_count": 35
+    },
+    {
+      "name": "Sovereign-Narrative-Intelligence-SNI-",
+      "visibility": "private",
+      "default_branch": "main",
+      "head_sha": "459a28529f4be0e3f619518d84bdb043d9e47474",
+      "tree_blob_count": 16
+    },
+    {
+      "name": "ARC-AGI",
+      "visibility": "public",
+      "default_branch": "master",
+      "head_sha": "ee19013e948c3b5d04c639cefd405f60f9ffc882",
+      "tree_blob_count": 821
+    },
+    {
+      "name": "zyth-ultimate",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "84ad424380cb701c28fe33f2109e7df21eda1c9f",
+      "tree_blob_count": 17
+    },
+    {
+      "name": "Sovereign-AGSI-Archive",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "7c0f22ecfef6a5237b72252bc5dbbb71ed5fa9a9",
+      "tree_blob_count": 121
+    },
+    {
+      "name": "conzet-sovereign-intelligence",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "f6474ea6b9f401924bf687660a6fc72402f690cc",
+      "tree_blob_count": 41
+    },
+    {
+      "name": "agents",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "75178db739852762bfbaac51a5e2feb7603286d0",
+      "tree_blob_count": 849
+    },
+    {
+      "name": "ultimate-phoenix-protocol",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "debb1ad1b996ebf7cd304bf38ca3faff059db409",
+      "tree_blob_count": 16
+    },
+    {
+      "name": "multi-ai-convergence-protocol",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "cf9e44230a5a9bc2c7187bb26babf6835fb1ba49",
+      "tree_blob_count": 709
+    },
+    {
+      "name": "ultimate-phoenix-protocol-ssi",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "7616fcab16748f0b580a002c0cda20bcd438e49e",
+      "tree_blob_count": 739
+    },
+    {
+      "name": "ZYGROS-PRIME",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "6d839812229774ec1d4a4d5ba7c4ffcd4464c9fb",
+      "tree_blob_count": 5453
+    },
+    {
+      "name": "PHOENIX-PROTOCOL-ULTIMATE",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "6c366a47824a151ee23f9fee1010b57ef996bf21",
+      "tree_blob_count": 1976
+    },
+    {
+      "name": "sovereign-agsi-portal",
+      "visibility": "private",
+      "default_branch": "main",
+      "head_sha": "30bb64ad79e7bde2222609fb18e92e45a4132710",
+      "tree_blob_count": 107
+    },
+    {
+      "name": "omninet-v4",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "95cfe07cea77a5bf9bf613947dd989eda67d318f",
+      "tree_blob_count": 30
+    },
+    {
+      "name": "CZAOUA-UNITY-SYSTEM",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "878a0d9fcc5e1b2a7d96b7b7474f8e456b594ed7",
+      "tree_blob_count": 23
+    },
+    {
+      "name": "we-omega",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "42628a819b8e0f46827895cab04ab6bb3c981cd2",
+      "tree_blob_count": 29
+    },
+    {
+      "name": "CONZETIAN-UNIFIED-INTELLIGANCE",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "1862986aea238ed0c091320d15ccb2fc9a7a843b",
+      "tree_blob_count": 8249
+    },
+    {
+      "name": "CONZETIAN-AI",
+      "visibility": "private",
+      "default_branch": "main",
+      "head_sha": "f977e9ac4d960ab4a36f08723b59d626a1cc8ddd",
+      "tree_blob_count": 58
+    },
+    {
+      "name": "omega-10",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "7303fc0bec5b77fb6dfd3e7c457da90f66001b0e",
+      "tree_blob_count": 25
+    },
+    {
+      "name": "sovereign-federation",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "8ea48e36a79da0ebfb5fc0b4be886cbdef382461",
+      "tree_blob_count": 42
+    },
+    {
+      "name": "conzetian-skill-lattice",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "c613637841e4cf4c26407d14850d282a8511c5fd",
+      "tree_blob_count": 97
+    },
+    {
+      "name": "Conzet-Intelligence-System-",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "1ae472978b0c87ba9e5a437357b9c92d25b875b4",
+      "tree_blob_count": 61
+    },
+    {
+      "name": "agentql",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "e2d0e1676541a67fb92e0e7708ecf8592da1250d",
+      "tree_blob_count": 146
+    },
+    {
+      "name": "conzetian-method",
+      "visibility": "public",
+      "default_branch": "main",
+      "head_sha": "951ae42e28fb1cd6a5109bdf4ad5f019edff3755",
+      "tree_blob_count": 33
+    }
+  ],
+  "security_followups": [
+    {
+      "repo": "ZYGROS-PRIME",
+      "status": "current archived Telegram token redacted in merged commit 6d839812229774ec1d4a4d5ba7c4ffcd4464c9fb",
+      "remaining": "revoke token via BotFather; Git history may retain prior value"
+    },
+    {
+      "repo": "CONZETIAN-UNIFIED-INTELLIGANCE",
+      "status": "stale vendored GitHub and Telegram credential copies redacted in merged commit 1862986aea238ed0c091320d15ccb2fc9a7a843b",
+      "remaining": "revoke/rotate exposed credentials if valid; prior history may retain values"
+    },
+    {
+      "repo": "CONZETIAN-AI",
+      "status": "CI package installation fixed on review branch; Python tests pass 6/6; secret scanner still fails closed on data/unified-repo-dataset.jsonl",
+      "remaining": "large dataset is 81,741,163 bytes; inspect/regenerate sanitized dataset through a controlled large-file workflow and rotate any embedded credential"
+    }
+  ]
+}
