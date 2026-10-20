@@ -45,3 +45,15 @@ Always Add. Never replace a repo with another. Every major node should point her
 2. Every major README should point to `sovereign-federation` (map), `conzetian-skill-lattice` (capabilities), and `omega-10` (evidence).
 3. New capabilities are added to the skill lattice. New evidence is added to the substrate. The federation index is updated additively.
 4. The system is cross-connected like the 50-layer memory tree: every layer knows the others exist.
+
+## Phoenix Recovery Hardening — 2026-10-20
+
+- **Pull request:** https://github.com/Zygros/omega-10/pull/1
+- **Verified code commit:** `188064b3eea6f2df42a30afb695de359b63a6424`
+- **Evidence note:** https://github.com/Zygros/omega-10/blob/conzetian/scout-duplicate-evidence-2026-10-19/evidence/audits/2026-10-20-phoenix-recovery-hardening.md
+- **CI run 35:** https://github.com/Zygros/omega-10/actions/runs/39461811915
+- **Phoenix Audit run 59:** https://github.com/Zygros/omega-10/actions/runs/39461811776
+
+The verified code change hardens local recovery against journal path injection, detects concurrent journal changes, ensures a nonzero corruption fraction exercises recovery, and expands CI lint to all repository Python files. CI passed on Python 3.11 and 3.12 with strict `ruff check .` and pytest. The audit workflow completed its configured checks.
+
+**Evidence boundary:** the Phoenix benchmark remains a local deterministic fixture, not a production recovery service. The pull request is still open and unmerged. These links document code and workflow evidence, not OTS receipt verification or credential remediation.
