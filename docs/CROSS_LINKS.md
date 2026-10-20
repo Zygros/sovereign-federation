@@ -67,3 +67,10 @@ The latest recorded CI run passed on Python 3.11 and 3.12 with strict `ruff chec
 - **Federation review PR:** https://github.com/Zygros/sovereign-federation/pull/4
 
 This cross-link is now open for review in PR #4; it has not been merged.
+
+## Execution Checkpoint — 2026-10-20
+
+- **Cross-repository execution evidence:** https://github.com/Zygros/omega-10/blob/conzetian/scout-duplicate-evidence-2026-10-19/evidence/audits/2026-10-20-phoenix-federation-execution-checkpoint.md
+- **Federation review PR:** https://github.com/Zygros/sovereign-federation/pull/4
+
+The checkpoint records the observed Phoenix CI/Phoenix Audit results, federation PR creation, updated cross-link commit, and remaining verification boundaries. It explicitly distinguishes the earlier queued workflow run from a verified run on the latest federation commit.
