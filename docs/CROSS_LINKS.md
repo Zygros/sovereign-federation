@@ -57,3 +57,12 @@ Always Add. Never replace a repo with another. Every major node should point her
 The verified code change hardens local recovery against journal path injection, detects concurrent journal changes, ensures a nonzero corruption fraction exercises recovery, and expands CI lint to all repository Python files. CI passed on Python 3.11 and 3.12 with strict `ruff check .` and pytest. The audit workflow completed its configured checks.
 
 **Evidence boundary:** the Phoenix benchmark remains a local deterministic fixture, not a production recovery service. The pull request is still open and unmerged. These links document code and workflow evidence, not OTS receipt verification or credential remediation.
+
+## OpenTimestamps Inventory Reconciliation — 2026-10-20
+
+- **Evidence note:** https://github.com/Zygros/omega-10/blob/conzetian/scout-duplicate-evidence-2026-10-19/evidence/audits/2026-10-20-ots-inventory-reconciliation.md
+- **Completed Dropbox inventory:** 1,770 entries across 3 fully consumed pages; 260 files ending in `.ots`, 260 unique paths, and no duplicate basenames.
+- **Known placeholder candidate:** `/Download11.8.25/DAO_Proposal_Scroll476.ots`, 74 bytes; Dropbox text extraction returned `OpenTimestamps placeholder`.
+- **Evidence boundary:** the earlier 261 count remains unreconciled; the 260 inventory count is confirmed by two complete scans. No OTS receipt was cryptographically verified and no Bitcoin confirmation is claimed.
+
+This section is a proposed additive federation cross-link. It remains on this review branch until a pull request can be opened and reviewed.
