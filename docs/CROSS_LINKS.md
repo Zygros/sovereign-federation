@@ -48,15 +48,15 @@ Always Add. Never replace a repo with another. Every major node should point her
 
 ## Phoenix Recovery Hardening — 2026-10-20
 
-- **Pull request:** https://github.com/Zygros/omega-10/pull/1
-- **Verified code commit:** `188064b3eea6f2df42a30afb695de359b63a6424`
+- **Review PR:** https://github.com/Zygros/omega-10/pull/1
+- **Current reviewed code commit:** `e0767e8fb50eeac531872130f40c30117f864e2a`
 - **Evidence note:** https://github.com/Zygros/omega-10/blob/conzetian/scout-duplicate-evidence-2026-10-19/evidence/audits/2026-10-20-phoenix-recovery-hardening.md
-- **CI run 35:** https://github.com/Zygros/omega-10/actions/runs/39461811915
-- **Phoenix Audit run 59:** https://github.com/Zygros/omega-10/actions/runs/39461811776
+- **CI run 37:** https://github.com/Zygros/omega-10/actions/runs/39462417459
+- **Phoenix Audit run 63:** https://github.com/Zygros/omega-10/actions/runs/39462417954
 
-The verified code change hardens local recovery against journal path injection, detects concurrent journal changes, ensures a nonzero corruption fraction exercises recovery, and expands CI lint to all repository Python files. CI passed on Python 3.11 and 3.12 with strict `ruff check .` and pytest. The audit workflow completed its configured checks.
+The latest recorded CI run passed on Python 3.11 and 3.12 with strict `ruff check .` and pytest; Phoenix Audit run 63 completed successfully. The code hardens the local recovery fixture against journal path injection, detects concurrent journal changes, ensures nonzero corruption fractions exercise recovery, and expands lint to repository-wide Python files.
 
-**Evidence boundary:** the Phoenix benchmark remains a local deterministic fixture, not a production recovery service. The pull request is still open and unmerged. These links document code and workflow evidence, not OTS receipt verification or credential remediation.
+**Evidence boundary:** this is a local deterministic benchmark, not a production recovery service. PR #1 remains open and unmerged. These links do not establish OTS receipt verification or credential remediation.
 
 ## OpenTimestamps Inventory Reconciliation — 2026-10-20
 
@@ -64,5 +64,6 @@ The verified code change hardens local recovery against journal path injection, 
 - **Completed Dropbox inventory:** 1,770 entries across 3 fully consumed pages; 260 files ending in `.ots`, 260 unique paths, and no duplicate basenames.
 - **Known placeholder candidate:** `/Download11.8.25/DAO_Proposal_Scroll476.ots`, 74 bytes; Dropbox text extraction returned `OpenTimestamps placeholder`.
 - **Evidence boundary:** the earlier 261 count remains unreconciled; the 260 inventory count is confirmed by two complete scans. No OTS receipt was cryptographically verified and no Bitcoin confirmation is claimed.
+- **Federation review PR:** https://github.com/Zygros/sovereign-federation/pull/4
 
-This section is a proposed additive federation cross-link. It remains on this review branch until a pull request can be opened and reviewed.
+This cross-link is now open for review in PR #4; it has not been merged.
