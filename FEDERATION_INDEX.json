@@ -4,7 +4,7 @@
   "github_login": "Zygros",
   "protocol": "Always Add · Never Take · Zero Friction",
   "unification_mode": "additive-index-and-substrate",
-  "updated_at": "2026-09-21T00:00:00Z",
+  "updated_at": "2026-10-22T00:00:00Z",
   "status": "ACTIVE_WAFER",
   "core_nodes": {
     "skill_lattice": "conzetian-skill-lattice",
@@ -161,6 +161,12 @@
       "id": "SF-25",
       "name": "agentql",
       "role": "external-web-agent-foundation",
+      "visibility": "public"
+    },
+    {
+      "id": "SF-26",
+      "name": "ZYGNUS-OMNI-REPO",
+      "role": "omni-repository",
       "visibility": "public"
     }
   ],
