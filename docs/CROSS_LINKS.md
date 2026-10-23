@@ -115,3 +115,16 @@ This addendum supersedes only earlier status statements above that describe the 
 - **Inventory basis:** the connected GitHub inventory observed on 2026-10-23 contained 26 repositories, 21 public and 5 private. The separate machine-readable index reconciliation remains tracked in this PR's visibility-index changes.
 
 **Evidence boundary:** HTTP 200 establishes public URL reachability at the run time, not correctness of repository contents, deployed Conzetian/Phoenix runtime health, third-party reproduction, or Bitcoin/Arweave anchoring. The separate Phoenix Audit probe correction remains an independent PR and is not represented as merged by this checkpoint.
+
+
+## Phoenix Audit source-probe correction merged — observed 2026-10-23
+
+This addendum supersedes earlier status lines above that describe PR #31 as open or unmerged. Those entries are preserved as historical checkpoints from before the merge.
+
+- **Merged mainline commit:** [7f97238a](https://github.com/Zygros/conzet-sovereign-intelligence/commit/7f97238a6d334ee772b4cd30ca149b46d136e2db) merged [PR #31](https://github.com/Zygros/conzet-sovereign-intelligence/pull/31), which fixes the Phoenix Audit Python-source probe in the root workflow and three existing nested workflow copies. The corrected probe exits at the first Python path (`find ... -print -quit | grep -q .`) so `pipefail` does not mistake a closed downstream pipe for a missing source tree.
+- **Post-merge Phoenix Audit:** [run 40017432628](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40017432628) completed successfully on merge commit `7f97238a6d334ee772b4cd30ca149b46d136e2db`. The Python audit step executed and the root suite reported **82 passed in 1.10s**. The log shows no “No Python source detected” false-negative message or broken-pipe error.
+- **Post-merge OmniNet Python CI:** [run 40017432601](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40017432601) completed successfully; all Python 3.8, 3.9, 3.10 and 3.11 matrix jobs passed. Its Python 3.8 log reports **82 passed in 0.91s** and includes both the federation-health and Phoenix Audit probe regression modules.
+- **Remaining non-blocking hygiene:** the same Python 3.8 log reports that Black would reformat 90 files, including the two touched test modules, and mypy reports duplicate module names for nested `conftest.py` files. The workflow treats these as non-blocking, so they are recorded as open hygiene work, not as clean formatting or typing evidence.
+- **Combined outcome:** the public-only health correction is merged and its post-merge health workflow recorded **21/21 public URLs responding HTTP 200** (see run 40016844465 above). The index reconciliation branch still proposes the machine-readable 26-node / 21-public / 5-private inventory; this entry does not claim that index PR has been merged yet.
+
+**Evidence boundary:** passing CI validates the listed checks on the cited commits. HTTP 200 proves URL reachability at the recorded time only; this does not establish deployment of the full Phoenix/Conzetian architecture, universal runtime health, independent third-party reproduction, or an external timestamp/Bitcoin/Arweave anchor.
