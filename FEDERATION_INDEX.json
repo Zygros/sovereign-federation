@@ -4,7 +4,7 @@
   "github_login": "Zygros",
   "protocol": "Always Add · Never Take · Zero Friction",
   "unification_mode": "additive-index-and-substrate",
-  "updated_at": "2026-10-22T00:00:00Z",
+  "updated_at": "2026-10-23T19:27:33Z",
   "status": "ACTIVE_WAFER",
   "core_nodes": {
     "skill_lattice": "conzetian-skill-lattice",
@@ -41,7 +41,7 @@
       "id": "SF-05",
       "name": "ZYGROS-PRIME",
       "role": "prime-naming",
-      "visibility": "public"
+      "visibility": "private"
     },
     {
       "id": "SF-06",
@@ -130,7 +130,7 @@
     {
       "id": "SF-20",
       "name": "sovereign-agsi-portal",
-      "role": "public-portal",
+      "role": "private-portal",
       "visibility": "private"
     },
     {
@@ -178,6 +178,6 @@
     "Skill lattice is the living capability wafer.",
     "Always Add. Never Take."
   ],
-  "wafer_principle": "Every major node points to the federation index, the Conzetian master control plane, the skill lattice, and the evidence substrate. The master additionally maintains the complete 25-node navigation graph.",
+  "wafer_principle": "Every major node points to the federation index, the Conzetian master control plane, the skill lattice, and the evidence substrate. The master additionally maintains the complete 26-node navigation graph.",
   "master_control_plane": "CONZETIAN-UNIFIED-INTELLIGANCE"
 }
