@@ -84,3 +84,12 @@ This records a verified CI result for the cited code commit, not for any later e
 - **Remote status at this checkpoint:** PR #31 is open and unmerged; no Actions run for its new head had yet been returned by the connected GitHub run lookup. The correction has not been promoted to `main`, and its full repository audit/test path remains to be verified.
 
 This is an evidence-integrity correction, separate from the visibility-health correction in PR #30. It does not claim deployment, live runtime health, or external anchoring.
+
+## Remote validation follow-up — observed 2026-10-23
+
+- [Phoenix Audit run #317](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680276) completed successfully for PR #31's source commit. Unlike the earlier run, its log shows the corrected early-exit probe proceeded into the Python audit; the root suite reported **79 passed in 0.66s**.
+- [OmniNet Python CI run #261](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40013680033) also completed successfully across Python 3.8, 3.9, 3.10, and 3.11. Each matrix log includes the four probe regression cases.
+- The run verifies the PR's source commit, not merged `main`. Repository-wide Black formatting and mypy checks remain non-blocking and report outstanding hygiene issues; they are not recorded as clean.
+- Reconciliation was repeated immediately before this append: the proposed `FEDERATION_INDEX.json` matches the connected live inventory at **26/26 exact repository names, 21 public, 5 private**, with zero visibility mismatches or omissions.
+
+PR #31 remains proposed and unmerged. The prior “Actions not yet returned” note records its earlier observation time; this addendum records the later successful runs. No deployment or external anchor is claimed.
