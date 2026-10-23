@@ -76,3 +76,11 @@ The live GitHub inventory and the proposed machine-readable index were re-compar
 - Workflow hygiene is not clean: Black reported 89 files needing formatting, including the touched test file, and mypy reported a duplicate conftest module. Those checks are explicitly non-blocking in the workflow. See the [append-only evidence checkpoint](https://github.com/Zygros/conzet-sovereign-intelligence/blob/3604310ba94f74a4ebcb9ada8ed983902ef2d0a6/EVIDENCE_CHAIN.md) and the [2026-10-23 visibility audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md).
 
 This records a verified CI result for the cited code commit, not for any later evidence-only branch head. The proposed correction and index reconciliation remain unmerged; mocked regression tests verify denominator behavior, not live reachability of every public URL. No deployment or external timestamp/Bitcoin/Arweave anchor is claimed.
+
+## Phoenix Audit evidence-integrity correction — observed 2026-10-23
+
+- **Source correction:** [conzet-sovereign-intelligence PR #31](https://github.com/Zygros/conzet-sovereign-intelligence/pull/31) changes the Python-source probe in the root Phoenix Audit workflow and three nested copies to stop `find` after the first match.
+- **Reproduction:** the old probe falsely reported no Python source on a 5,000-file fixture; the corrected probe detected source. Four local regression assertions passed. The [audit record](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/evidence/audits/2026-10-23-phoenix-audit-source-probe.md) and [append-only evidence chain](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/fix-phoenix-audit-source-probe-2026-10-23/EVIDENCE_CHAIN.md) preserve the procedure and scope.
+- **Remote status at this checkpoint:** PR #31 is open and unmerged; no Actions run for its new head had yet been returned by the connected GitHub run lookup. The correction has not been promoted to `main`, and its full repository audit/test path remains to be verified.
+
+This is an evidence-integrity correction, separate from the visibility-health correction in PR #30. It does not claim deployment, live runtime health, or external anchoring.
