@@ -128,3 +128,22 @@ This addendum supersedes earlier status lines above that describe PR #31 as open
 - **Combined outcome:** the public-only health correction is merged and its post-merge health workflow recorded **21/21 public URLs responding HTTP 200** (see run 40016844465 above). The index reconciliation branch still proposes the machine-readable 26-node / 21-public / 5-private inventory; this entry does not claim that index PR has been merged yet.
 
 **Evidence boundary:** passing CI validates the listed checks on the cited commits. HTTP 200 proves URL reachability at the recorded time only; this does not establish deployment of the full Phoenix/Conzetian architecture, universal runtime health, independent third-party reproduction, or an external timestamp/Bitcoin/Arweave anchor.
+
+
+## Federation index reconciliation merged — observed 2026-10-23
+
+This section supersedes the earlier pre-merge status note stating that the index reconciliation was still proposed. Historical checkpoints above remain unchanged.
+
+- [PR #5](https://github.com/Zygros/sovereign-federation/pull/5) merged into `main` at [`fc5ae01c`](https://github.com/Zygros/sovereign-federation/commit/fc5ae01cdea8ce473e994943f8f2603a6eafe497).
+- The merged [machine-readable federation index](https://github.com/Zygros/sovereign-federation/blob/fc5ae01cdea8ce473e994943f8f2603a6eafe497/FEDERATION_INDEX.json) has **26 unique nodes: 21 public and 5 private**. A fresh comparison against the connected GitHub repository inventory on 2026-10-23 found zero missing repository names, zero extras, and zero visibility mismatches.
+- `ZYGROS-PRIME` is correctly marked private; `sovereign-agsi-portal` is correctly marked `private-portal`; `ZYGNUS-OMNI-REPO` is present as a public node.
+- Post-merge [Phoenix Audit run 40017716523](https://github.com/Zygros/sovereign-federation/actions/runs/40017716523) completed successfully on the merge commit.
+
+## Published Scout evidence-integrity checkpoint — observed 2026-10-23
+
+- The canonical [Scout integrity report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-23-scout-evidence-integrity.md), [machine-readable result](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-23-scout-evidence-integrity.json), and [appended core evidence ledger](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/EVIDENCE_CHAIN.md) are merged at [core commit `a9fa362e`](https://github.com/Zygros/conzet-sovereign-intelligence/commit/a9fa362edfcd1c5a8b77d7742df3c33d9d0a1bea).
+- Latest Scout run [39993289060](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/39993289060) contains 93 discovery records; the 97,643-byte Scout JSON and 196,602-byte receipt JSON each matched the manifest's SHA-256 under independent recomputation. The receipt file contains 89 receipts and 4 rejections. Candidates remain `unreviewed_candidates` and require human or independent review.
+- The last observed [Published Evidence Integrity run 39993465496](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/39993465496), checked at `2026-10-23T17:14:56Z`, reported the newest run's two `.ots` proofs **pending**, with no Bitcoin block. It separately confirmed older run `39903171799` at block **972716** using a public-header check. The older run's confirmation does not anchor the newest publication. No later integrity check for the newest publication was observed in the inspected run history.
+- The integrity workflow's overall success reflects its configured confirmation grace window plus the older confirmed run. **It is not evidence that the newest OTS proofs are confirmed.** No candidate promotion, code execution, or latest-run Bitcoin confirmation is claimed.
+
+**Evidence boundary:** this cross-link record preserves byte-integrity and timestamp statuses separately. The proof confirmation for the newest Scout run remains unverified at the last observation, and the 93 records are public-metadata discoveries, not 93 independently validated opportunities.
