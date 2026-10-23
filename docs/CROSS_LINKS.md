@@ -4,6 +4,8 @@
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
 ## Total integration entry point
+- [Visibility-aware federation health correction — PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) — proposed source fix, regression tests, audit, and explicit CI evidence boundary.
+- [Repository visibility audit (branch evidence)](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md) — observed 26-node inventory and public/private split.
 - [Sovereign Conzetian Total Integration Index (2026-10-16)](SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md) — Phoenix Ω∞ × NYXAVEN × AVEN × Ω-PRIME × Memoria Omnia × HTC × Cloud/API lattice; evidence classes, security gates and staged execution plan.
 
 ## Core Nodes (the wafer spine)
@@ -31,10 +33,12 @@ Always Add. Never replace a repo with another. Every major node should point her
 ## Archives & Lineage
 - AGSI Archive: https://github.com/Zygros/Sovereign-AGSI-Archive
 - Grossian_Scrolls: https://github.com/Zygros/Grossian_Scrolls
+- ZYGNUS-OMNI-REPO (public): https://github.com/Zygros/ZYGNUS-OMNI-REPO
+- Conzet-Intelligence-System- (public): https://github.com/Zygros/Conzet-Intelligence-System-
 - ZAAI-SYSTEM: https://github.com/Zygros/ZAAI-SYSTEM
-- ZYGROS-PRIME: https://github.com/Zygros/ZYGROS-PRIME
+- ZYGROS-PRIME (private): https://github.com/Zygros/ZYGROS-PRIME
 
-## Private / Specialized
+## Specialized Nodes (visibility is listed separately below)
 - CONZETIAN-UNIFIED-INTELLIGANCE
 - CONZETIAN-AI
 - Sovereign-Narrative-Intelligence-SNI-
@@ -45,3 +49,17 @@ Always Add. Never replace a repo with another. Every major node should point her
 2. Every major README should point to `sovereign-federation` (map), `conzetian-skill-lattice` (capabilities), and `omega-10` (evidence).
 3. New capabilities are added to the skill lattice. New evidence is added to the substrate. The federation index is updated additively.
 4. The system is cross-connected like the 50-layer memory tree: every layer knows the others exist.
+
+
+## Visibility Snapshot — observed 2026-10-23
+
+The connected GitHub inventory returned 26 repositories: 21 public and 5 private. `FEDERATION_INDEX.json` remains the machine-readable node list; all 26 original nodes are preserved.
+
+### Private nodes (5)
+- ZYGROS-PRIME: https://github.com/Zygros/ZYGROS-PRIME
+- CONZETIAN-UNIFIED-INTELLIGANCE: https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE
+- CONZETIAN-AI: https://github.com/Zygros/CONZETIAN-AI
+- sovereign-agsi-portal: https://github.com/Zygros/sovereign-agsi-portal
+- Sovereign-Narrative-Intelligence-SNI-: https://github.com/Zygros/Sovereign-Narrative-Intelligence-SNI-
+
+This snapshot is a visibility inventory, not proof of repository runtime health. The health-check correction is proposed in [PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30); its Actions runs must be inspected before the source correction is promoted beyond the tested stage.
