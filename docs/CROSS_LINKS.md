@@ -93,3 +93,13 @@ This is an evidence-integrity correction, separate from the visibility-health co
 - Reconciliation was repeated immediately before this append: the proposed `FEDERATION_INDEX.json` matches the connected live inventory at **26/26 exact repository names, 21 public, 5 private**, with zero visibility mismatches or omissions.
 
 PR #31 remains proposed and unmerged. The prior “Actions not yet returned” note records its earlier observation time; this addendum records the later successful runs. No deployment or external anchor is claimed.
+
+## Latest probe-code verification — observed 2026-10-23
+
+- Latest source/test commit: [12e667487b](https://github.com/Zygros/conzet-sovereign-intelligence/commit/12e667487bb2cb0365aeab459d7a40715c83058d).
+- [Phoenix Audit run #322](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458363) completed successfully after the corrected probe, executing the root Python audit and reporting **79 passed in 0.69s**.
+- [OmniNet Python CI run #263](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014458405) completed successfully across Python 3.8, 3.9, 3.10, and 3.11; every matrix job collected and passed the four-case probe regression module.
+- Remaining caveat: the repository's non-blocking Black check still flags the new test module, and mypy still reports a duplicate `conftest` module. The Actions runs are green, but formatting/type checking are not reported as clean.
+- Live inventory reconciliation repeated before this append: **26/26 exact repository names; 21 public; 5 private; zero visibility mismatches and zero omissions**. This confirms the proposed index data, not live URL reachability or merge state.
+
+The newest verification is an additive follow-up to the earlier run #320 checkpoint. PR #31 remains open and unmerged.
