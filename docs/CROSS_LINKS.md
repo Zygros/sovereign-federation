@@ -63,3 +63,16 @@ The connected GitHub inventory returned 26 repositories: 21 public and 5 private
 - Sovereign-Narrative-Intelligence-SNI-: https://github.com/Zygros/Sovereign-Narrative-Intelligence-SNI-
 
 This snapshot is a visibility inventory, not proof of repository runtime health. The health-check correction is proposed in [PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30); its Actions runs must be inspected before the source correction is promoted beyond the tested stage.
+
+## Remote verification checkpoint — observed 2026-10-23
+
+The live GitHub inventory and the proposed machine-readable index were re-compared before this note was added: **26/26 names match exactly, visibility matches for every node, and the index totals 21 public / 5 private**.
+
+### Source correction CI evidence
+
+- The health-check correction is proposed in [conzet-sovereign-intelligence PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30).
+- On source commit [96c04cf](https://github.com/Zygros/conzet-sovereign-intelligence/commit/96c04cf4544d3598ccdd8b5d56a7f33bd879158b), [OmniNet Python CI run #259](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40012093501) concluded success. The Python 3.8, 3.9, 3.10, and 3.11 matrix jobs each reported **78 passed** in the repository pytest suite and included the three visibility regression cases.
+- [Phoenix Audit run #306](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40012093647) concluded success at the job level, but its Python compile/audit subcheck was skipped after a find/grep broken-pipe result. It is not counted as Python compileall proof.
+- Workflow hygiene is not clean: Black reported 89 files needing formatting, including the touched test file, and mypy reported a duplicate conftest module. Those checks are explicitly non-blocking in the workflow. See the [append-only evidence checkpoint](https://github.com/Zygros/conzet-sovereign-intelligence/blob/3604310ba94f74a4ebcb9ada8ed983902ef2d0a6/EVIDENCE_CHAIN.md) and the [2026-10-23 visibility audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md).
+
+This records a verified CI result for the cited code commit, not for any later evidence-only branch head. The proposed correction and index reconciliation remain unmerged; mocked regression tests verify denominator behavior, not live reachability of every public URL. No deployment or external timestamp/Bitcoin/Arweave anchor is claimed.
