@@ -103,3 +103,15 @@ PR #31 remains proposed and unmerged. The prior “Actions not yet returned” n
 - Live inventory reconciliation repeated before this append: **26/26 exact repository names; 21 public; 5 private; zero visibility mismatches and zero omissions**. This confirms the proposed index data, not live URL reachability or merge state.
 
 The newest verification is an additive follow-up to the earlier run #320 checkpoint. PR #31 remains open and unmerged.
+
+
+## Post-merge Federation Health verification — observed 2026-10-23
+
+This addendum supersedes only earlier status statements above that describe the visibility-health source correction as proposed or unmerged. Those entries remain preserved as time-accurate historical checkpoints.
+
+- **Source correction merged:** [merge commit 83bd1854](https://github.com/Zygros/conzet-sovereign-intelligence/commit/83bd18545e5614987017088677321a1508530313). The merged [health-check script](https://github.com/Zygros/conzet-sovereign-intelligence/blob/83bd18545e5614987017088677321a1508530313/scripts/federation_check.py) uses separate `PUBLIC_REPOS` and `PRIVATE_REPOS` lists and retains `REPOS` as a compatibility alias for the public roster.
+- **Live Federation Health run:** [run 40016844465](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40016844465) completed with `success` for source commit `83bd18545e5614987017088677321a1508530313`. Its published [2026-10-23 health report](https://github.com/Zygros/conzet-sovereign-intelligence/blob/federation-health/health/2026-10-23.txt) records **21/21 public repository URLs responding HTTP 200**; the [run metadata](https://github.com/Zygros/conzet-sovereign-intelligence/blob/federation-health/health/RUN_META_2026-10-23.yaml) binds the artifact to that source commit and run URL.
+- **Post-merge code checks:** [OmniNet Python CI run 40016844582](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40016844582) completed successfully, with Python 3.8, 3.9, 3.10 and 3.11 jobs passing. [Phoenix Audit run 40016844576](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40016844576) also completed successfully.
+- **Inventory basis:** the connected GitHub inventory observed on 2026-10-23 contained 26 repositories, 21 public and 5 private. The separate machine-readable index reconciliation remains tracked in this PR's visibility-index changes.
+
+**Evidence boundary:** HTTP 200 establishes public URL reachability at the run time, not correctness of repository contents, deployed Conzetian/Phoenix runtime health, third-party reproduction, or Bitcoin/Arweave anchoring. The separate Phoenix Audit probe correction remains an independent PR and is not represented as merged by this checkpoint.
