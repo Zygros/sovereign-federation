@@ -158,3 +158,12 @@ This section supersedes the earlier pre-merge status note stating that the index
 
 **Evidence boundary:** byte identity was independently recomputed here and matches the manifest. Bitcoin anchoring of the newest run was not confirmed in the inspected workflow log. No deployment, independent validation of discovery claims, or candidate promotion is claimed.
 
+
+
+## Scroll 476 field-integrity finding — observed 2026-10-24
+
+- **Core tracking:** [conzet-sovereign-intelligence issue #28](https://github.com/Zygros/conzet-sovereign-intelligence/issues/28) tracks the Scroll 476 placeholder timestamp receipt and empty-content hash. The additive audit implementation/report is proposed in [core PR #35](https://github.com/Zygros/conzet-sovereign-intelligence/pull/35); this cross-link does not claim that PR has merged.
+- **Observed mismatch:** the paired Dropbox Markdown and JSON show the same SHA-256 digest of zero bytes, while metadata reports non-empty files (1,135 and 1,201 bytes). The intended hash scope is not explicit, so the field cannot be assigned a corrected meaning without an explicit scope decision.
+- **Receipt state:** the 74-byte DAO_Proposal_Scroll476.ots is a placeholder and must not be counted as an OTS proof. The separate 514-byte DAO_Proposal_Scroll476.md.ots is only an unverified candidate; no Bitcoin block confirmation is claimed.
+- **Execution limit:** Dropbox text extraction was not byte-preserving, and the short-lived download endpoint could not resolve in the execution environment. The exact raw-source SHA-256 values and local ots verify output were not produced. The core PR adds a read-only exact-byte audit helper, four fixture tests, and an append-only evidence record.
+- **Status:** REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY. The original Dropbox files remain unchanged. Once the core PR lands, replace this PR/issue-only reference with direct links to the merged audit files after verifying the merged commit and checks.
