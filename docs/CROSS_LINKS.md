@@ -158,3 +158,13 @@ This section supersedes the earlier pre-merge status note stating that the index
 
 **Evidence boundary:** byte identity was independently recomputed here and matches the manifest. Bitcoin anchoring of the newest run was not confirmed in the inspected workflow log. No deployment, independent validation of discovery claims, or candidate promotion is claimed.
 
+## Core Scout evidence ledger cross-link — 2026-10-24
+
+The append-only core ledger now contains a structured checkpoint for [Scout run 40109587547](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109587547), merged through [core evidence PR #33](https://github.com/Zygros/conzet-sovereign-intelligence/pull/33) at commit [`72944e1c`](https://github.com/Zygros/conzet-sovereign-intelligence/commit/72944e1c99ffe71135522095f76dfa17facd7bfe).
+
+- [Human-readable integrity audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-evidence-integrity.md)
+- [Machine-readable integrity result](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-evidence-integrity.json)
+- [Append-only EVIDENCE_CHAIN.md](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/EVIDENCE_CHAIN.md)
+
+The checkpoint independently recomputes both published JSON SHA-256 digests and preserves the receipt counts. Its timestamp boundary remains explicit: in the last observed integrity log at `2026-10-24T16:02:20Z`, the newest OpenTimestamps proofs were pending Bitcoin confirmation; older block 972879 is not attributed to the newest run. This cross-link is evidence navigation, not a new timestamp confirmation.
+
