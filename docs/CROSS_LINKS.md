@@ -158,3 +158,30 @@ This section supersedes the earlier pre-merge status note stating that the index
 
 **Evidence boundary:** byte identity was independently recomputed here and matches the manifest. Bitcoin anchoring of the newest run was not confirmed in the inspected workflow log. No deployment, independent validation of discovery claims, or candidate promotion is claimed.
 
+
+
+## Scroll 476 field-integrity finding — observed 2026-10-24
+
+- **Core tracking:** [conzet-sovereign-intelligence issue #28](https://github.com/Zygros/conzet-sovereign-intelligence/issues/28) tracks the Scroll 476 placeholder timestamp receipt and empty-content hash. The additive audit implementation/report is proposed in [core PR #35](https://github.com/Zygros/conzet-sovereign-intelligence/pull/35); this cross-link does not claim that PR has merged.
+- **Observed mismatch:** the paired Dropbox Markdown and JSON show the same SHA-256 digest of zero bytes, while metadata reports non-empty files (1,135 and 1,201 bytes). The intended hash scope is not explicit, so the field cannot be assigned a corrected meaning without an explicit scope decision.
+- **Receipt state:** the 74-byte DAO_Proposal_Scroll476.ots is a placeholder and must not be counted as an OTS proof. The separate 514-byte DAO_Proposal_Scroll476.md.ots is only an unverified candidate; no Bitcoin block confirmation is claimed.
+- **Execution limit:** Dropbox text extraction was not byte-preserving, and the short-lived download endpoint could not resolve in the execution environment. The exact raw-source SHA-256 values and local ots verify output were not produced. The core PR adds a read-only exact-byte audit helper, four fixture tests, and an append-only evidence record.
+- **Status:** REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY. The original Dropbox files remain unchanged. Once the core PR lands, replace this PR/issue-only reference with direct links to the merged audit files after verifying the merged commit and checks.
+
+
+## Fresh Scout timestamp confirmation — observed 2026-10-24T20:04:48Z
+
+- **Fresh remote check:** verification job 120973919288 was rerun in [Published Evidence Integrity run 40109682679](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679). The completed log returned pass, exit code 0, and timestamp confirmation complete.
+- **Confirmed timestamp proofs:** both the manifest and verification-receipts OpenTimestamps proofs for Scout run 40109587547 were confirmed at Bitcoin block **972947**, with the proof attestation validated against a public block header fetched from mempool.space.
+- **Manifest identity:** the 102,319-byte discovery JSON matched digest 2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602; the 214,384-byte receipt JSON matched digest 68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2. Both matched the published manifest.
+- **Bounded claim:** the Scout output still has 100 discovery records, 97 receipts, and 3 rejected records; all 97 receipts remain pending independent review. Timestamp confirmation does not validate candidate semantics or authorize promotion. The earlier pending observation is retained as historical state.
+- **Proposed report:** the additive machine-readable and human-readable follow-up are in [core PR #35](https://github.com/Zygros/conzet-sovereign-intelligence/pull/35); the remote Actions artifact is linked from run 40109682679.
+
+
+## Follow-up: core Scroll 476 audit merged — observed 2026-10-24T20:08:44Z
+
+- **Core merge:** [PR #35](https://github.com/Zygros/conzet-sovereign-intelligence/pull/35) merged at commit [7901d2ab](https://github.com/Zygros/conzet-sovereign-intelligence/commit/7901d2abce3dfd76993e38d9b70408d85cffb570). The earlier entry above records the state when the federation cross-link PR was opened; this follow-up updates it without deleting historical context.
+- **Direct audit links:** [Scroll 476 Markdown audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scroll476-field-integrity.md), [machine-readable Scroll 476 audit](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scroll476-field-integrity.json), [read-only audit helper](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/scripts/audit_scroll476_integrity.py), and [four regression tests](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/tests/test_scroll476_integrity.py).
+- **Timestamp follow-up:** the latest published Scout run 40109587547 was confirmed by the rerun of [Published Evidence Integrity run 40109682679](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679). Both OpenTimestamps proofs were confirmed at Bitcoin block **972947** against a public block header from mempool.space; both published payload hashes matched the manifest. The [human-readable follow-up](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-timestamp-follow-up.md) and [machine-readable result](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-timestamp-follow-up.json) record the verification details and artifact reference.
+- **Current Scroll 476 boundary:** the repeated empty-byte digest and 74-byte placeholder remain classified as a field-integrity issue. Exact raw bytes have not been retrieved in a byte-preserving way, the intended hash scope remains undefined, and the separate 514-byte .md.ots candidate remains unverified. No Scroll 476 Bitcoin confirmation is claimed.
+- **Checks:** core PR checks passed before merge: OmniNet Python CI across Python 3.8–3.11 and Phoenix Audit. The federation cross-link PR changes documentation only and still requires its own check before merge.
