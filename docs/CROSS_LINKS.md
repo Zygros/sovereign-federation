@@ -167,3 +167,12 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **Receipt state:** the 74-byte DAO_Proposal_Scroll476.ots is a placeholder and must not be counted as an OTS proof. The separate 514-byte DAO_Proposal_Scroll476.md.ots is only an unverified candidate; no Bitcoin block confirmation is claimed.
 - **Execution limit:** Dropbox text extraction was not byte-preserving, and the short-lived download endpoint could not resolve in the execution environment. The exact raw-source SHA-256 values and local ots verify output were not produced. The core PR adds a read-only exact-byte audit helper, four fixture tests, and an append-only evidence record.
 - **Status:** REPRODUCED_FIELD_INCONSISTENCY_METADATA_ONLY. The original Dropbox files remain unchanged. Once the core PR lands, replace this PR/issue-only reference with direct links to the merged audit files after verifying the merged commit and checks.
+
+
+## Fresh Scout timestamp confirmation — observed 2026-10-24T20:04:48Z
+
+- **Fresh remote check:** verification job 120973919288 was rerun in [Published Evidence Integrity run 40109682679](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40109682679). The completed log returned pass, exit code 0, and timestamp confirmation complete.
+- **Confirmed timestamp proofs:** both the manifest and verification-receipts OpenTimestamps proofs for Scout run 40109587547 were confirmed at Bitcoin block **972947**, with the proof attestation validated against a public block header fetched from mempool.space.
+- **Manifest identity:** the 102,319-byte discovery JSON matched digest 2ca43c08601cac4aa3171c0c97272d9da474f8e9a7ac31cc41ec2f0c15e9e602; the 214,384-byte receipt JSON matched digest 68b97a14b45374d257a9ddb5ef9083857970e0d6ba65e5f2f7d27a78cc83f0c2. Both matched the published manifest.
+- **Bounded claim:** the Scout output still has 100 discovery records, 97 receipts, and 3 rejected records; all 97 receipts remain pending independent review. Timestamp confirmation does not validate candidate semantics or authorize promotion. The earlier pending observation is retained as historical state.
+- **Proposed report:** the additive machine-readable and human-readable follow-up are in [core PR #35](https://github.com/Zygros/conzet-sovereign-intelligence/pull/35); the remote Actions artifact is linked from run 40109682679.
