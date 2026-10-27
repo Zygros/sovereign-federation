@@ -32,7 +32,7 @@
 
 ## Reproducibility
 
-The companion JSON contains the observed repository inventory, indexed inventory, comparison arrays, source blob SHAs, merge commit SHAs, workflow run identifier, step results, and scope limits. Re-run the same comparison against the listed live GitHub API endpoints to reproduce the inventory check.
+The companion JSON contains the observed repository inventory, indexed inventory, comparison arrays, source blob SHAs, merge commit SHAs, workflow run identifier, step results, and scope limits. Re-run the comparison through the authenticated GitHub repository-listing connector with `owner=Zygros`, `page_size=100`, and `page_offset=0`. The public API URL above is only a navigation reference; private nodes require authorized GitHub access.
 
 - [Machine-readable audit record](./2026-10-27-federation-live-reconciliation.json)
 - [Federation index source](https://github.com/Zygros/sovereign-federation/blob/main/FEDERATION_INDEX.json)
