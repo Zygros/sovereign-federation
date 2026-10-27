@@ -207,3 +207,10 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **Evidence boundaries:** the Phoenix proof-cycle runner remains scoped to deterministic local verification machinery. The Scout integrity checkpoint's earlier pending timestamp observation is historical; a later section above records the subsequent block 972947 confirmation for that Scout run. Scroll 476's 74-byte receipt remains an invalid placeholder and its separate OTS candidate remains unverified.
 - **Reproducible report:** [human-readable audit](../evidence/audits/2026-10-27-federation-live-reconciliation.md) and [machine-readable audit record](../evidence/audits/2026-10-27-federation-live-reconciliation.json). These preserve the live inventory, comparison arrays, source blob SHAs, merge SHAs, workflow run/step outcomes, and explicit limits.
 - **Scope:** this is an inventory and selected-artifact reconciliation, not a source-level audit of all repositories, a new external anchor, a production deployment, or a Google Drive connection/scan. Existing historical entries are preserved.
+
+
+## Reconciliation PR CI follow-up — 2026-10-27
+
+- The additive reconciliation snapshot at commit `aef786f70f7f8ee3e76419e642f6070b46f2117b` passed [push Phoenix Audit run 40564441638](https://github.com/Zygros/sovereign-federation/actions/runs/40564441638) and [pull-request Phoenix Audit run 40564492682](https://github.com/Zygros/sovereign-federation/actions/runs/40564492682).
+- Both runs completed the configured Python/federation audit, Node audit, and secret-pattern steps with `success`.
+- This records the test result for that exact snapshot. The current PR branch continues through CI after this additive follow-up; no merge or deployment is implied.
