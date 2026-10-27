@@ -34,6 +34,15 @@
       "rejected_records": 3,
       "claims_verified_false": true,
       "historical_timestamp_status": "pending_in_that_observation"
+    },
+    "repository_inventory_source": {
+      "method": "authenticated GitHub connector list_repositories",
+      "parameters": {
+        "owner": "Zygros",
+        "page_size": 100,
+        "page_offset": 0
+      },
+      "qualification": "The API URL listed beside this record is a navigation reference only. Reproducing the full 26-repository inventory, including private repositories, requires authorized GitHub access; an unauthenticated public listing will not expose private nodes."
     }
   },
   "inventory_reconciliation": {
