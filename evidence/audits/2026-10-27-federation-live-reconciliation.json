@@ -1,0 +1,423 @@
+{
+  "schema_version": "conzetian-federation-live-reconciliation/v1",
+  "observed_at_utc": "2026-10-27T18:55:15.693Z",
+  "evidence_class": "TESTED_PENDING_REVIEW",
+  "scope": "Live GitHub repository inventory reconciliation plus selected federation, Phoenix, and Scout evidence-artifact inspection. This is not a full source audit of all repositories.",
+  "sources": {
+    "repository_inventory_api": "https://api.github.com/users/Zygros/repos?per_page=100",
+    "federation_index": {
+      "url": "https://github.com/Zygros/sovereign-federation/blob/main/FEDERATION_INDEX.json",
+      "blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+      "updated_at": "2026-10-23T19:27:33Z"
+    },
+    "cross_links": {
+      "url": "https://github.com/Zygros/sovereign-federation/blob/main/docs/CROSS_LINKS.md",
+      "blob_sha": "c802b726c04c6e4d008a4447be03e7cc78a226e3"
+    },
+    "federation_main": {
+      "url": "https://github.com/Zygros/sovereign-federation/tree/main",
+      "commit_sha": "e08e3589b865a5135e05784ea3cf1a56fa8b7d58"
+    },
+    "phoenix_proof_cycle": {
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/blob/main/tools/phoenix_proof_cycle.py",
+      "blob_sha": "bcfaad275078695f22f2cac37c1085575b34fe8b",
+      "scope_statement": "Local deterministic verification machinery only; does not claim external AI execution, web research, Bitcoin/Arweave anchoring, or production deployment."
+    },
+    "scout_integrity_checkpoint": {
+      "markdown_url": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-evidence-integrity.md",
+      "markdown_blob_sha": "7224a82e97b91199db1960348461bf47aa24b19d",
+      "json_url": "https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-10-24-scout-evidence-integrity.json",
+      "json_blob_sha": "1fc1959aa58797ce3a06b953dc318dee06411793",
+      "observed_at": "2026-10-24T16:02:20.294222Z",
+      "records": 100,
+      "receipts": 97,
+      "rejected_records": 3,
+      "claims_verified_false": true,
+      "historical_timestamp_status": "pending_in_that_observation"
+    },
+    "repository_inventory_source": {
+      "method": "authenticated GitHub connector list_repositories",
+      "parameters": {
+        "owner": "Zygros",
+        "page_size": 100,
+        "page_offset": 0
+      },
+      "qualification": "The API URL listed beside this record is a navigation reference only. Reproducing the full 26-repository inventory, including private repositories, requires authorized GitHub access; an unauthenticated public listing will not expose private nodes."
+    }
+  },
+  "inventory_reconciliation": {
+    "live_repository_count": 26,
+    "indexed_repository_count": 26,
+    "live_public_count": 21,
+    "live_private_count": 5,
+    "missing_from_live_inventory": [],
+    "extra_in_live_inventory": [],
+    "visibility_mismatches": [],
+    "exact_name_and_visibility_match": true,
+    "index_updated_at_retained_without_rewrite": "2026-10-23T19:27:33Z",
+    "live_repositories": [
+      {
+        "name": "agentql",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "agents",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ARC-AGI",
+        "visibility": "public",
+        "default_branch": "master",
+        "archived": false
+      },
+      {
+        "name": "Conzet-Intelligence-System-",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "conzet-sovereign-intelligence",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "CONZETIAN-AI",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "conzetian-method",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "conzetian-skill-lattice",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "CONZETIAN-UNIFIED-INTELLIGANCE",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "CZAOUA-UNITY-SYSTEM",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "Grossian_Scrolls",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "multi-ai-convergence-protocol",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "omega-10",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "omninet-v4",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "PHOENIX-PROTOCOL-ULTIMATE",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "Sovereign-AGSI-Archive",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "sovereign-agsi-portal",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "sovereign-federation",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "Sovereign-Narrative-Intelligence-SNI-",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ultimate-phoenix-protocol",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ultimate-phoenix-protocol-ssi",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "we-omega",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ZAAI-SYSTEM",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ZYGNUS-OMNI-REPO",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "ZYGROS-PRIME",
+        "visibility": "private",
+        "default_branch": "main",
+        "archived": false
+      },
+      {
+        "name": "zyth-ultimate",
+        "visibility": "public",
+        "default_branch": "main",
+        "archived": false
+      }
+    ],
+    "indexed_repositories": [
+      {
+        "name": "agentql",
+        "visibility": "public"
+      },
+      {
+        "name": "agents",
+        "visibility": "public"
+      },
+      {
+        "name": "ARC-AGI",
+        "visibility": "public"
+      },
+      {
+        "name": "Conzet-Intelligence-System-",
+        "visibility": "public"
+      },
+      {
+        "name": "conzet-sovereign-intelligence",
+        "visibility": "public"
+      },
+      {
+        "name": "CONZETIAN-AI",
+        "visibility": "private"
+      },
+      {
+        "name": "conzetian-method",
+        "visibility": "public"
+      },
+      {
+        "name": "conzetian-skill-lattice",
+        "visibility": "public"
+      },
+      {
+        "name": "CONZETIAN-UNIFIED-INTELLIGANCE",
+        "visibility": "private"
+      },
+      {
+        "name": "CZAOUA-UNITY-SYSTEM",
+        "visibility": "public"
+      },
+      {
+        "name": "Grossian_Scrolls",
+        "visibility": "public"
+      },
+      {
+        "name": "multi-ai-convergence-protocol",
+        "visibility": "public"
+      },
+      {
+        "name": "omega-10",
+        "visibility": "public"
+      },
+      {
+        "name": "omninet-v4",
+        "visibility": "public"
+      },
+      {
+        "name": "PHOENIX-PROTOCOL-ULTIMATE",
+        "visibility": "public"
+      },
+      {
+        "name": "Sovereign-AGSI-Archive",
+        "visibility": "public"
+      },
+      {
+        "name": "sovereign-agsi-portal",
+        "visibility": "private"
+      },
+      {
+        "name": "sovereign-federation",
+        "visibility": "public"
+      },
+      {
+        "name": "Sovereign-Narrative-Intelligence-SNI-",
+        "visibility": "private"
+      },
+      {
+        "name": "ultimate-phoenix-protocol",
+        "visibility": "public"
+      },
+      {
+        "name": "ultimate-phoenix-protocol-ssi",
+        "visibility": "public"
+      },
+      {
+        "name": "we-omega",
+        "visibility": "public"
+      },
+      {
+        "name": "ZAAI-SYSTEM",
+        "visibility": "public"
+      },
+      {
+        "name": "ZYGNUS-OMNI-REPO",
+        "visibility": "public"
+      },
+      {
+        "name": "ZYGROS-PRIME",
+        "visibility": "private"
+      },
+      {
+        "name": "zyth-ultimate",
+        "visibility": "public"
+      }
+    ]
+  },
+  "cross_link_gap": {
+    "cross_links_blob_sha_before_change": "c802b726c04c6e4d008a4447be03e7cc78a226e3",
+    "direct_reference_to_core_scout_duplicate_audit_pr34": false,
+    "direct_reference_to_federation_checkpoint_pr6": false,
+    "action": "Append dated navigation/evidence checkpoint; preserve existing historical sections."
+  },
+  "merged_changes": [
+    {
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "pr": 34,
+      "title": "feat(scout): publish non-destructive duplicate-signal audit",
+      "merged": true,
+      "merged_at": "2026-10-25T05:05:50Z",
+      "merge_commit_sha": "5963d3bcf986514a265c8922669a224cc3f9caf6",
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/34"
+    },
+    {
+      "repository": "Zygros/sovereign-federation",
+      "pr": 6,
+      "title": "Record merged inventory and latest Scout evidence status",
+      "merged": true,
+      "merged_at": "2026-10-24T19:36:02Z",
+      "merge_commit_sha": "827b0050d4a9ed180e2acbfe91d02d8438e3999f",
+      "url": "https://github.com/Zygros/sovereign-federation/pull/6"
+    }
+  ],
+  "latest_main_audit": {
+    "run_id": 40215912489,
+    "name": "Phoenix Audit",
+    "event": "push",
+    "status": "completed",
+    "conclusion": "success",
+    "head_sha": "e08e3589b865a5135e05784ea3cf1a56fa8b7d58",
+    "created_at": "2026-10-25T17:19:35Z",
+    "updated_at": "2026-10-25T17:19:44Z",
+    "url": "https://github.com/Zygros/sovereign-federation/actions/runs/40215912489",
+    "job_steps": [
+      {
+        "job": "audit",
+        "step": "Set up job",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Python and federation audit",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Node audit",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Secret patterns",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Post Run actions/checkout@v4",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "job": "audit",
+        "step": "Complete job",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "open_pr_context": {
+    "pr": 7,
+    "url": "https://github.com/Zygros/sovereign-federation/pull/7",
+    "state": "open",
+    "merged": false,
+    "base_sha": "827b0050d4a9ed180e2acbfe91d02d8438e3999f",
+    "head_sha": "d1813fe88309e500a096ad36b5aab1ca9c0255ff",
+    "mergeable_reported": false,
+    "note": "Existing PR #7 is a separate Scout-evidence cross-link. Its recorded base SHA predates current main; this audit uses a new branch from current main and does not rewrite the older branch."
+  },
+  "evidence_boundaries": [
+    "The live inventory result is metadata reconciliation, not a source-level audit of every repository.",
+    "The federation Phoenix Audit checks the repository's configured compile/test/build/secret-pattern steps; it does not prove every member repository is healthy.",
+    "The Phoenix proof-cycle runner explicitly scopes itself to deterministic local verification machinery.",
+    "Scout payload hash identity is not semantic truth; receipts remain subject to independent review.",
+    "A later checkpoint in docs/CROSS_LINKS.md records Bitcoin block 972947 for the Scout timestamp follow-up; the older 2026-10-24 pending observation above is retained as historical chronology and is not treated as current status.",
+    "The Scroll 476 follow-up in docs/CROSS_LINKS.md still classifies the 74-byte receipt as an invalid placeholder and the separate OTS candidate as unverified.",
+    "No Google Drive connection, full Drive scan, external deployment, or new external anchor is claimed."
+  ]
+}
