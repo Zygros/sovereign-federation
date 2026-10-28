@@ -1,0 +1,77 @@
+{
+  "schema_version": "conzetian-private-node-ci-checkpoint/v1",
+  "observed_at_utc": "2026-10-28T19:31:55Z",
+  "evidence_class": "TESTED_PENDING_REVIEW",
+  "scope": "Sanitized CI checkpoint for a private repository; not a full source audit.",
+  "private_node": {
+    "repository": "Zygros/ZYGROS-PRIME",
+    "visibility": "private",
+    "pr_number": 7,
+    "pr_url": "https://github.com/Zygros/ZYGROS-PRIME/pull/7",
+    "head_sha": "f32225f0c369050a05b092b741259f32d32968cb",
+    "merged": false
+  },
+  "changes": [
+    "Fix malformed usage-string quoting in Downloaded/send_prompt_1.py.",
+    "Exclude the explicitly incomplete Unpacked export tree from the repository compile gate.",
+    "Apply the same narrow Unpacked exclusion to the fatal Flake8 check.",
+    "Preserve the existing safe early-exit Python source probe."
+  ],
+  "verified_runs": [
+    {
+      "id": 40754460888,
+      "name": "Repository Quality Gate",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460888"
+    },
+    {
+      "id": 40754460943,
+      "name": "Phoenix Audit",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460943"
+    },
+    {
+      "id": 40754460899,
+      "name": "OmniNet Python CI",
+      "status": "completed",
+      "conclusion": "success",
+      "python_matrix": [
+        "3.8",
+        "3.9",
+        "3.10",
+        "3.11"
+      ],
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460899"
+    }
+  ],
+  "external_blocker": {
+    "workflow": "HTC Claim Audit",
+    "push_run": {
+      "id": 40754453440,
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754453440"
+    },
+    "pull_request_run": {
+      "id": 40754460901,
+      "status": "in_progress_at_last_observation",
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460901"
+    },
+    "failing_step": "Attest evidence bundle provenance",
+    "prior_reproduction_run": {
+      "id": 40015791480,
+      "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40015791480"
+    },
+    "observed_error": "GitHub reports provenance-attestation persistence unavailable for user-owned private repositories.",
+    "action_taken": "No repository visibility change; no attestation success claimed."
+  },
+  "scope_limits": [
+    "Private code PR remains open and unmerged.",
+    "This note omits private claim-level audit payloads.",
+    "Workflow success is scoped to configured checks, not a blanket source or semantic audit.",
+    "No production deployment or external attestation is claimed."
+  ]
+}
