@@ -235,3 +235,13 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **Verified reruns:** [CI run 40753589925](https://github.com/Zygros/omega-10/actions/runs/40753589925) passed on Python 3.11 and 3.12, including strict repository-wide Ruff and the full pytest suite. [Phoenix Audit push run 40753579774](https://github.com/Zygros/omega-10/actions/runs/40753579774) and [pull-request run 40753589935](https://github.com/Zygros/omega-10/actions/runs/40753589935) also completed successfully on the fix commit.
 - **Boundary:** these results verify the cited workflow checks only. The benchmark remains a local microbenchmark; no production deployment, OTS verification, external anchor, or credential remediation is claimed. The code PR remains unmerged pending review.
 - **Append-only rule:** this section adds the failed-to-passing CI chronology and direct evidence links without removing prior entries or upgrading unrelated evidence.
+
+
+## Private-node Phoenix source-probe CI checkpoint — 2026-10-28
+
+- **Sanitized evidence:** [Markdown checkpoint](../evidence/audits/2026-10-28-private-node-ci-checkpoint.md) and [machine-readable JSON](../evidence/audits/2026-10-28-private-node-ci-checkpoint.json).
+- **Private review branch:** [ZYGROS-PRIME PR #7](https://github.com/Zygros/ZYGROS-PRIME/pull/7), head `f32225f0c369050a05b092b741259f32d32968cb`; still open and unmerged.
+- **Verified checks:** [Repository Quality Gate run 40754460888](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460888) passed; [Phoenix Audit PR run 40754460943](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460943) passed; [OmniNet Python CI run 40754460899](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460899) passed on Python 3.8–3.11.
+- **External blocker:** [HTC Claim Audit run 40754453440](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754453440) uploaded its audit artifact but failed to persist GitHub build provenance because the platform reports attestations unavailable for user-owned private repositories. The corresponding [PR run 40754460901](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460901) was in progress at the last observation. The node remains private; no attestation or complete-workflow success is claimed.
+- **Privacy and scope:** this public checkpoint records CI status and the platform blocker only. It does not expose the private claim-audit payload, assert that all repository content is valid, or claim production deployment.
+- **Append-only rule:** prior federation history remains intact; the new entry links the observed repair and verification state without promoting the blocked attestation.
