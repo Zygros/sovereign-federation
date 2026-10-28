@@ -1,0 +1,80 @@
+{
+  "schema_version": "omega10-strict-lint-recovery/v1",
+  "observed_at_utc": "2026-10-28T19:21:56Z",
+  "evidence_class": "TESTED",
+  "repository": "Zygros/omega-10",
+  "pull_request": {
+    "number": 1,
+    "url": "https://github.com/Zygros/omega-10/pull/1",
+    "state": "open",
+    "merged": false
+  },
+  "failure": {
+    "run_id": 39838393636,
+    "url": "https://github.com/Zygros/omega-10/actions/runs/39838393636",
+    "head_sha": "0408380366a1970a640234a9d802419cae773646",
+    "conclusion": "failure",
+    "findings": [
+      {
+        "code": "EXE001",
+        "path": "scripts/mmap_ring_benchmark.py",
+        "description": "Shebang present but file not executable"
+      },
+      {
+        "code": "UP017",
+        "path": "scripts/mmap_ring_benchmark.py",
+        "description": "Use datetime.UTC alias"
+      }
+    ],
+    "pytest_ran": false
+  },
+  "repair": {
+    "commit_sha": "f08668c4b5b06f55b116a262f88c6d429c158d6e",
+    "parent_sha": "0408380366a1970a640234a9d802419cae773646",
+    "path": "scripts/mmap_ring_benchmark.py",
+    "prior_blob_sha": "7ed8865b9c33f2ec9ee9cc286bca9e11035954f2",
+    "new_blob_sha": "19c362025637571b9c38309984757b854cd1d564",
+    "changes": [
+      "Use datetime.UTC",
+      "Set Git file mode to 100755 to match existing shebang"
+    ]
+  },
+  "verification": [
+    {
+      "run_id": 40753589925,
+      "name": "CI",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Zygros/omega-10/actions/runs/40753589925",
+      "checks": [
+        "Python 3.11 strict ruff check .",
+        "Python 3.11 full pytest suite",
+        "Python 3.12 strict ruff check .",
+        "Python 3.12 full pytest suite"
+      ]
+    },
+    {
+      "run_id": 40753579774,
+      "name": "Phoenix Audit",
+      "event": "push",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Zygros/omega-10/actions/runs/40753579774"
+    },
+    {
+      "run_id": 40753589935,
+      "name": "Phoenix Audit",
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/Zygros/omega-10/actions/runs/40753589935"
+    }
+  ],
+  "scope_limits": [
+    "The code PR remains open and unmerged.",
+    "Local deterministic benchmark only; no production deployment is claimed.",
+    "No OpenTimestamps verification, external anchor, or credential remediation is claimed.",
+    "This is a targeted lint repair, not a full source audit."
+  ]
+}

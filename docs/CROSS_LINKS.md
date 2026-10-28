@@ -224,3 +224,14 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **Claim boundary:** timestamp confirmation binds the published bytes; it does not establish the semantic truth of the 100 discovery records, independently verify the 97 receipts, or promote candidates. The core follow-up keeps all 97 receipts pending independent review.
 - **Separate Scroll 476 boundary:** this Scout timestamp result is not attributed to Scroll 476. Its 74-byte `.ots` remains an invalid placeholder and the separate 514-byte OTS candidate remains unverified.
 - **Historical-state rule:** this section adds the missing direct navigation links and current timestamp chronology without deleting or rewriting the earlier pending-state observation.
+
+
+## Omega-10 strict-lint recovery — 2026-10-28
+
+- **Evidence report:** [human-readable recovery record](../evidence/audits/2026-10-28-omega10-strict-lint-recovery.md) and [machine-readable JSON receipt](../evidence/audits/2026-10-28-omega10-strict-lint-recovery.json).
+- **Code review:** [Omega-10 PR #1](https://github.com/Zygros/omega-10/pull/1) remains open and unmerged.
+- **Observed failure:** [CI run 39838393636](https://github.com/Zygros/omega-10/actions/runs/39838393636) failed the strict lint gate on `scripts/mmap_ring_benchmark.py` for `EXE001` (shebang/file mode mismatch) and `UP017` (UTC alias); pytest was skipped.
+- **Additive fix:** [commit `f08668c4b5b06f55b116a262f88c6d429c158d6e`](https://github.com/Zygros/omega-10/commit/f08668c4b5b06f55b116a262f88c6d429c158d6e) changes only that script's datetime import/use and tracked executable mode.
+- **Verified reruns:** [CI run 40753589925](https://github.com/Zygros/omega-10/actions/runs/40753589925) passed on Python 3.11 and 3.12, including strict repository-wide Ruff and the full pytest suite. [Phoenix Audit push run 40753579774](https://github.com/Zygros/omega-10/actions/runs/40753579774) and [pull-request run 40753589935](https://github.com/Zygros/omega-10/actions/runs/40753589935) also completed successfully on the fix commit.
+- **Boundary:** these results verify the cited workflow checks only. The benchmark remains a local microbenchmark; no production deployment, OTS verification, external anchor, or credential remediation is claimed. The code PR remains unmerged pending review.
+- **Append-only rule:** this section adds the failed-to-passing CI chronology and direct evidence links without removing prior entries or upgrading unrelated evidence.
