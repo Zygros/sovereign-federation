@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "report_date": "2026-10-29",
+  "scope": "Public repository Phoenix Audit source-probe repair reconciliation",
+  "completed": [
+    {
+      "repository": "Zygros/CZAOUA-UNITY-SYSTEM",
+      "pr": 1,
+      "merged": true,
+      "merge_commit": "d0425dbf6b091a51189ed6008fa58fbe917edb29",
+      "pr_branch_audit_run": 40015204598,
+      "pr_branch_audit_conclusion": "success",
+      "main_workflow_blob": "09bd804aa189ce59a60e64d1e9183975fa3d7418",
+      "main_has_safe_probe": true,
+      "main_has_unsafe_probe": false
+    }
+  ],
+  "pending": [
+    {
+      "repository": "Zygros/multi-ai-convergence-protocol",
+      "pr": 9,
+      "head": "2869a53aaa9143f7d7584ab124856fd850ee9475",
+      "previous_failed_run": 40015129794,
+      "previous_failure": "Jest found no tests",
+      "current_change": "Skip Jest only when no supported Jest test files are present; build remains enforced",
+      "latest_head_ci_runs_returned": 0,
+      "ci_verified": false,
+      "merged": false
+    },
+    {
+      "repository": "Zygros/ZAAI-SYSTEM",
+      "pr": 3,
+      "head": "850112d21c678730ecb266a948cbe5b8f4b2d112",
+      "previous_failed_run": 40015217086,
+      "previous_failure": "pytest found no tests and exited 5",
+      "current_change": "Skip pytest only when no Python test files are present; compileall remains enforced",
+      "latest_head_ci_runs_returned": 0,
+      "ci_verified": false,
+      "merged": false
+    },
+    {
+      "repository": "Zygros/ultimate-phoenix-protocol-ssi",
+      "pr": 2,
+      "head": "9e796f5f725062b73438415404dcc67e8414bb23",
+      "failed_runs": [
+        40015134360,
+        40015134385,
+        40015134390
+      ],
+      "failures": [
+        "one JavaScript test failed",
+        "ESLint configuration missing",
+        "npm install failed"
+      ],
+      "fixed": false,
+      "merged": false
+    }
+  ],
+  "public_security_scope": "No private security findings included",
+  "external_anchors_claimed": false,
+  "deployment_claimed": false
+}
