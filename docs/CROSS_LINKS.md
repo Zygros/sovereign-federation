@@ -245,3 +245,12 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **External blocker:** [HTC Claim Audit run 40754453440](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754453440) uploaded its audit artifact but failed to persist GitHub build provenance because the platform reports attestations unavailable for user-owned private repositories. The corresponding [PR run 40754460901](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/40754460901) was in progress at the last observation. The node remains private; no attestation or complete-workflow success is claimed.
 - **Privacy and scope:** this public checkpoint records CI status and the platform blocker only. It does not expose the private claim-audit payload, assert that all repository content is valid, or claim production deployment.
 - **Append-only rule:** prior federation history remains intact; the new entry links the observed repair and verification state without promoting the blocked attestation.
+
+
+## Phoenix Audit source-probe reconciliation — 2026-10-29
+
+- **Evidence:** [reconciliation report](../evidence/audits/2026-10-29-phoenix-audit-probe-reconciliation.md) and [machine-readable record](../evidence/audits/2026-10-29-phoenix-audit-probe-reconciliation.json).
+- **Merged repair:** [CZAOUA-UNITY-SYSTEM PR #1](https://github.com/Zygros/CZAOUA-UNITY-SYSTEM/pull/1), merge commit `d0425dbf6b091a51189ed6008fa58fbe917edb29`. Its PR-branch Phoenix Audit passed; the merged workflow file was re-read and contains the safe early-exit Python source probe.
+- **Pending repairs:** [multi-ai-convergence-protocol PR #9](https://github.com/Zygros/multi-ai-convergence-protocol/pull/9) and [ZAAI-SYSTEM PR #3](https://github.com/Zygros/ZAAI-SYSTEM/pull/3) now distinguish absent test files from failing tests while preserving compilation/build gates. No CI runs were returned for their latest heads, so they remain unverified and unmerged.
+- **Unresolved related branch:** [ultimate-phoenix-protocol-ssi PR #2](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/pull/2) still has failures in Phoenix Audit, CI/CD, and OmniNet JavaScript CI; this entry does not claim those issues are fixed.
+- **Scope:** public CI status only. No private security details, deployments, or external anchors are claimed. Earlier entries remain intact.
