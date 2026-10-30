@@ -279,3 +279,18 @@ This section supersedes the earlier pre-merge status note stating that the index
 - **Evidence refresh:** [latest PR secure-cell run 41113567380](https://github.com/Zygros/omninet-v4/actions/runs/41113567380) and [latest PR Phoenix Audit run 41113567209](https://github.com/Zygros/omninet-v4/actions/runs/41113567209) also completed successfully on the evidence-bearing branch head. The matrix again reported **14 passed** on each Python version; Phoenix Audit reported **21 passed**.
 - **Scope boundary:** the workflow intentionally uses `pip install -e . --no-deps` plus focused dependencies; pip emits a resolver warning because unrelated legacy application dependencies are not installed in this focused environment. This is not a full repository test, dependency audit, Tor integration, multi-host replay test, production deployment, or external OTS/Bitcoin/Arweave anchor.
 
+## SSI adapter CI reconciliation — observed 2026-10-30
+
+This addendum updates the earlier historical note that [ultimate-phoenix-protocol-ssi PR #2](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/pull/2) retained CI failures. The earlier failures remain valid observations for their earlier commits; the following later checks verify the evidence-bearing branch head.
+
+- **Source PR:** [SSI PR #2](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/pull/2), branch `conzetian/phoenix-audit-source-probe-2026-10-23`. The PR remains open and unmerged.
+- **Evidence-bearing head:** `0275b9a38ac555150a6681e9d8dd3084f5b87128`.
+- **Phoenix Audit:** [PR run 41114494390](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/actions/runs/41114494390) and [push run 41114489350](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/actions/runs/41114489350) completed successfully. The adapter suite reported **4 passed, 0 failed**.
+- **OmniNet JavaScript CI:** [PR run 41114494479](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/actions/runs/41114494479) completed successfully on Node 20 and 22; each matrix job reported **4 passed, 0 failed**.
+- **Test-runner correction:** the adapter tests use Node's native `node:test` runner. Phoenix Audit now installs `adapters/` from its own lockfile and runs `npm test --prefix adapters`; the root Jest runner is no longer used to execute Node-native tests.
+- **Credential scan:** the Phoenix Audit scanner now emits file paths only, excludes `node_modules`, and does not print matching source lines. The successful run reported no matching paths.
+- **Reproducible evidence:** [Markdown report](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/blob/conzetian/phoenix-audit-source-probe-2026-10-23/evidence/audits/2026-10-30-ssi-ci-reconciliation.md) and [machine-readable JSON receipt](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/blob/conzetian/phoenix-audit-source-probe-2026-10-23/evidence/audits/2026-10-30-ssi-ci-reconciliation.json).
+- **Remaining independent workflow failure:** [legacy CI/CD run 41114275622](https://github.com/Zygros/ultimate-phoenix-protocol-ssi/actions/runs/41114275622) failed at the root ESLint step because no ESLint configuration exists; subsequent tests, coverage, npm audit, Trivy, and Codecov steps were skipped. It is not represented as green or resolved by the Phoenix Audit/JavaScript CI results.
+
+**Evidence boundary:** these checks validate the adapter test suite and workflow behavior on the cited commits. They do not establish production deployment, live multi-model execution, or external OTS/Bitcoin/Arweave anchoring.
+
