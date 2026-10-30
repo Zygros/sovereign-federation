@@ -268,3 +268,14 @@ This section supersedes the earlier pre-merge status note stating that the index
 ## ZAAI post-merge verification completion — 2026-10-29
 
 - [Validate Repository run 40934154212](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/40934154212) completed successfully after the prior reconciliation refresh. The earlier in-progress observation remains preserved in the audit chronology.
+
+## OmniNet v4 packaging and secure-cell verification — observed 2026-10-30
+
+- **Source PR:** [omninet-v4 PR #1](https://github.com/Zygros/omninet-v4/pull/1), branch `sovereign-execution/secure-cell-verification`. The PR remains open and unmerged; this entry records the proposed implementation and its CI evidence, not a main-branch promotion.
+- **Code correction commit:** [a3badb9f](https://github.com/Zygros/omninet-v4/commit/a3badb9faea0ae2206b57a03803d7b368a44467b) normalizes the invalid `3.0.0-UNITY` package version to PEP 440 `3.0.0+unity`, declares the `omninet` package mapping for Poetry, and adds a version-consistency regression test.
+- **Focused CI:** [PR run 41113319963](https://github.com/Zygros/omninet-v4/actions/runs/41113319963) and [push run 41113315066](https://github.com/Zygros/omninet-v4/actions/runs/41113315066) completed successfully. Secure-cell, replay-guard, and package-version tests reported **14 passed** on each of Python 3.10, 3.11, and 3.12.
+- **Phoenix Audit:** [PR run 41113320040](https://github.com/Zygros/omninet-v4/actions/runs/41113320040) and [push run 41113315001](https://github.com/Zygros/omninet-v4/actions/runs/41113315001) completed successfully; the Python suite reported **21 passed**.
+- **Reproducible branch evidence:** [Markdown report](https://github.com/Zygros/omninet-v4/blob/sovereign-execution/secure-cell-verification/reports/2026-10-30-omninet-packaging-secure-cell-ci.md) and [machine-readable JSON receipt](https://github.com/Zygros/omninet-v4/blob/sovereign-execution/secure-cell-verification/reports/2026-10-30-omninet-packaging-secure-cell-ci.json). The report and receipt were added at branch commit `a66447fd2c824ea9a72f53631633bf2123c3711a`.
+- **Evidence refresh:** [latest PR secure-cell run 41113567380](https://github.com/Zygros/omninet-v4/actions/runs/41113567380) and [latest PR Phoenix Audit run 41113567209](https://github.com/Zygros/omninet-v4/actions/runs/41113567209) also completed successfully on the evidence-bearing branch head. The matrix again reported **14 passed** on each Python version; Phoenix Audit reported **21 passed**.
+- **Scope boundary:** the workflow intentionally uses `pip install -e . --no-deps` plus focused dependencies; pip emits a resolver warning because unrelated legacy application dependencies are not installed in this focused environment. This is not a full repository test, dependency audit, Tor integration, multi-host replay test, production deployment, or external OTS/Bitcoin/Arweave anchor.
+
