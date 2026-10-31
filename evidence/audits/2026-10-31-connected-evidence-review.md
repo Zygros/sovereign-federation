@@ -46,3 +46,7 @@ Potentially sensitive wallet/key material surfaced during metadata and document 
 - No OpenTimestamps proof verification or Bitcoin block confirmation.
 - No Arweave/AO transaction or process-state verification.
 - No production deployment or live Phoenix runtime execution.
+
+
+## Sharing-metadata follow-up
+Direct shared-link lookups for the wallet-named JSON artifact and the AO sync document returned no direct links (`has_more=false`). Their file metadata did include a parent shared-folder identifier. The folder-level membership/access context was not resolved, so this is **not** evidence that the files are unshared or inaccessible to other members. Their contents remain excluded from this public record.
