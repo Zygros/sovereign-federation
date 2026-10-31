@@ -305,3 +305,12 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Private-node CI repair:** [CONZETIAN-UNIFIED-INTELLIGANCE PR #11](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11) adds the missing pytest installation and pins Python 3.11. [Contract Verification run 41233055281](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055281) passed with **2 tests passed**; [Phoenix Audit run 41233055290](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055290) also passed. PR #11 remains open and unmerged.
 - **Sensitive-material boundary:** potentially sensitive wallet/key material was excluded from the public evidence record; no secret values or wallet contents were copied.
 - **Explicit non-claims:** no exhaustive Dropbox scan, Google Drive scan, OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, credential rotation, or production deployment is claimed.
+
+
+## Phoenix ledger startup guard — 2026-10-31
+
+- **Source PR:** [ZAAI-SYSTEM PR #2](https://github.com/Zygros/ZAAI-SYSTEM/pull/2), open and unmerged. The ledger constructor now verifies the existing chain before loading its tail hash/sequence and refuses to append when history is invalid.
+- **Regression:** a test tampers with the first event, expects `hash_mismatch:1` during initialization, and confirms the file remains unchanged.
+- **Verification:** [Phoenix Bot Tests run 41233495449](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495449) passed with **6 tests**; [Phoenix Audit run 41233495432](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495432) passed; [Validate Repository run 41233495438](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495438) passed.
+- **Evidence:** [Markdown audit](../evidence/audits/2026-10-31-zaai-ledger-startup-guard.md) and [machine-readable receipt](../evidence/audits/2026-10-31-zaai-ledger-startup-guard.json).
+- **Limits:** no multi-writer locking, fsync durability, external signature/timestamp, OTS/Bitcoin/Arweave proof, or production deployment is claimed. A privileged full-file rewrite and rehash remains outside this local chain check.
