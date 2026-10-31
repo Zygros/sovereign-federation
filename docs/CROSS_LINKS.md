@@ -294,3 +294,14 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 
 **Evidence boundary:** these checks validate the adapter test suite and workflow behavior on the cited commits. They do not establish production deployment, live multi-model execution, or external OTS/Bitcoin/Arweave anchoring.
 
+
+
+## Connected evidence review and private contract CI recovery — 2026-10-31
+
+- **Sanitized evidence record:** [connected evidence review](../evidence/audits/2026-10-31-connected-evidence-review.md) and [machine-readable receipt](../evidence/audits/2026-10-31-connected-evidence-review.json).
+- **Dropbox scope:** the `.ots` title-only search returned 20 results; the first root listing returned 300 entries with `has_more=true`. Neither result is an exhaustive account inventory.
+- **Ledger structure:** two selected JSONL artifacts contained 10 and 3 records; all predecessor pointers matched the preceding stored hash. This checks chain-link continuity only. Event digests, HMAC validity, authorship, and external anchoring were not verified.
+- **Historical run record:** the stored 2026-01-21 log reports 15 files, 29.3 MB, 69 chunks, and 11 OCR pages. No fresh ingest run was performed.
+- **Private-node CI repair:** [CONZETIAN-UNIFIED-INTELLIGANCE PR #11](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11) adds the missing pytest installation and pins Python 3.11. [Contract Verification run 41233055281](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055281) passed with **2 tests passed**; [Phoenix Audit run 41233055290](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055290) also passed. PR #11 remains open and unmerged.
+- **Sensitive-material boundary:** potentially sensitive wallet/key material was excluded from the public evidence record; no secret values or wallet contents were copied.
+- **Explicit non-claims:** no exhaustive Dropbox scan, Google Drive scan, OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, credential rotation, or production deployment is claimed.
