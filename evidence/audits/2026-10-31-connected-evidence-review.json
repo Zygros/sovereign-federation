@@ -53,6 +53,13 @@
     "integration_status_document": {
       "claims_live_state": true,
       "external_readback_performed": false
+    },
+    "sensitive_artifact_sharing_checks": {
+      "direct_shared_links_returned": 0,
+      "has_more": false,
+      "parent_shared_folder_context_present": true,
+      "parent_folder_access_resolved": false,
+      "contents_fetched": false
     }
   },
   "private_node_ci": {
@@ -88,6 +95,7 @@
     "The historical run log was not reproduced as a new run.",
     "No OpenTimestamps proof, Bitcoin confirmation, Arweave transaction, or AO process state was independently verified.",
     "Google Drive connector remains unavailable; no Drive scan was performed.",
-    "Private-node PR #11 remains open and unmerged."
+    "Private-node PR #11 remains open and unmerged.",
+    "Direct shared-link lookups for the wallet-named artifact and AO sync document returned no direct links, but parent shared-folder access was not resolved; no unshared/private conclusion is drawn."
   ]
 }
