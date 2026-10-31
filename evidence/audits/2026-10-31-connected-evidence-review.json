@@ -79,6 +79,19 @@
       "id": 41233055290,
       "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055290",
       "conclusion": "success"
+    },
+    "latest_reproducible_head": "ff3e75db606436ecceb2eedabdea67d0a68efd63",
+    "pytest_version": "9.2.0",
+    "follow_up_runs": {
+      "contract": {
+        "id": 41233324790,
+        "conclusion": "success",
+        "tests": "2 passed in 0.01s"
+      },
+      "phoenix_audit": {
+        "id": 41233324853,
+        "conclusion": "success"
+      }
     }
   },
   "sensitive_material_handling": {
@@ -96,6 +109,7 @@
     "No OpenTimestamps proof, Bitcoin confirmation, Arweave transaction, or AO process state was independently verified.",
     "Google Drive connector remains unavailable; no Drive scan was performed.",
     "Private-node PR #11 remains open and unmerged.",
-    "Direct shared-link lookups for the wallet-named artifact and AO sync document returned no direct links, but parent shared-folder access was not resolved; no unshared/private conclusion is drawn."
+    "Direct shared-link lookups for the wallet-named artifact and AO sync document returned no direct links, but parent shared-folder access was not resolved; no unshared/private conclusion is drawn.",
+    "The private authentication-hardening PR #7 remains separate and must receive a fresh run after the workflow fix is merged to main."
   ]
 }
