@@ -50,3 +50,11 @@ Potentially sensitive wallet/key material surfaced during metadata and document 
 
 ## Sharing-metadata follow-up
 Direct shared-link lookups for the wallet-named JSON artifact and the AO sync document returned no direct links (`has_more=false`). Their file metadata did include a parent shared-folder identifier. The folder-level membership/access context was not resolved, so this is **not** evidence that the files are unshared or inaccessible to other members. Their contents remain excluded from this public record.
+
+
+## Private contract workflow reproducibility addendum
+The private-node workflow was further tightened to pin `pytest==9.2.0`, the version observed in the successful run, rather than installing an unbounded latest version. On the updated source PR #11 head `ff3e75db606436ecceb2eedabdea67d0a68efd63`:
+- [Contract Verification run 41233324790](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324790): SUCCESS, **2 passed in 0.01s**.
+- [Phoenix Audit run 41233324853](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324853): SUCCESS.
+
+PR #11 remains open and unmerged; the separate authentication-hardening PR #7 still needs a fresh run after the workflow fix reaches the base branch.
