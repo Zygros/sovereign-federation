@@ -87,7 +87,7 @@
       }
     ],
     "folder_names_redacted": true,
-    "_link_urls_redacted": true,
+    "link_urls_redacted": true,
     "mutation_performed": false,
     "blocker": "The connected Dropbox actions do not expose an operation to update or revoke an existing shared link. The delete action deletes the folder and was not used."
   },
