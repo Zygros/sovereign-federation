@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "private_audit_merge_checkpoint",
+  "recorded_at": "2026-11-02",
+  "merged": {
+    "conzetian_unified_intelligance_pr14": {
+      "merge_commit": "e98fcd7f1e70a65ddf80b88e340abbb86195d299",
+      "merged": true,
+      "post_merge_combined_status": [],
+      "fresh_push_run": "not_returned",
+      "readback": {
+        "phoenix_audit_workflow": "aedd6cbf1bd921b66cd004774ff8c4d3d5c6e393",
+        "probe_regression_test": "adc12ef8b97016a7748ed2c4a648888b6ce8aa67",
+        "send_prompt_helpers": "03024c15dedac599b3ec5d6ca83b8083935f9e1e",
+        "update_context_helper": "3c3a785e1df2cbd5ed729e9d4dc8fe8437f71047",
+        "contract_workflow": "82767e5257b0889f3abd47aea8ade8aa7b0c6e61"
+      },
+      "prior_checks": {
+        "phoenix_audit": {
+          "run_id": 41347955169,
+          "conclusion": "success"
+        },
+        "probe": {
+          "run_id": 41347954991,
+          "conclusion": "success"
+        },
+        "contract": {
+          "run_id": 41347955005,
+          "conclusion": "failure",
+          "python": "3.15.1",
+          "error": "No module named pytest",
+          "predates_pr11_merge": true
+        }
+      }
+    },
+    "zaai_prime_pr7": {
+      "merge_commit": "b2684d79e7bad511bfe0464789d94a4f010a9f3d",
+      "merged": true,
+      "checks": {
+        "repository_quality": {
+          "run_id": 40754460888,
+          "conclusion": "success"
+        },
+        "phoenix_audit": {
+          "run_id": 40754460943,
+          "conclusion": "success"
+        },
+        "omninet_python_ci": {
+          "run_id": 40754460899,
+          "conclusion": "success",
+          "matrix": [
+            "3.8",
+            "3.9",
+            "3.10",
+            "3.11"
+          ]
+        },
+        "htc_claim_audit": {
+          "run_id": 40754460901,
+          "conclusion": "failure",
+          "failed_step": "Attest evidence bundle provenance",
+          "reason": "Feature not available for user-owned private repositories"
+        }
+      }
+    }
+  },
+  "open_security_pr": {
+    "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+    "pull_request": 7,
+    "state": "open",
+    "merged": false,
+    "head": "f8d2808e8946c9dbeb34af5d981a98adf31ca2fb",
+    "ahead_by": 14,
+    "behind_by": 54,
+    "mergeable": false,
+    "current_head_runs": [],
+    "older_api_policy_test_count": 6,
+    "older_test_commit": "8677144a382f06851e7245b14cbfe9bd96e7b58e",
+    "current_head_test_claimed": false
+  },
+  "dropbox": {
+    "confirmed_public_edit_links": 2,
+    "settings": {
+      "audience": "public",
+      "access_level": "edit",
+      "allow_download": true
+    },
+    "folder_names_redacted": true,
+    "link_urls_redacted": true,
+    "private_tracking_issue": 15,
+    "mutation_performed": false,
+    "blocker": "No existing-link revoke/update action in connected Dropbox tools."
+  },
+  "inventory": {
+    "live": 26,
+    "indexed": 26,
+    "public": 21,
+    "private": 5,
+    "missing": 0,
+    "extra": 0,
+    "visibility_mismatches": 0
+  },
+  "google_drive": {
+    "connector_actions_available": false,
+    "scan_performed": false
+  },
+  "limitations": [
+    "No post-merge combined CI pass is claimed for private PR #14 merge commit.",
+    "HTC provenance attestation unavailable for user-owned private repository.",
+    "Private API security PR #7 needs current-main reconciliation and current-head tests.",
+    "No Dropbox link mutation, credential rotation, OTS/Bitcoin/Arweave verification, production deployment, or external anchor."
+  ]
+}
