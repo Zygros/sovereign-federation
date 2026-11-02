@@ -362,3 +362,14 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Sanitized evidence:** [private audit merge checkpoint](../evidence/audits/2026-11-02-private-audit-merge-checkpoint.md) and [machine-readable receipt](../evidence/audits/2026-11-02-private-audit-merge-checkpoint.json).
 
 **Evidence boundary:** no post-merge CI pass is claimed for the private Phoenix Audit merge commit; HTC provenance attestation remains platform-blocked; Dropbox access settings were not changed; no Google Drive scan, credential rotation, OTS/Bitcoin/Arweave verification, production deployment, or external anchor is claimed.
+
+
+## CONZETIAN-AI Phoenix Audit and dataset-preservation checkpoint — 2026-11-02
+
+- **Source PR:** private [CONZETIAN-AI PR #1](https://github.com/Zygros/CONZETIAN-AI/pull/1) remains draft/open/unmerged. Latest head `e4e9a3c4e1d713704fc0be970f06c745bf255f76` uses `find -print -quit` through command substitution and adds a positive/empty-tree source-probe regression.
+- **Hosted verification:** [Phoenix Audit run 41515327328](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41515327328) passed on the latest head: source-probe regression passed, Python compile/install completed, pytest reported **16 passed**, and Node, Go, Rust, Java, and Secret patterns steps succeeded.
+- **Preserved dataset finding:** the scanner reported a secret-like pattern only in a preserved append-only dataset and printed the path only; no matching values were printed. This is not confirmation of a live credential. Private [CONZETIAN-AI issue #5](https://github.com/Zygros/CONZETIAN-AI/issues/5) tracks a controlled redaction-only review and issuer-side validation if required.
+- **Prior regression failure:** [run 41515231421](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41515231421) failed because the initial shell assertion quoting did not match the workflow text. The assertion was corrected; the later run passed.
+- **Sanitized evidence:** [Markdown checkpoint](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.json).
+
+**Evidence boundary:** the preserved dataset was not opened or modified; the pattern is not classified as a confirmed live credential; no credential rotation, dataset deletion/redaction, production deployment, or external anchor is claimed.
