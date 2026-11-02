@@ -294,3 +294,46 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 
 **Evidence boundary:** these checks validate the adapter test suite and workflow behavior on the cited commits. They do not establish production deployment, live multi-model execution, or external OTS/Bitcoin/Arweave anchoring.
 
+
+
+## Connected evidence review and private contract CI recovery — 2026-10-31
+
+- **Sanitized evidence record:** [connected evidence review](../evidence/audits/2026-10-31-connected-evidence-review.md) and [machine-readable receipt](../evidence/audits/2026-10-31-connected-evidence-review.json).
+- **Dropbox scope:** the `.ots` title-only search returned 20 results; the first root listing returned 300 entries with `has_more=true`. Neither result is an exhaustive account inventory.
+- **Ledger structure:** two selected JSONL artifacts contained 10 and 3 records; all predecessor pointers matched the preceding stored hash. This checks chain-link continuity only. Event digests, HMAC validity, authorship, and external anchoring were not verified.
+- **Historical run record:** the stored 2026-01-21 log reports 15 files, 29.3 MB, 69 chunks, and 11 OCR pages. No fresh ingest run was performed.
+- **Private-node CI repair:** [CONZETIAN-UNIFIED-INTELLIGANCE PR #11](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11) adds the missing pytest installation and pins Python 3.11. [Contract Verification run 41233055281](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055281) passed with **2 tests passed**; [Phoenix Audit run 41233055290](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055290) also passed. PR #11 remains open and unmerged.
+- **Sensitive-material boundary:** potentially sensitive wallet/key material was excluded from the public evidence record; no secret values or wallet contents were copied.
+- **Explicit non-claims:** no exhaustive Dropbox scan, Google Drive scan, OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, credential rotation, or production deployment is claimed.
+
+
+## Phoenix ledger startup guard — 2026-10-31
+
+- **Source PR:** [ZAAI-SYSTEM PR #2](https://github.com/Zygros/ZAAI-SYSTEM/pull/2), open and unmerged. The ledger constructor now verifies the existing chain before loading its tail hash/sequence and refuses to append when history is invalid.
+- **Regression:** a test tampers with the first event, expects `hash_mismatch:1` during initialization, and confirms the file remains unchanged.
+- **Verification:** [Phoenix Bot Tests run 41233495449](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495449) passed with **6 tests**; [Phoenix Audit run 41233495432](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495432) passed; [Validate Repository run 41233495438](https://github.com/Zygros/ZAAI-SYSTEM/actions/runs/41233495438) passed.
+- **Evidence:** [Markdown audit](../evidence/audits/2026-10-31-zaai-ledger-startup-guard.md) and [machine-readable receipt](../evidence/audits/2026-10-31-zaai-ledger-startup-guard.json).
+- **Limits:** no multi-writer locking, fsync durability, external signature/timestamp, OTS/Bitcoin/Arweave proof, or production deployment is claimed. A privileged full-file rewrite and rehash remains outside this local chain check.
+
+- **Pinned dependency follow-up:** private-node PR #11 now pins `pytest==9.2.0`; [Contract Verification run 41233324790](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324790) passed with **2 tests**, and [Phoenix Audit run 41233324853](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324853) passed on head `ff3e75db606436ecceb2eedabdea67d0a68efd63`. PR #11 remains open and unmerged.
+
+
+## Phoenix API authentication and audit integrity — 2026-11-01
+
+- **Sanitized evidence:** [review report](../evidence/audits/2026-11-01-phoenix-api-and-audit-ci-integrity.md) and [machine-readable receipt](../evidence/audits/2026-11-01-phoenix-api-and-audit-ci-integrity.json).
+- **Private API key policy:** [CONZETIAN-UNIFIED-INTELLIGANCE PR #7](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/7) now rejects keys shorter than 32 non-whitespace characters. [API Key Policy run 41346979725](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41346979725) reported 6 tests passed on commit `8677144a382f06851e7245b14cbfe9bd96e7b58e`; the later documentation/workflow head has no fresh policy run. The old [Phoenix Audit run 41346979691](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41346979691) was green but skipped Python checks after `find: Broken pipe` / `find: write error`.
+- **Contract workflow dependency:** [PR #11](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11) pins Python 3.11 and pytest 9.2.0; [run 41233324790](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324790) passed 2 tests. PR #11 remains open and unmerged, so base-branch contract checks still fail on Python 3.15.1 without pytest.
+- **Phoenix Audit repair:** [PR #14](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/14) replaces the broken-pipe probe, fixes three active helper-script syntax errors, excludes only the preserved `Unpacked/` export subtree from active compilation, and scopes pytest to repository-root tests. [Phoenix Audit run 41347955169](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41347955169) passed; root pytest reported **2 passed** and Node, Go, Rust, Java, and Secret patterns checks succeeded. [Probe Regression run 41347954991](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41347954991) passed.
+- **Remaining boundary:** [Contract Verification run 41347955005](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41347955005) failed because the base workflow lacked pytest. Nine syntax errors remain in the preserved `Unpacked/` archive, which was not modified or claimed valid. PR #14 remains open and unmerged.
+- **Chronology:** superseded PRs #12 and #13 were closed with their branches/commits preserved; PR #14 is the current review branch. No deployment, credential rotation, external anchor, or production verification is claimed.
+
+
+## Execution reconciliation — 2026-11-02
+
+- **Current inventory:** the live GitHub list returned 26 repositories (21 public, 5 private); all 26 names and visibility values match `FEDERATION_INDEX.json`. This is inventory reconciliation, not a source audit of every repository.
+- **Contract workflow merge:** private [CONZETIAN-UNIFIED-INTELLIGANCE PR #11](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11) was merged at `0332ddb3b4fb573f1c574a70e5828d26d0c00e13`. The workflow on main pins Python 3.11, installs pytest 9.2.0, and uses `contents: read`. The PR-branch run [41233324790](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324790) passed 2 tests; [Phoenix Audit run 41233324853](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233324853) passed. These are pre-merge branch checks; no separate post-merge push run is claimed.
+- **Phoenix Audit PR #14:** remains open and unmerged. Its latest observed branch head `f45481b521bd950498f774309852aa9e571d88ba` is 13 commits ahead and 5 behind main; GitHub currently reports `mergeable=false`. The previous Contract Verification failure [41347955005](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41347955005) was on the pre-merge base and logged Python 3.15.1 with `No module named pytest`. The follow-up evidence commit has no new run returned yet.
+- **Dropbox sharing review:** two connected folder links were confirmed as `public` audience, `edit` access, with downloads enabled. Folder names and URLs are withheld from this public record. Expiration and password-protection fields were not returned. The connected Dropbox actions do not expose a revoke/update-existing-link operation; deleting the folder is not an acceptable substitute, so no sharing mutation was performed.
+- **Sanitized evidence:** [execution reconciliation report](../evidence/audits/2026-11-02-execution-reconciliation.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-02-execution-reconciliation.json).
+
+**Evidence boundary:** no Dropbox content was deleted or modified, no public link was revoked or downgraded, no wallet/key contents were opened, and no Google Drive scan, OTS cryptographic verification, Bitcoin confirmation, Arweave/AO read-back, credential rotation, production deployment, or external anchor is claimed.

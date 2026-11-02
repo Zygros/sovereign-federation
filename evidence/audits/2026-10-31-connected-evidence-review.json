@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "connected_evidence_review",
+  "date": "2026-10-31",
+  "github_inventory": {
+    "repositories": 26,
+    "public": 21,
+    "private": 5
+  },
+  "dropbox": {
+    "ots_title_search": {
+      "query": ".ots",
+      "results": 20,
+      "has_more": false,
+      "scope": "title_only",
+      "account_wide": false
+    },
+    "root_listing": {
+      "page_entries": 300,
+      "has_more": true,
+      "complete": false
+    },
+    "ledger_pointer_checks": [
+      {
+        "ledger_label": "A",
+        "records": 10,
+        "predecessor_links_valid": true,
+        "genesis": "zero_sha256",
+        "digest_recomputation": false
+      },
+      {
+        "ledger_label": "B",
+        "records": 3,
+        "predecessor_links_valid": true,
+        "genesis": "GENESIS",
+        "digest_recomputation": false
+      }
+    ],
+    "historical_build_report": {
+      "declared_ledger_ok": true,
+      "declared_entries": 3,
+      "observed_ledger_b_records": 3,
+      "count_matches": true
+    },
+    "historical_run_log": {
+      "timestamp": "2026-01-21",
+      "declared_files": 15,
+      "declared_bytes": 30724050,
+      "declared_chunks": 69,
+      "declared_ocr_pages": 11,
+      "rerun_performed": false
+    },
+    "integration_status_document": {
+      "claims_live_state": true,
+      "external_readback_performed": false
+    },
+    "sensitive_artifact_sharing_checks": {
+      "direct_shared_links_returned": 0,
+      "has_more": false,
+      "parent_shared_folder_context_present": true,
+      "parent_folder_access_resolved": false,
+      "contents_fetched": false
+    }
+  },
+  "private_node_ci": {
+    "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+    "pr_number": 11,
+    "pr_url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11",
+    "state": "open",
+    "merged": false,
+    "head_sha": "24aef44ef7f041a4aca33a586607b9fcf652b063",
+    "contract_run": {
+      "id": 41233055281,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055281",
+      "conclusion": "success",
+      "tests": "2 passed"
+    },
+    "phoenix_audit_run": {
+      "id": 41233055290,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/41233055290",
+      "conclusion": "success"
+    },
+    "latest_reproducible_head": "ff3e75db606436ecceb2eedabdea67d0a68efd63",
+    "pytest_version": "9.2.0",
+    "follow_up_runs": {
+      "contract": {
+        "id": 41233324790,
+        "conclusion": "success",
+        "tests": "2 passed in 0.01s"
+      },
+      "phoenix_audit": {
+        "id": 41233324853,
+        "conclusion": "success"
+      }
+    }
+  },
+  "sensitive_material_handling": {
+    "potential_wallet_or_key_material_surfaced": true,
+    "secret_values_copied": false,
+    "wallet_contents_fetched": false,
+    "public_report_contains_secret_values": false,
+    "rotation_or_revocation_performed": false
+  },
+  "limitations": [
+    "Dropbox root listing was partial: 300 entries and has_more=true.",
+    "The .ots title-only search result count is not an account-wide inventory.",
+    "Ledger checks validate predecessor-pointer continuity only, not event digest recomputation, HMAC validity, authorship, or external anchoring.",
+    "The historical run log was not reproduced as a new run.",
+    "No OpenTimestamps proof, Bitcoin confirmation, Arweave transaction, or AO process state was independently verified.",
+    "Google Drive connector remains unavailable; no Drive scan was performed.",
+    "Private-node PR #11 remains open and unmerged.",
+    "Direct shared-link lookups for the wallet-named artifact and AO sync document returned no direct links, but parent shared-folder access was not resolved; no unshared/private conclusion is drawn.",
+    "The private authentication-hardening PR #7 remains separate and must receive a fresh run after the workflow fix is merged to main."
+  ]
+}

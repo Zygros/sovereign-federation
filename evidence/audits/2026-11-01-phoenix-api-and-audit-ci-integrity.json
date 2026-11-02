@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0.0",
+  "record_id": "2026-11-01-phoenix-api-and-audit-ci-integrity",
+  "observed_at": "2026-11-01",
+  "federation_inventory": {
+    "repository_count": 26,
+    "public": 21,
+    "private": 5,
+    "index_node_count": 26,
+    "missing": 0,
+    "extra": 0,
+    "visibility_mismatches": 0,
+    "index_blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+    "index_updated_at": "2026-10-23T19:27:33Z"
+  },
+  "api_key_policy": {
+    "source_pr": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/7",
+    "status": "open_unmerged",
+    "minimum_non_whitespace_characters": 32,
+    "tested_commit": "8677144a382f06851e7245b14cbfe9bd96e7b58e",
+    "api_policy_run": {
+      "id": 41346979725,
+      "conclusion": "success",
+      "tests_run": 6
+    },
+    "later_head": "f8d2808e8946c9dbeb34af5d981a98adf31ca2fb",
+    "fresh_policy_run_on_later_head": false,
+    "contract_workflow_repair_pr": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/11",
+    "contract_workflow_run": {
+      "id": 41233324790,
+      "conclusion": "success",
+      "tests_passed": 2
+    },
+    "contract_base_failure": {
+      "id": 41346979781,
+      "conclusion": "failure",
+      "reason": "Python 3.15.1 environment lacked pytest"
+    }
+  },
+  "phoenix_audit": {
+    "false_green_observed": {
+      "run_id": 41346979691,
+      "conclusion": "success",
+      "log_evidence": [
+        "find: Broken pipe",
+        "find: write error"
+      ],
+      "python_checks_skipped": true
+    },
+    "current_fix_pr": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/14",
+    "current_head": "c1acaa9b3cd5638d08ac983dcdbf741272fd48e5",
+    "regression_run": {
+      "id": 41347954991,
+      "conclusion": "success"
+    },
+    "audit_run": {
+      "id": 41347955169,
+      "conclusion": "success",
+      "root_pytest_passed": 2,
+      "root_pytest_duration_seconds": 0.01,
+      "other_steps": [
+        "Node",
+        "Go",
+        "Rust",
+        "Java",
+        "Secret patterns"
+      ]
+    },
+    "contract_run": {
+      "id": 41347955005,
+      "conclusion": "failure",
+      "reason": "Base workflow used Python 3.15.1 without pytest"
+    },
+    "active_syntax_fixes": 3,
+    "archived_syntax_errors_observed": 9,
+    "archived_subtree_excluded": "source-repositories/ZYGROS-PRIME/Unpacked/",
+    "archive_modified": false,
+    "pytest_scope": "repository-root tests/ or test/"
+  },
+  "superseded_prs": [
+    {
+      "number": 12,
+      "state": "closed",
+      "superseded_by": 14,
+      "branch_preserved": true
+    },
+    {
+      "number": 13,
+      "state": "closed",
+      "superseded_by": 14,
+      "branch_preserved": true
+    }
+  ],
+  "explicit_non_claims": [
+    "No production deployment",
+    "No credential rotation",
+    "No Git history rewrite",
+    "No Google Drive scan",
+    "No OTS, Bitcoin, Arweave, or AO verification",
+    "The Unpacked archive has not been compiled or validated"
+  ]
+}
