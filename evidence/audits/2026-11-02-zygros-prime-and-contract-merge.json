@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "phoenix_execution_followup",
+  "recorded_at": "2026-11-02",
+  "inventory": {
+    "live_repositories": 26,
+    "public": 21,
+    "private": 5,
+    "indexed_repositories": 26,
+    "missing": 0,
+    "extra": 0,
+    "visibility_mismatches": 0,
+    "global_open_pr_search_results": 45,
+    "all_open_prs_reviewed": false
+  },
+  "merged_changes": [
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 7,
+      "merged": true,
+      "source_head": "f32225f0c369050a05b092b741259f32d32968cb",
+      "merge_commit": "b2684d79e7bad511bfe0464789d94a4f010a9f3d",
+      "main_workflow_blob": "4266e004f82118ecba410da0dffc8bb3da34b10a",
+      "checks": {
+        "repository_quality_gate": {
+          "run_id": 40754460888,
+          "conclusion": "success"
+        },
+        "phoenix_audit": {
+          "run_id": 40754460943,
+          "conclusion": "success"
+        },
+        "omninet_python_ci": {
+          "run_id": 40754460899,
+          "conclusion": "success",
+          "matrix": [
+            "3.8",
+            "3.9",
+            "3.10",
+            "3.11"
+          ]
+        },
+        "htc_claim_audit": {
+          "run_id": 40754460901,
+          "conclusion": "failure",
+          "failed_step": "Attest evidence bundle provenance",
+          "reason": "Feature not available for user-owned private repositories"
+        }
+      },
+      "limitations": [
+        "No provenance attestation success.",
+        "Unpacked export subtree remains excluded and unvalidated.",
+        "No deployment claimed."
+      ]
+    },
+    {
+      "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+      "pull_request": 11,
+      "merged": true,
+      "merge_commit": "0332ddb3b4fb573f1c574a70e5828d26d0c00e13",
+      "checks": {
+        "contract_verification": {
+          "run_id": 41233324790,
+          "conclusion": "success",
+          "tests": "2 passed"
+        },
+        "phoenix_audit": {
+          "run_id": 41233324853,
+          "conclusion": "success"
+        }
+      },
+      "limitations": [
+        "Checks cited were run on the PR branch before merge; no separate post-merge push run is claimed."
+      ]
+    }
+  ],
+  "open_pr14": {
+    "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+    "state": "open",
+    "merged": false,
+    "head": "f45481b521bd950498f774309852aa9e571d88ba",
+    "main": "0332ddb3b4fb573f1c574a70e5828d26d0c00e13",
+    "compare_status": "diverged",
+    "ahead_by": 13,
+    "behind_by": 5,
+    "mergeable": false,
+    "prior_contract_run": {
+      "id": 41347955005,
+      "conclusion": "failure",
+      "python": "3.15.1",
+      "error": "No module named pytest"
+    },
+    "prior_phoenix_audit_run": {
+      "id": 41347955169,
+      "conclusion": "success"
+    },
+    "prior_probe_run": {
+      "id": 41347954991,
+      "conclusion": "success"
+    },
+    "fresh_run_after_evidence_commit": "not_returned"
+  },
+  "dropbox_finding": {
+    "confirmed_folder_links": 2,
+    "effective_settings": {
+      "audience": "public",
+      "access_level": "edit",
+      "allow_download": true
+    },
+    "folder_names_redacted": true,
+    "link_urls_redacted": true,
+    "expiry": "not_returned",
+    "password_protection": "not_returned",
+    "private_tracking_issue": 15,
+    "mutation_performed": false,
+    "blocker": "No existing-link update/revoke action is exposed by the connected Dropbox tools. Delete would delete the folder."
+  },
+  "google_drive": {
+    "connector_actions_available": false,
+    "scan_performed": false
+  },
+  "explicit_nonclaims": [
+    "No wallet/key contents opened or copied.",
+    "No Dropbox link revoked or downgraded.",
+    "No credential rotation.",
+    "No OTS cryptographic verification, Bitcoin confirmation, or Arweave/AO read-back.",
+    "No production deployment or external anchor."
+  ]
+}
