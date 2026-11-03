@@ -100,7 +100,7 @@ The 20 additional repository writes produced the following observed outcome at c
 
 - 15 repositories had at least one successful relevant audit or repository-specific check.
 - Three repositories had failure-only relevant checks: `sovereign-agsi-portal`, `ultimate-phoenix-protocol-ssi`, and `CONZETIAN-AI`.
-- `ZYGROS-PRIME` still had four workflows in progress.
+- Two repositories still had at least one workflow in progress: `ZYGROS-PRIME` (four workflows) and `CONZETIAN-UNIFIED-INTELLIGANCE` (Phoenix Audit pending while Contract Verification passed).
 - `ZYGNUS-OMNI-REPO` returned no Actions runs.
 
 Important independent failures:
