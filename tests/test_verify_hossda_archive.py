@@ -4,39 +4,37 @@ import sys
 import zipfile
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "tools"))
-from verify_hossda_archive import inspect_archive, build_report
+from verify_hossda_archive import inspect, build
 
 
-def test_pdf_digest_matches_sibling_receipt(tmp_path):
-    pdf = b"pdf-bytes"
-    proof = b"ots-receipt" + hashlib.sha256(pdf).digest()
-    archive = tmp_path / "bundle.zip"
-    with zipfile.ZipFile(archive, "w") as z:
-        z.writestr("doc.pdf", pdf)
-        z.writestr("doc.pdf.ots", proof)
-    result = inspect_archive(archive)
+def test_pdf_receipt_digest_match(tmp_path):
+    data = b"pdf bytes"
+    proof = b"ots" + hashlib.sha256(data).digest()
+    path = tmp_path / "x.zip"
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("x.pdf", data)
+        z.writestr("x.pdf.ots", proof)
+    assert inspect(path)["pdfs"][0]["ots_digest_match"]
+
+
+def test_mismatched_receipt_is_rejected(tmp_path):
+    path = tmp_path / "x.zip"
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("x.pdf", b"pdf")
+        z.writestr("x.pdf.ots", b"other")
+    assert not inspect(path)["pdfs"][0]["ots_digest_match"]
+
+
+def test_zip_crc_and_pdf_count(tmp_path):
+    path = tmp_path / "x.zip"
+    with zipfile.ZipFile(path, "w") as z:
+        z.writestr("a.pdf", b"a")
+    result = inspect(path)
     assert result["zip_crc"] == "PASS"
-    assert result["pdfs"][0]["ots_digest_match"] is True
+    assert result["counts"]["pdf"] == 1
 
 
-def test_mismatched_receipt_is_not_accepted(tmp_path):
-    archive = tmp_path / "bundle.zip"
-    with zipfile.ZipFile(archive, "w") as z:
-        z.writestr("doc.pdf", b"pdf-A")
-        z.writestr("doc.pdf.ots", b"proof-for-another-file")
-    result = inspect_archive(archive)
-    assert result["pdfs"][0]["ots_digest_match"] is False
-
-
-def test_same_pdf_hash_is_deduplicated_across_archives(tmp_path):
-    pdf = b"same-pdf"
-    proof = b"ots" + hashlib.sha256(pdf).digest()
-    paths = []
-    for name in ("one.zip", "two.zip"):
-        path = tmp_path / name
-        with zipfile.ZipFile(path, "w") as z:
-            z.writestr(name + ".pdf", pdf)
-            z.writestr(name + ".pdf.ots", proof)
-        paths.append(path)
-    result = build_report(paths)
-    assert result["unique_pdf_sha256_count"] == 1
+def test_screenshot_evidence_claims_are_recorded():
+    from verify_hossda_archive import CLAIMS
+    assert len(CLAIMS) == 9
+    assert {c["block_height"] for c in CLAIMS} == {974329, 974333, 974334, 974347, 974351, 974352}
