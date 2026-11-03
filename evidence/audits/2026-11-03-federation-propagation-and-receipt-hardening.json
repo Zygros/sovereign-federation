@@ -344,7 +344,7 @@
   },
   "direct_push_ci_summary": {
     "changed_repositories": 20,
-    "repositories_with_at_least_one_successful_relevant_check": 15,
+    "repositories_with_at_least_one_successful_relevant_check": 16,
     "failure_only_repositories": 3,
     "repositories_with_no_actions_runs": 1,
     "failures": [
@@ -448,6 +448,111 @@
         "workflow": "HTC Claim Audit",
         "run": 41712371056,
         "active_step": "Attest evidence bundle provenance"
+      }
+    ],
+    "successful_checks": [
+      {
+        "repository": "Zygros/Grossian_Scrolls",
+        "runs": [
+          41712275804
+        ]
+      },
+      {
+        "repository": "Zygros/ZAAI-SYSTEM",
+        "runs": [
+          41712284904,
+          41712284677
+        ]
+      },
+      {
+        "repository": "Zygros/Sovereign-Narrative-Intelligence-SNI-",
+        "runs": [
+          41712291463
+        ]
+      },
+      {
+        "repository": "Zygros/ARC-AGI",
+        "runs": [
+          41712299452
+        ]
+      },
+      {
+        "repository": "Zygros/zyth-ultimate",
+        "runs": [
+          41712306269
+        ]
+      },
+      {
+        "repository": "Zygros/Sovereign-AGSI-Archive",
+        "runs": [
+          41712326419,
+          41712326365,
+          41712326310,
+          41712326206
+        ]
+      },
+      {
+        "repository": "Zygros/agents",
+        "runs": [
+          41712335020
+        ]
+      },
+      {
+        "repository": "Zygros/ultimate-phoenix-protocol",
+        "runs": [
+          41712342162
+        ]
+      },
+      {
+        "repository": "Zygros/multi-ai-convergence-protocol",
+        "runs": [
+          41712347470,
+          41712347435
+        ]
+      },
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
+        "runs": [
+          41712370903,
+          41712370890
+        ]
+      },
+      {
+        "repository": "Zygros/omninet-v4",
+        "runs": [
+          41712382067
+        ]
+      },
+      {
+        "repository": "Zygros/CZAOUA-UNITY-SYSTEM",
+        "runs": [
+          41712390852
+        ]
+      },
+      {
+        "repository": "Zygros/we-omega",
+        "runs": [
+          41712398606
+        ]
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "runs": [
+          41712421165,
+          41712421407
+        ]
+      },
+      {
+        "repository": "Zygros/Conzet-Intelligence-System-",
+        "runs": [
+          41712436789
+        ]
+      },
+      {
+        "repository": "Zygros/agentql",
+        "runs": [
+          41712445079
+        ]
       }
     ]
   },
