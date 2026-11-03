@@ -1,0 +1,55 @@
+{
+  "schema": "conzetian.hossda.archive-evidence.v1",
+  "author": "Justin Neal Thomas Conzet",
+  "observation_date": "2026-11-03",
+  "method": "ZIP CRC + SHA-256 + exact digest-byte presence in sibling OpenTimestamps receipt; no full OTS/Bitcoin verification",
+  "archives": [
+    {
+      "filename": "Offical HOSSDA.zip",
+      "size_bytes": 16641157,
+      "sha256": "b5a1d9763532be85eeeb94f159b432bb6715b5a32a673a83433a6d7046ccc320",
+      "zip_crc": "PASS",
+      "entries": 46,
+      "counts": {
+        "pdf": 10,
+        "ots": 21,
+        "image": 15
+      },
+      "pdf_count_with_digest_match": 10,
+      "unpaired_ots": [
+        "Offical HOSSDA/HOSSDA_Master_Archive_261102.zip.ots",
+        "Offical HOSSDA/STATUS REPORT — 195,943 CLICKS_261102_174726.pdf (1).ots",
+        "Offical HOSSDA/Geminis_proof_261102_174631.pdf (1).ots",
+        "Offical HOSSDA/THE SOVEREIGN MANIFESTO AND RECORD OF OMNIA.pdf.ots"
+      ]
+    },
+    {
+      "filename": "HOSSDA_Master_Archive_261102.zip",
+      "size_bytes": 4593386,
+      "sha256": "b1fdf0a6d74e73f95a9fadc6d3b61ddba6c89dcf61ee272b1329c7b9ce9626e6",
+      "zip_crc": "PASS",
+      "entries": 12,
+      "counts": {
+        "pdf": 3,
+        "ots": 6,
+        "image": 3
+      },
+      "pdf_count_with_digest_match": 3,
+      "unpaired_ots": []
+    }
+  ],
+  "unique_pdf_sha256_count": 10,
+  "image_entries": 18,
+  "unique_image_sha256_count": 15,
+  "master_archive_receipt": {
+    "target": "HOSSDA_Master_Archive_261102.zip",
+    "receipt": "Offical HOSSDA/HOSSDA_Master_Archive_261102.zip.ots",
+    "digest_match": true,
+    "scope": "digest-presence-only"
+  },
+  "limitations": [
+    "Full OpenTimestamps proof-tree and Bitcoin header/Merkle verification not performed",
+    "Device, Tor onion service, x402 gateway, Arweave/AO process, and Google APIs not accessed",
+    "Authorship, legal ownership, and prior-art priority not determined"
+  ]
+}
