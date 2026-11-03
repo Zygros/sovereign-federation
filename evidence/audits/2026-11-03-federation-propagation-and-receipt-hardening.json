@@ -27,7 +27,14 @@
     "invalid_endpoints": 0,
     "self_edges": 0,
     "main_materialize_run": 41711951390,
-    "main_audit_run": 41711951406
+    "main_audit_run": 41711951406,
+    "central_document_audit_runs": [
+      41713343273,
+      41713362926,
+      41713390302,
+      41713411413,
+      41713417230
+    ]
   },
   "merged_core_spine_pull_requests": [
     {
@@ -245,7 +252,8 @@
       "proof_cycle_pr": 41711762834,
       "phoenix_audit_pr": 41711762855,
       "proof_cycle_main": 41711973409,
-      "phoenix_audit_main": 41711973487
+      "phoenix_audit_main": 41711973487,
+      "phoenix_audit_after_ci_status_update": 41713438640
     },
     "artifact": {
       "id": 13266249198,
@@ -384,13 +392,8 @@
           41712370890,
           41712370824
         ],
-        "status": "in_progress_at_capture"
-      },
-      {
-        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
-        "run": 41712421407,
-        "status": "in_progress_at_capture",
-        "additional_successful_run": 41712421165
+        "status": "in_progress_at_latest_readback",
+        "note": "Claim-audit, quality, Phoenix audit, and Python matrix jobs remained in progress; provenance-attestation step was active."
       }
     ],
     "no_actions_runs": [
@@ -399,8 +402,18 @@
         "note": "No Actions runs were returned after the new manifest was created."
       }
     ],
-    "repositories_with_in_progress_checks": 2,
-    "pending_only_repositories": 1
+    "repositories_with_in_progress_checks": 1,
+    "pending_only_repositories": 1,
+    "resolved_pending": [
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "runs": [
+          41712421165,
+          41712421407
+        ],
+        "status": "success"
+      }
+    ]
   },
   "termux_capture": {
     "source": "user-supplied terminal transcript only",
