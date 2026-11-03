@@ -1,5 +1,7 @@
 # Federation Propagation and Phoenix Receipt Hardening — 2026-11-03
 
+Machine-readable record: [JSON evidence receipt](2026-11-03-federation-propagation-and-receipt-hardening.json).
+
 ## Executive result
 
 The canonical 26-node federation roster is now present in **all 26 repositories**. A read-back of every local `.phoenix/CROSSCONNECT.json` confirms an exact ordered match to `sovereign-federation/FEDERATION_INDEX.json`: **26/26 exact, zero missing nodes, zero extras**.
