@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "federation_inventory_graph_reconciliation",
+  "recorded_at": "2026-11-03",
+  "evidence_class": "VERIFIED_FOR_LOGICAL_TOPOLOGY",
+  "repository": "Zygros/sovereign-federation",
+  "pull_request": 23,
+  "pull_request_url": "https://github.com/Zygros/sovereign-federation/pull/23",
+  "branch": "automation/federation-index-driven-edges-20261103-1140",
+  "source_index": {
+    "path": "FEDERATION_INDEX.json",
+    "blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+    "repository_count": 26,
+    "public": 21,
+    "private": 5
+  },
+  "pre_patch_state": {
+    "crossconnect_blob_sha": "e1681009898f6f47392daecc1f5563a7d1e58f2f",
+    "crossconnect_repository_count": 25,
+    "missing_from_crossconnect": [
+      "ZYGNUS-OMNI-REPO"
+    ],
+    "generator_blob_sha": "780f4bb92f32719bf03a8a4ff68952f449ebd945",
+    "generator_hardcoded_repository_count": 25,
+    "workflow_blob_sha": "e3de02149906532f86fa207c4795688abcaca9a8",
+    "expected_edge_count": 600,
+    "graph_blob_sha": "9670f183bf43289855c67247ef441fcd7375400d",
+    "graph_line_count": 600
+  },
+  "patch": {
+    "source_commit": "e73b9f2c783ef4528b5a0db18c3f1993db3e29af",
+    "generated_graph_commit": "5182258659232048de0f34faf0345479e84e655c",
+    "crossconnect_blob_sha": "af09eb3b5c80681a5cda5e933d46c49dbf9318a7",
+    "graph_blob_sha": "ca5aee4f7e1492b1debb93171e82c63edd7cd1e4",
+    "generator_blob_sha": "ebd40a49788991912dc9be4e71f5d2f50677b8f8",
+    "workflow_blob_sha": "bec26b357662831f1a036ccd13c517c602119f7b"
+  },
+  "verification": {
+    "materialize_workflow_run": {
+      "id": 41706207456,
+      "url": "https://github.com/Zygros/sovereign-federation/actions/runs/41706207456",
+      "conclusion": "success",
+      "reported_nodes": 26,
+      "reported_generated_edges": 650,
+      "reported_verified_edges": 650
+    },
+    "phoenix_audit_run": {
+      "id": 41706207441,
+      "url": "https://github.com/Zygros/sovereign-federation/actions/runs/41706207441",
+      "conclusion": "success"
+    },
+    "readback": {
+      "node_count": 26,
+      "crossconnect_matches_index": true,
+      "graph_line_count": 650,
+      "unique_directed_pairs": 650,
+      "expected_directed_pairs": 650,
+      "all_endpoints_in_index": true,
+      "self_edges": 0
+    }
+  },
+  "limitations": [
+    "The graph records logical repository edges only; it does not establish live network connectivity or runtime activation.",
+    "The pre-patch scan found 25 local CROSSCONNECT files, each with 25 nodes and missing ZYGNUS-OMNI-REPO; ZYGNUS-OMNI-REPO itself had no local .phoenix/CROSSCONNECT.json. This PR corrects the central federation copy; other repository copies require staged propagation.",
+    "No OpenTimestamps, Bitcoin, Arweave/AO, deployment, or payment-settlement verification was performed in this audit."
+  ]
+}

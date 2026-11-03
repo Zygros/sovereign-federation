@@ -4,6 +4,7 @@
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
 ## Total integration entry point
+- [2026-11-03 canonical federation graph reconciliation](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) — canonical index/manifest alignment, 26 nodes, and 650 verified unique directed logical edges; see [PR #23](https://github.com/Zygros/sovereign-federation/pull/23) and its successful Actions receipts.
 - [Visibility-aware federation health correction — PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) — proposed source fix, regression tests, audit, and explicit CI evidence boundary.
 - [Repository visibility audit (branch evidence)](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md) — observed 26-node inventory and public/private split.
 - [Sovereign Conzetian Total Integration Index (2026-10-16)](SOVEREIGN_CONZETIAN_TOTAL_INTEGRATION_2026-10-16.md) — Phoenix Ω∞ × NYXAVEN × AVEN × Ω-PRIME × Memoria Omnia × HTC × Cloud/API lattice; evidence classes, security gates and staged execution plan.
