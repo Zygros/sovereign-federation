@@ -55,3 +55,6 @@ No external timestamp, Bitcoin confirmation, Arweave/AO read-back, deployment, o
 | `conzet-sovereign-intelligence` | [#39](https://github.com/Zygros/conzet-sovereign-intelligence/pull/39) | [OmniNet CI #41706879903](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41706879903), [Audit #41706879809](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41706879809) |
 
 The prior 2026-10-25 cross-link drift is no longer open: the current `docs/CROSS_LINKS.md` on `main` contains PR #34, PR #6, and the Scout reference; both PRs remain merged with the recorded merge commits.
+## Post-merge propagation update — 2026-11-03
+
+The six core-spine crossconnect PRs are now merged. The remaining 19 existing manifests were updated on their default branches, and a new `.phoenix/CROSSCONNECT.json` was created in `ZYGNUS-OMNI-REPO`. A fresh read-back of all 26 repositories confirms that every roster exactly matches the canonical ordered 26-node index. The central graph remains 650 unique directed logical edges. Full commit and CI evidence is recorded in [the federation propagation and receipt-hardening report](2026-11-03-federation-propagation-and-receipt-hardening.md).
