@@ -37,7 +37,8 @@
       41713647452,
       41713652703,
       41713674356,
-      41713683616
+      41713683616,
+      41713804068
     ]
   },
   "merged_core_spine_pull_requests": [
@@ -392,11 +393,10 @@
         "repository": "Zygros/ZYGROS-PRIME",
         "runs": [
           41712371056,
-          41712370890,
           41712370824
         ],
         "status": "in_progress_at_latest_readback",
-        "note": "Repository Quality Gate #41712370903 passed. HTC Claim Audit remained in its provenance-attestation step; Phoenix Audit and OmniNet Python CI were still in progress, with no failure output available."
+        "note": "Repository Quality Gate #41712370903 and Phoenix Audit #41712370890 passed. HTC Claim Audit remained at provenance attestation; OmniNet Python CI was still completing its Python matrix."
       }
     ],
     "no_actions_runs": [
@@ -406,7 +406,6 @@
       }
     ],
     "repositories_with_in_progress_checks": 1,
-    "pending_only_repositories": 1,
     "resolved_pending": [
       {
         "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
@@ -421,8 +420,15 @@
         "run": 41712370903,
         "workflow": "Repository Quality Gate",
         "status": "success"
+      },
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
+        "run": 41712370890,
+        "workflow": "Phoenix Audit",
+        "status": "success"
       }
-    ]
+    ],
+    "repositories_with_pending_checks": 1
   },
   "termux_capture": {
     "source": "user-supplied terminal transcript only",
