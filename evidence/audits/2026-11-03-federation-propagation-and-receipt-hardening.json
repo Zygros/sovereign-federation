@@ -463,7 +463,7 @@
     "Crossconnect manifests and graph edges describe logical repository topology, not live service connectivity or runtime activation.",
     "The OMEGA-10 recovery benchmark is deterministic and local; it does not establish distributed or production recovery.",
     "Phoenix proof-cycle receipts validate a local deterministic fixture; they do not establish external AI execution, web research, or external timestamp/blockchain anchoring.",
-    "No new OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or production deployment was performed.",
+    "No new OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or Phoenix runtime/payment-service deployment was performed. The existing zyth-ultimate GitHub Pages build/deployment workflow did run and succeed after its manifest commit.",
     "The November 3 Termux transcript was not backed by raw WAL/log/checkpoint files in this run; its financial and OTS claims remain unreconciled."
   ]
 }
