@@ -4,7 +4,7 @@
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
 ## Total integration entry point
-- [2026-11-03 full federation propagation and receipt hardening](../evidence/audits/2026-11-03-federation-propagation-and-receipt-hardening.md) — 26/26 manifests exactly match the canonical index; six core PRs merged; 19 manifests updated and one new ZYGNUS manifest created; Phoenix and OMEGA artifacts independently rehashed.
+- [2026-11-03 full federation propagation and receipt hardening](../evidence/audits/2026-11-03-federation-propagation-and-receipt-hardening.md) — 26/26 manifests exactly match the canonical index; six core PRs merged; 19 manifests updated and one new ZYGNUS manifest created; Phoenix and OMEGA artifacts independently rehashed. [Machine-readable JSON](../evidence/audits/2026-11-03-federation-propagation-and-receipt-hardening.json).
 - [2026-11-03 Phoenix vertical-slice revalidation](../evidence/audits/2026-11-03-phoenix-vertical-slice-revalidation.md) — proof-cycle receipts, OMEGA-10 local recovery artifacts, and the six merged core-spine changes.
 - [2026-11-03 canonical federation graph reconciliation](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) — canonical index/manifest alignment, 26 nodes, and 650 verified unique directed logical edges; see [PR #23](https://github.com/Zygros/sovereign-federation/pull/23) and its successful Actions receipts.
 - [Visibility-aware federation health correction — PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) — proposed source fix, regression tests, audit, and explicit CI evidence boundary.
