@@ -392,11 +392,10 @@
       {
         "repository": "Zygros/ZYGROS-PRIME",
         "runs": [
-          41712371056,
-          41712370824
+          41712371056
         ],
         "status": "in_progress_at_latest_readback",
-        "note": "Repository Quality Gate #41712370903 and Phoenix Audit #41712370890 passed. HTC Claim Audit is still at the provenance-attestation step. OmniNet Python CI has passed Python 3.8, 3.10, and 3.11; Python 3.9 remains in progress."
+        "note": "Repository Quality Gate #41712370903, Phoenix Audit #41712370890, and OmniNet Python CI #41712370824 all passed. Only HTC Claim Audit remains in progress at the evidence provenance-attestation step; no failure output has surfaced."
       }
     ],
     "no_actions_runs": [
@@ -432,22 +431,21 @@
     "progress_detail": [
       {
         "repository": "Zygros/ZYGROS-PRIME",
+        "workflow": "HTC Claim Audit",
+        "run": 41712371056,
+        "active_step": "Attest evidence bundle provenance"
+      },
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
         "workflow": "OmniNet Python CI",
         "run": 41712370824,
         "completed_versions": [
           "3.8",
+          "3.9",
           "3.10",
           "3.11"
         ],
-        "in_progress_versions": [
-          "3.9"
-        ]
-      },
-      {
-        "repository": "Zygros/ZYGROS-PRIME",
-        "workflow": "HTC Claim Audit",
-        "run": 41712371056,
-        "active_step": "Attest evidence bundle provenance"
+        "status": "success"
       }
     ],
     "successful_checks": [
@@ -514,7 +512,8 @@
         "repository": "Zygros/ZYGROS-PRIME",
         "runs": [
           41712370903,
-          41712370890
+          41712370890,
+          41712370824
         ]
       },
       {
