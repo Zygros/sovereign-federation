@@ -72,3 +72,9 @@ The earlier cross-link drift for merged PR #34 and PR #6 is closed: the current 
 - Phoenix Proof Cycle artifact: [run #41708321444](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41708321444/artifacts/13267390936).
 - OMEGA-10 CI artifacts: [run #41707544068](https://github.com/Zygros/omega-10/actions/runs/41707544068).
 - No external timestamp or blockchain receipt is included.
+
+## Post-merge receipt hardening — 2026-11-03
+
+Before merge, the independent receipt verifier was tightened to reject true external-evidence flags in the deterministic fixture, bind `errors_before_repair` to the initial verifier event, and reject boolean sequence values. Final-head Proof Cycle CI passed 8 runner self-tests and 15 receipt-contract tests; all three PASS/REPAIRED/FAIL receipts passed hash-chain and terminal-binding read-back. The PR is merged as `4b91814f906ea7943625544958c88d9cb8f0aea7`; post-merge Proof Cycle and Phoenix Audit both passed. The final artifact SHA-256 is `60d43cee4cedce9dd28fa5513c21dbbfbfb6dab110536026f1bc84e2d9cbf1f3`.
+
+The six core-spine PRs are merged and the full 26-repository crossconnect propagation is complete. See [the federation propagation and receipt-hardening report](2026-11-03-federation-propagation-and-receipt-hardening.md) for commit SHAs, independent artifact checks, and remaining CI blockers.
