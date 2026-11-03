@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "phoenix_vertical_slice_revalidation",
+  "recorded_at": "2026-11-03",
+  "status": "VERIFIED_LOCAL_FIXTURES_AND_GITHUB_CI",
+  "phoenix_receipt_cycle": {
+    "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+    "pull_request": 4,
+    "pull_request_url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4",
+    "validated_code_commit": "52290b38c31297fab64db9a49d46b25c6ac2a773",
+    "proof_cycle_run": {
+      "id": 41708321444,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41708321444",
+      "conclusion": "success"
+    },
+    "audit_run": {
+      "id": 41708321215,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41708321215",
+      "conclusion": "success"
+    },
+    "artifact": {
+      "id": 13267390936,
+      "name": "phoenix-proof-cycle-receipts",
+      "size_bytes": 3175,
+      "sha256": "3a5da033af7f9a8ad4528c51688e03e73300c8f5bccc1ef3191cadca9688824e",
+      "downloaded_and_rehashed": true
+    },
+    "tests": {
+      "runner_self_tests": 8,
+      "independent_receipt_contract_tests": 13,
+      "all_passed": true
+    },
+    "receipts": [
+      {
+        "name": "phoenix-proof-cycle.json",
+        "status": "PASS",
+        "events": 4,
+        "independently_verified": true
+      },
+      {
+        "name": "phoenix-proof-cycle-repaired.json",
+        "status": "REPAIRED",
+        "events": 6,
+        "independently_verified": true
+      },
+      {
+        "name": "phoenix-proof-cycle-failed.json",
+        "status": "FAIL",
+        "events": 4,
+        "independently_verified": true
+      }
+    ],
+    "tamper_checks": {
+      "direct_finding_tamper_rejected": true,
+      "resealed_outer_export_finding_tamper_rejected": true
+    },
+    "all_external_evidence_flags_false": true
+  },
+  "omega10_local_benchmark": {
+    "repository": "Zygros/omega-10",
+    "pull_request": 4,
+    "pull_request_url": "https://github.com/Zygros/omega-10/pull/4",
+    "head_commit": "e5acea05e1bda6ff6915e5ea4d799bd6c9085d8d",
+    "ci_run": {
+      "id": 41707544068,
+      "url": "https://github.com/Zygros/omega-10/actions/runs/41707544068",
+      "conclusion": "success"
+    },
+    "audit_run": {
+      "id": 41707544064,
+      "url": "https://github.com/Zygros/omega-10/actions/runs/41707544064",
+      "conclusion": "success"
+    },
+    "matrix_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "matrix_jobs_passed": 2,
+    "artifacts": [
+      {
+        "id": 13266480500,
+        "sha256": "40f3482df63308b07c2f10515888c8b1d2305b0fef5459fae0a4c1ddd5c3c620",
+        "downloaded_and_rehashed": true
+      },
+      {
+        "id": 13266395535,
+        "sha256": "81d9ad214f2c478538792ad0e621d628280149b50629bc6c59ec9b727f418b48",
+        "downloaded_and_rehashed": true
+      }
+    ],
+    "independently_verified_result": {
+      "components": 420,
+      "seeded_corruptions": 210,
+      "recovered": 210,
+      "recovery_rate": 1,
+      "append_only_history_preserved": true,
+      "event_count": 6,
+      "event_hash_chain_valid": true,
+      "baseline_manifest_hash_matches": true,
+      "ledger_hash_matches": true,
+      "live_and_snapshot_component_bytes_match": 420,
+      "all_passed": true
+    },
+    "scope": "Deterministic local snapshot/restore fixture only."
+  },
+  "crossconnect_prs": [
+    {
+      "repository": "Zygros/sovereign-federation",
+      "pr": 23,
+      "url": "https://github.com/Zygros/sovereign-federation/pull/23",
+      "ci": "success"
+    },
+    {
+      "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+      "pr": 4,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4",
+      "ci": "success"
+    },
+    {
+      "repository": "Zygros/omega-10",
+      "pr": 4,
+      "url": "https://github.com/Zygros/omega-10/pull/4",
+      "ci": "success"
+    },
+    {
+      "repository": "Zygros/conzetian-skill-lattice",
+      "pr": 4,
+      "url": "https://github.com/Zygros/conzetian-skill-lattice/pull/4",
+      "ci": "success"
+    },
+    {
+      "repository": "Zygros/conzetian-method",
+      "pr": 1,
+      "url": "https://github.com/Zygros/conzetian-method/pull/1",
+      "ci": "success"
+    },
+    {
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "pr": 39,
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/39",
+      "ci": "success"
+    }
+  ],
+  "previous_crosslink_drift_closed": {
+    "current_main_docs_contains_pr34_pr6_and_scout_reference": true,
+    "pr34_merge_commit": "5963d3bcf986514a265c8922669a224cc3f9caf6",
+    "pr6_merge_commit": "827b0050d4a9ed180e2acbfe91d02d8438e3999f"
+  },
+  "evidence_boundary": [
+    "The Phoenix receipt runner and OMEGA-10 recovery benchmark are deterministic local fixtures, not live external AI execution or production resilience evidence.",
+    "All Phoenix receipt external-evidence flags are false; no Bitcoin, Arweave/AO, or OpenTimestamps anchor was verified or created.",
+    "The OMEGA-10 benchmark is local snapshot restoration and does not establish distributed recovery.",
+    "Six crossconnect PRs are open and CI-green but not merged; 19 other existing local crossconnect copies remain stale on main and the ZYGNUS-OMNI-REPO repository has no local crossconnect file.",
+    "Dropbox's latest relevant Phoenix artifacts are archival (last modified 2026-02-10); the Lovable connector returned internal errors during workspace/project reads, so connected project state was not refreshed.",
+    "The user's Termux status transcript was not independently retrieved from the device and is not used as a verified external runtime claim."
+  ]
+}

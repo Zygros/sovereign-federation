@@ -39,6 +39,19 @@ The materialization log explicitly reports `nodes=26 generated=650 expected=650`
 
 ## Scope boundary and remaining propagation
 
-The 650 edges are logical repository relationships, not evidence that 650 live network routes or services are active. The pre-patch scan found 25 repositories with a local `.phoenix/CROSSCONNECT.json`; all 25 had 25 entries and omitted `ZYGNUS-OMNI-REPO`. The new repository itself did not yet contain a local crossconnect file. This PR corrects the central federation copy. The Phoenix implementation repository has a separate additive correction in [PR #4](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4), whose Phoenix Audit run [#41706336428](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41706336428) succeeded. Together, PRs #23 and #4 propose correcting the central federation and Phoenix copies; 23 other existing copies remain stale on `main`, and the new ZYGNUS repository has no local copy. Remaining propagation should be performed in controlled batches.
+The 650 edges are logical repository relationships, not evidence that 650 live network routes or services are active. The pre-patch scan found 25 repositories with a local `.phoenix/CROSSCONNECT.json`; all 25 had 25 entries and omitted `ZYGNUS-OMNI-REPO`. The new repository itself did not yet contain a local crossconnect file. This PR corrects the central federation copy. Six open, mergeable PRs now propose the 26-node crossconnect correction across the central federation, Phoenix, OMEGA-10, skill lattice, Conzetian method, and sovereign intelligence repositories. Their branch CI checks are green. The initial scan found 25 local crossconnect copies; six are now corrected on proposed branches and **19 existing copies remain stale on `main**. `ZYGNUS-OMNI-REPO` itself still has no local `.phoenix/CROSSCONNECT.json`. See the companion [Phoenix vertical-slice revalidation](./2026-11-03-phoenix-vertical-slice-revalidation.md) for receipt and benchmark evidence.
 
 No external timestamp, Bitcoin confirmation, Arweave/AO read-back, deployment, or payment settlement is claimed.
+
+## Subsequent core-spine propagation — 2026-11-03
+
+| Repository | PR | Verified CI |
+|---|---|---|
+| `sovereign-federation` | [#23](https://github.com/Zygros/sovereign-federation/pull/23) | [Materialize #41706207456](https://github.com/Zygros/sovereign-federation/actions/runs/41706207456), [Audit #41706678002](https://github.com/Zygros/sovereign-federation/actions/runs/41706678002) |
+| `PHOENIX-PROTOCOL-ULTIMATE` | [#4](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4) | [Proof Cycle #41708321444](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41708321444), [Audit #41708321215](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41708321215) |
+| `omega-10` | [#4](https://github.com/Zygros/omega-10/pull/4) | [CI #41707544068](https://github.com/Zygros/omega-10/actions/runs/41707544068), [Audit #41707544064](https://github.com/Zygros/omega-10/actions/runs/41707544064) |
+| `conzetian-skill-lattice` | [#4](https://github.com/Zygros/conzetian-skill-lattice/pull/4) | [Audit #41706798149](https://github.com/Zygros/conzetian-skill-lattice/actions/runs/41706798149) |
+| `conzetian-method` | [#1](https://github.com/Zygros/conzetian-method/pull/1) | [Protocol CI #41706847209](https://github.com/Zygros/conzetian-method/actions/runs/41706847209), [Audit #41706847020](https://github.com/Zygros/conzetian-method/actions/runs/41706847020) |
+| `conzet-sovereign-intelligence` | [#39](https://github.com/Zygros/conzet-sovereign-intelligence/pull/39) | [OmniNet CI #41706879903](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41706879903), [Audit #41706879809](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41706879809) |
+
+The prior 2026-10-25 cross-link drift is no longer open: the current `docs/CROSS_LINKS.md` on `main` contains PR #34, PR #6, and the Scout reference; both PRs remain merged with the recorded merge commits.

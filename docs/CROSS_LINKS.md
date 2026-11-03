@@ -4,6 +4,7 @@
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
 ## Total integration entry point
+- [2026-11-03 Phoenix vertical-slice revalidation](../evidence/audits/2026-11-03-phoenix-vertical-slice-revalidation.md) — fresh proof-cycle receipts, OMEGA-10 local recovery artifacts, and six crossconnect PRs.
 - [2026-11-03 canonical federation graph reconciliation](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) — canonical index/manifest alignment, 26 nodes, and 650 verified unique directed logical edges; see [PR #23](https://github.com/Zygros/sovereign-federation/pull/23) and its successful Actions receipts.
 - [Visibility-aware federation health correction — PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) — proposed source fix, regression tests, audit, and explicit CI evidence boundary.
 - [Repository visibility audit (branch evidence)](https://github.com/Zygros/conzet-sovereign-intelligence/blob/conzetian/visibility-aware-health-2026-10-22/evidence/audits/2026-10-23-repository-visibility-audit.md) — observed 26-node inventory and public/private split.
@@ -15,7 +16,7 @@ Always Add. Never replace a repo with another. Every major node should point her
 - **Evidence substrate**: https://github.com/Zygros/omega-10
 - **Method framework**: https://github.com/Zygros/conzetian-method
 
-- **Phoenix crossconnect reconciliation:** [Federation graph evidence](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) · [Federation PR #23](https://github.com/Zygros/sovereign-federation/pull/23) · [Phoenix PR #4](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4)
+- **Phoenix vertical-slice revalidation:** [Revalidation evidence](../evidence/audits/2026-11-03-phoenix-vertical-slice-revalidation.md) · [Federation graph evidence](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) · [Federation PR #23](https://github.com/Zygros/sovereign-federation/pull/23) · [Phoenix PR #4](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4) · [OMEGA-10 PR #4](https://github.com/Zygros/omega-10/pull/4) · [Skill Lattice PR #4](https://github.com/Zygros/conzetian-skill-lattice/pull/4) · [Conzetian Method PR #1](https://github.com/Zygros/conzetian-method/pull/1) · [Sovereign Intelligence PR #39](https://github.com/Zygros/conzet-sovereign-intelligence/pull/39)
 
 ## Phoenix family
 - Meta-unified: https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE
