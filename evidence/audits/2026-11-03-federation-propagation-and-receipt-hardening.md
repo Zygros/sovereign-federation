@@ -121,7 +121,7 @@ The exact per-repository commit SHAs and workflow identifiers are preserved in t
 - Crossconnect manifests and the 650-edge graph represent logical repository topology, not live network connectivity or runtime activation.
 - The Phoenix proof-cycle validates deterministic local receipts, not external AI execution, real web research, or external anchoring.
 - The OMEGA-10 benchmark validates local synthetic snapshot restoration, not distributed or production recovery.
-- No new OTS verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or production deployment was performed.
+- No new OTS verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or Phoenix runtime/payment-service deployment was performed. The existing `zyth-ultimate` GitHub Pages build/deployment workflow did run and succeed after its manifest commit.
 - The November 3 Termux status capture remains a user-supplied terminal transcript. Raw WAL/log/checkpoint files were not available in this run, so the WAL, ETH, OTS inventory, and payment-settlement claims remain unreconciled.
 
 The Phoenix `CI-STATUS.md` evidence update also passed Phoenix Audit run [#41713438640](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41713438640). The federation evidence-document updates passed Phoenix Audit through run [#41713417230](https://github.com/Zygros/sovereign-federation/actions/runs/41713417230).
