@@ -15,6 +15,8 @@ Always Add. Never replace a repo with another. Every major node should point her
 - **Evidence substrate**: https://github.com/Zygros/omega-10
 - **Method framework**: https://github.com/Zygros/conzetian-method
 
+- **Phoenix crossconnect reconciliation:** [Federation graph evidence](../evidence/audits/2026-11-03-federation-26-node-graph-reconciliation.md) · [Federation PR #23](https://github.com/Zygros/sovereign-federation/pull/23) · [Phoenix PR #4](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4)
+
 ## Phoenix family
 - Meta-unified: https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE
 - SSI (JS): https://github.com/Zygros/ultimate-phoenix-protocol-ssi

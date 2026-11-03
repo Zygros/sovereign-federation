@@ -61,7 +61,25 @@
   },
   "limitations": [
     "The graph records logical repository edges only; it does not establish live network connectivity or runtime activation.",
-    "The pre-patch scan found 25 local CROSSCONNECT files, each with 25 nodes and missing ZYGNUS-OMNI-REPO; ZYGNUS-OMNI-REPO itself had no local .phoenix/CROSSCONNECT.json. This PR corrects the central federation copy; other repository copies require staged propagation.",
+    "The pre-patch scan found 25 local CROSSCONNECT files, each with 25 nodes and missing ZYGNUS-OMNI-REPO; ZYGNUS-OMNI-REPO itself had no local .phoenix/CROSSCONNECT.json. The federation PR #23 and Phoenix PR #4 now propose corrections in two repositories; 23 other existing copies remain stale on main pending controlled propagation.",
     "No OpenTimestamps, Bitcoin, Arweave/AO, deployment, or payment-settlement verification was performed in this audit."
-  ]
+  ],
+  "phoenix_repository_change": {
+    "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+    "pull_request": 4,
+    "pull_request_url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4",
+    "branch": "automation/phoenix-crossconnect-ci-status-20261103-1140",
+    "head_commit": "03f5081ba7437469a6e5b127082562bfb9bed139",
+    "phoenix_audit_run": {
+      "id": 41706336428,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41706336428",
+      "conclusion": "success"
+    },
+    "readback": {
+      "crossconnect_nodes": 26,
+      "includes_zygnus_omni_repo": true,
+      "readme_link_added": true,
+      "ci_status_evidence_appended": true
+    }
+  }
 }
