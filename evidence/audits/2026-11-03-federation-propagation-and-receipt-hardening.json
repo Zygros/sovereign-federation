@@ -1,0 +1,419 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "federation_crossconnect_propagation_and_receipt_hardening",
+  "recorded_at": "2026-11-03",
+  "evidence_class": "VERIFIED_FOR_REPOSITORY_MANIFEST_PARITY_AND_LOCAL_CI",
+  "canonical_index": {
+    "repository": "Zygros/sovereign-federation",
+    "path": "FEDERATION_INDEX.json",
+    "blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+    "node_count": 26
+  },
+  "crossconnect_readback": {
+    "repositories_checked": 26,
+    "exact_ordered_matches": 26,
+    "mismatches": 0,
+    "existing_manifests_updated": 19,
+    "new_manifest_created": 1,
+    "core_spine_pr_manifests_merged": 6
+  },
+  "graph": {
+    "path": "graph/repository_edges.jsonl",
+    "blob_sha": "ca5aee4f7e1492b1debb93171e82c63edd7cd1e4",
+    "node_count": 26,
+    "edge_rows": 650,
+    "unique_directed_pairs": 650,
+    "expected_directed_pairs": 650,
+    "invalid_endpoints": 0,
+    "self_edges": 0,
+    "main_materialize_run": 41711951390,
+    "main_audit_run": 41711951406
+  },
+  "merged_core_spine_pull_requests": [
+    {
+      "repo": "Zygros/sovereign-federation",
+      "pr": 23,
+      "merge_commit": "5ff838d44753352ec6d71ac98061db0def10d5cd",
+      "checks": [
+        41711951390,
+        41711951406
+      ]
+    },
+    {
+      "repo": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+      "pr": 4,
+      "merge_commit": "4b91814f906ea7943625544958c88d9cb8f0aea7",
+      "checks": [
+        41711973409,
+        41711973487
+      ]
+    },
+    {
+      "repo": "Zygros/omega-10",
+      "pr": 4,
+      "merge_commit": "ea04f34749c1395a91fbd2f877e2a4a5dde995e6",
+      "checks": [
+        41711983211,
+        41711983269
+      ]
+    },
+    {
+      "repo": "Zygros/conzetian-skill-lattice",
+      "pr": 4,
+      "merge_commit": "eddfd0198d58124920107685a26c067bfa1f2d4f",
+      "checks": [
+        41711999562
+      ]
+    },
+    {
+      "repo": "Zygros/conzetian-method",
+      "pr": 1,
+      "merge_commit": "6b6a2a9ffcf11afc90dac057bcd91c17afd7580f",
+      "checks": [
+        41712009081,
+        41712008884
+      ]
+    },
+    {
+      "repo": "Zygros/conzet-sovereign-intelligence",
+      "pr": 39,
+      "merge_commit": "66c26079e3e659dcdb4acebbd44a1d95bca6c7bc",
+      "checks": [
+        41712020856,
+        41712020994
+      ]
+    }
+  ],
+  "direct_propagation_commits": [
+    {
+      "repo": "Zygros/Grossian_Scrolls",
+      "branch": "main",
+      "commit": "7b25945f0f0fa7136f637f504f80c2d50f638e1e",
+      "blob": "45db55978a0a7511d20a85e5487f00abad86221c",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ZAAI-SYSTEM",
+      "branch": "main",
+      "commit": "b7c07545b329f354d088880184952477064c62a6",
+      "blob": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/Sovereign-Narrative-Intelligence-SNI-",
+      "branch": "main",
+      "commit": "17fc24670d99686abd5507d83cbb6d2a1d4b3ec1",
+      "blob": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ARC-AGI",
+      "branch": "master",
+      "commit": "b7c195ed7fc6520d67a5cabf8e0a3b52b801a0e8",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/zyth-ultimate",
+      "branch": "main",
+      "commit": "a6f07fcf3fff830c447bc0771e13d2dafca2a5a7",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/Sovereign-AGSI-Archive",
+      "branch": "main",
+      "commit": "3718c8b9b38424378b34f7913415ed1b8db9e164",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/agents",
+      "branch": "main",
+      "commit": "ce9ee419ea1e1690cb4a2ceb728e3d2f606655b1",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ultimate-phoenix-protocol",
+      "branch": "main",
+      "commit": "0e1e8a9cca2916878423ec5b67e6b3fa1a9d3d84",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/multi-ai-convergence-protocol",
+      "branch": "main",
+      "commit": "c843fc1b5b2a8c8b2a5864b20096d088cc7f4aa6",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ultimate-phoenix-protocol-ssi",
+      "branch": "main",
+      "commit": "b15a6e75788d19cdef224332b552954c52569239",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ZYGROS-PRIME",
+      "branch": "main",
+      "commit": "51df13a34fac030b45a321590260c11bf80c7b5d",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/sovereign-agsi-portal",
+      "branch": "main",
+      "commit": "341e3320521e7b91af6be77b67b45203ba11323e",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/omninet-v4",
+      "branch": "main",
+      "commit": "a1232df959f12386395b238dd4555412a478c30a",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/CZAOUA-UNITY-SYSTEM",
+      "branch": "main",
+      "commit": "5d766d1a61a1809c5bc85d784e08b516cf7ea223",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/we-omega",
+      "branch": "main",
+      "commit": "02af1bb4d6d9c6339dcb42e28118f91fbc80568a",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+      "branch": "main",
+      "commit": "9aa0f7a20e2695603118013f5847ad878017fd39",
+      "blob": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/CONZETIAN-AI",
+      "branch": "main",
+      "commit": "c2837588e4cce18fe5a81585441ed18c79b8eaf8",
+      "blob": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/Conzet-Intelligence-System-",
+      "branch": "main",
+      "commit": "b36186d4796d95ef127c8f3ddd090097b49fa30d",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/agentql",
+      "branch": "main",
+      "commit": "3dd990f396d98f779fa581b0174c9dbd6f2c4617",
+      "blob": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+      "change": "updated"
+    },
+    {
+      "repo": "Zygros/ZYGNUS-OMNI-REPO",
+      "branch": "main",
+      "commit": "695b000f5c335f5f5c011f020690ca5ba941b2d5",
+      "blob": "3e508a3a34feae949d20beceda0b3d6d12cfb33a",
+      "change": "created"
+    }
+  ],
+  "phoenix_receipt_contract": {
+    "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+    "pr": 4,
+    "tested_head": "34ed9e872306cd046eea8fa9e74d951596b946b5",
+    "merge_commit": "4b91814f906ea7943625544958c88d9cb8f0aea7",
+    "hardening": [
+      "all five deterministic-fixture external-evidence flags must be false",
+      "errors_before_repair must match the initial verifier event",
+      "boolean sequence values are rejected"
+    ],
+    "tests": {
+      "runner_self_tests": 8,
+      "independent_receipt_contract_tests": 15,
+      "all_passed": true
+    },
+    "runs": {
+      "proof_cycle_pr": 41711762834,
+      "phoenix_audit_pr": 41711762855,
+      "proof_cycle_main": 41711973409,
+      "phoenix_audit_main": 41711973487
+    },
+    "artifact": {
+      "id": 13266249198,
+      "name": "phoenix-proof-cycle-receipts",
+      "size_bytes": 3178,
+      "sha256": "60d43cee4cedce9dd28fa5513c21dbbfbfb6dab110536026f1bc84e2d9cbf1f3",
+      "independently_rehashed": true
+    },
+    "receipt_readback": [
+      {
+        "file": "phoenix-proof-cycle.json",
+        "status": "PASS",
+        "events": 4,
+        "outer_hash": true,
+        "finding_hash": true,
+        "ledger_chain": true,
+        "terminal_binding": true,
+        "external_flags_false": true
+      },
+      {
+        "file": "phoenix-proof-cycle-repaired.json",
+        "status": "REPAIRED",
+        "events": 6,
+        "outer_hash": true,
+        "finding_hash": true,
+        "ledger_chain": true,
+        "terminal_binding": true,
+        "external_flags_false": true
+      },
+      {
+        "file": "phoenix-proof-cycle-failed.json",
+        "status": "FAIL",
+        "events": 4,
+        "outer_hash": true,
+        "finding_hash": true,
+        "ledger_chain": true,
+        "terminal_binding": true,
+        "external_flags_false": true
+      }
+    ]
+  },
+  "omega10_recovery": {
+    "repository": "Zygros/omega-10",
+    "pr": 4,
+    "tested_head": "e5acea05e1bda6ff6915e5ea4d799bd6c9085d8d",
+    "merge_commit": "ea04f34749c1395a91fbd2f877e2a4a5dde995e6",
+    "branch_ci_run": 41707544068,
+    "branch_audit_run": 41707544064,
+    "main_ci_run": 41711983211,
+    "main_audit_run": 41711983269,
+    "python_matrix": [
+      "3.11",
+      "3.12"
+    ],
+    "benchmark": {
+      "components": 420,
+      "corrupted": 210,
+      "recovered": 210,
+      "recovery_rate": 1,
+      "component_snapshot_pairs_rehashed": 420,
+      "all_pairs_match": true,
+      "baseline_manifest_hash_matches": true,
+      "ledger_events": 6,
+      "ledger_chain_valid": true,
+      "benchmark_passed": true
+    },
+    "artifacts": [
+      {
+        "id": 13266395535,
+        "name": "omega10-phoenix-recovery-3.11",
+        "size_bytes": 280141,
+        "sha256": "81d9ad214f2c478538792ad0e621d628280149b50629bc6c59ec9b727f418b48",
+        "independently_rehashed": true
+      },
+      {
+        "id": 13266480500,
+        "name": "omega10-phoenix-recovery-3.12",
+        "size_bytes": 280136,
+        "sha256": "40f3482df63308b07c2f10515888c8b1d2305b0fef5459fae0a4c1ddd5c3c620",
+        "independently_rehashed": true
+      }
+    ]
+  },
+  "direct_push_ci_summary": {
+    "changed_repositories": 20,
+    "repositories_with_at_least_one_successful_relevant_check": 15,
+    "failure_only_repositories": 3,
+    "pending_repositories": 1,
+    "repositories_with_no_actions_runs": 1,
+    "failures": [
+      {
+        "repository": "Zygros/sovereign-agsi-portal",
+        "run": 41712378304,
+        "workflow": "Phoenix Audit",
+        "cause": "npm ERESOLVE: Vite 7 conflicts with @builder.io/vite-plugin-jsx-loc@0.1.1 peer range Vite 4/5; the same failure was present in prior run 35164329444."
+      },
+      {
+        "repository": "Zygros/ultimate-phoenix-protocol-ssi",
+        "runs": [
+          41712353500,
+          41712353545,
+          41712353635
+        ],
+        "cause": "Existing Node workflow issues: adapters npm ci has no package-lock.json; legacy lint step has no ESLint config; Phoenix Audit Node test hits Jest environment teardown/import-after-teardown failure."
+      },
+      {
+        "repository": "Zygros/CONZETIAN-AI",
+        "run": 41712428411,
+        "workflow": "Phoenix Audit",
+        "cause": "pytest collection cannot import conzetian_ai; a separate draft PR #1 adds pip install -e . and has a successful branch audit, but remains unmerged and non-mergeable."
+      }
+    ],
+    "mixed_results": [
+      {
+        "repository": "Zygros/agents",
+        "successful_run": 41712335020,
+        "failed_runs": [
+          41712335352,
+          41712335036,
+          41712335254
+        ],
+        "cause": "Phoenix Audit passed; eval tests lack configured provider credentials (HTTP 401 and Google credentials setup skipped); flake8 reports pre-existing source syntax/lint issues; Ruff reports setup.py import/order and mode issues."
+      },
+      {
+        "repository": "Zygros/agentql",
+        "successful_run": 41712445079,
+        "failed_run": 41712442317,
+        "cause": "Phoenix Audit passed; Python pre-commit workflow failed, but the connector returned no job detail and the prior main run 38327357241 also failed."
+      }
+    ],
+    "pending": [
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
+        "runs": [
+          41712371056,
+          41712370903,
+          41712370890,
+          41712370824
+        ],
+        "status": "in_progress_at_capture"
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "run": 41712421407,
+        "status": "in_progress_at_capture",
+        "additional_successful_run": 41712421165
+      }
+    ],
+    "no_actions_runs": [
+      {
+        "repository": "Zygros/ZYGNUS-OMNI-REPO",
+        "note": "No Actions runs were returned after the new manifest was created."
+      }
+    ]
+  },
+  "termux_capture": {
+    "source": "user-supplied terminal transcript only",
+    "raw_wal_and_logs_available": false,
+    "wal_reconciled": false,
+    "ots_all_13_classified": false,
+    "payment_settlement_verified": false,
+    "external_onion_reachability_verified": false
+  },
+  "limitations": [
+    "Crossconnect manifests and graph edges describe logical repository topology, not live service connectivity or runtime activation.",
+    "The OMEGA-10 recovery benchmark is deterministic and local; it does not establish distributed or production recovery.",
+    "Phoenix proof-cycle receipts validate a local deterministic fixture; they do not establish external AI execution, web research, or external timestamp/blockchain anchoring.",
+    "No new OpenTimestamps verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or production deployment was performed.",
+    "The November 3 Termux transcript was not backed by raw WAL/log/checkpoint files in this run; its financial and OTS claims remain unreconciled."
+  ]
+}
