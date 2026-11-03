@@ -333,7 +333,6 @@
     "changed_repositories": 20,
     "repositories_with_at_least_one_successful_relevant_check": 15,
     "failure_only_repositories": 3,
-    "pending_repositories": 1,
     "repositories_with_no_actions_runs": 1,
     "failures": [
       {
@@ -399,7 +398,9 @@
         "repository": "Zygros/ZYGNUS-OMNI-REPO",
         "note": "No Actions runs were returned after the new manifest was created."
       }
-    ]
+    ],
+    "repositories_with_in_progress_checks": 2,
+    "pending_only_repositories": 1
   },
   "termux_capture": {
     "source": "user-supplied terminal transcript only",
