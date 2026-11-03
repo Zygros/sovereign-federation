@@ -103,7 +103,7 @@ The 20 additional repository writes produced the following observed outcome at c
 - 15 repositories had at least one successful relevant audit or repository-specific check.
 - Three repositories had failure-only relevant checks: `sovereign-agsi-portal`, `ultimate-phoenix-protocol-ssi`, and `CONZETIAN-AI`.
 - `CONZETIAN-UNIFIED-INTELLIGANCE` subsequently completed both Contract Verification (#41712421165) and Phoenix Audit (#41712421407) successfully.
-- `ZYGROS-PRIME` remained the one repository with four workflows still in progress at the latest read-back; its HTC Claim Audit included a provenance-attestation step.
+- `ZYGROS-PRIME` remained the one repository with three workflows still in progress at the latest read-back; its Repository Quality Gate passed, while HTC Claim Audit remained at provenance attestation and Phoenix Audit/OmniNet Python CI had not completed.
 - `ZYGNUS-OMNI-REPO` returned no Actions runs.
 
 Important independent failures:
