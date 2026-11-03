@@ -74,7 +74,7 @@ def build(paths):
 
 def main():
     p=argparse.ArgumentParser(); p.add_argument("archives",nargs="+",type=pathlib.Path); p.add_argument("--json",type=pathlib.Path); a=p.parse_args()
-    report=build(a.archives); encoded=json.dumps(report,indent=2,sort_keys=True)+"\\n"
+    report=build(a.archives); encoded=json.dumps(report,indent=2,sort_keys=True)+"\n"
     if a.json: a.json.parent.mkdir(parents=True,exist_ok=True); a.json.write_text(encoded,encoding="utf-8")
     print(encoded,end="")
     good=all(x["zip_crc"]=="PASS" and all(y["ots_digest_match"] for y in x["pdfs"]) for x in report["archives"])
