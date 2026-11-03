@@ -4,6 +4,8 @@ on:
     paths:
       - 'scripts/generate_crossconnect_edges.py'
       - '.github/workflows/materialize-federation-edges.yml'
+      - 'FEDERATION_INDEX.json'
+      - '.phoenix/CROSSCONNECT.json'
 permissions:
   contents: write
 jobs:
@@ -11,27 +13,34 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Generate deterministic 600-edge graph
+      - name: Generate directed graph from canonical federation index
         run: python3 scripts/generate_crossconnect_edges.py
-      - name: Verify exact artifact
+      - name: Verify exact artifact against canonical index
         run: |
-          test "$(wc -l < graph/repository_edges.jsonl)" -eq 600
+          set -euo pipefail
           python3 - <<'PY'
           import json
           from pathlib import Path
-          p=Path('graph/repository_edges.jsonl')
-          rows=[json.loads(x) for x in p.read_text().splitlines()]
-          assert len(rows)==600
-          pairs={(r['source'],r['target']) for r in rows}
-          assert len(pairs)==600
-          assert all(a!=b for a,b in pairs)
-          print('verified=600 unique directed edges')
+          index = json.loads(Path('FEDERATION_INDEX.json').read_text(encoding='utf-8'))
+          cross = json.loads(Path('.phoenix/CROSSCONNECT.json').read_text(encoding='utf-8'))
+          names = [entry['name'] for entry in index['repos']]
+          assert names and len(names) == len(set(names)), 'index names must be non-empty and unique'
+          assert cross['repositories'] == names, 'crossconnect/index mismatch'
+          rows = [json.loads(line) for line in Path('graph/repository_edges.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]
+          expected = len(names) * (len(names) - 1)
+          pairs = {(row['source'], row['target']) for row in rows}
+          assert len(rows) == expected, (len(rows), expected)
+          assert len(pairs) == expected, 'duplicate or missing directed pairs'
+          assert all(a in names and b in names and a != b for a, b in pairs), 'invalid edge endpoint or self-edge'
+          print(f'verified_nodes={len(names)} verified_directed_edges={expected}')
           PY
       - name: Commit generated artifact
         run: |
+          set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add graph/repository_edges.jsonl
-          git diff --cached --quiet && exit 0
-          git commit -m 'Materialize and verify 600 repository federation edges'
+          if git diff --cached --quiet; then echo 'Generated artifact is already current.'; exit 0; fi
+          EDGE_COUNT=$(python3 -c 'import json; n=len(json.load(open("FEDERATION_INDEX.json"))["repos"]); print(n*(n-1))')
+          git commit -m "Materialize and verify ${EDGE_COUNT} repository federation edges"
           git push

@@ -1,0 +1,175 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "federation_inventory_graph_reconciliation",
+  "recorded_at": "2026-11-03",
+  "evidence_class": "VERIFIED_FOR_LOGICAL_TOPOLOGY",
+  "repository": "Zygros/sovereign-federation",
+  "pull_request": 23,
+  "pull_request_url": "https://github.com/Zygros/sovereign-federation/pull/23",
+  "branch": "automation/federation-index-driven-edges-20261103-1140",
+  "source_index": {
+    "path": "FEDERATION_INDEX.json",
+    "blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+    "repository_count": 26,
+    "public": 21,
+    "private": 5
+  },
+  "pre_patch_state": {
+    "crossconnect_blob_sha": "e1681009898f6f47392daecc1f5563a7d1e58f2f",
+    "crossconnect_repository_count": 25,
+    "missing_from_crossconnect": [
+      "ZYGNUS-OMNI-REPO"
+    ],
+    "generator_blob_sha": "780f4bb92f32719bf03a8a4ff68952f449ebd945",
+    "generator_hardcoded_repository_count": 25,
+    "workflow_blob_sha": "e3de02149906532f86fa207c4795688abcaca9a8",
+    "expected_edge_count": 600,
+    "graph_blob_sha": "9670f183bf43289855c67247ef441fcd7375400d",
+    "graph_line_count": 600
+  },
+  "patch": {
+    "source_commit": "e73b9f2c783ef4528b5a0db18c3f1993db3e29af",
+    "generated_graph_commit": "5182258659232048de0f34faf0345479e84e655c",
+    "crossconnect_blob_sha": "af09eb3b5c80681a5cda5e933d46c49dbf9318a7",
+    "graph_blob_sha": "ca5aee4f7e1492b1debb93171e82c63edd7cd1e4",
+    "generator_blob_sha": "ebd40a49788991912dc9be4e71f5d2f50677b8f8",
+    "workflow_blob_sha": "bec26b357662831f1a036ccd13c517c602119f7b"
+  },
+  "verification": {
+    "materialize_workflow_run": {
+      "id": 41706207456,
+      "url": "https://github.com/Zygros/sovereign-federation/actions/runs/41706207456",
+      "conclusion": "success",
+      "reported_nodes": 26,
+      "reported_generated_edges": 650,
+      "reported_verified_edges": 650
+    },
+    "phoenix_audit_run": {
+      "id": 41706207441,
+      "url": "https://github.com/Zygros/sovereign-federation/actions/runs/41706207441",
+      "conclusion": "success"
+    },
+    "readback": {
+      "node_count": 26,
+      "crossconnect_matches_index": true,
+      "graph_line_count": 650,
+      "unique_directed_pairs": 650,
+      "expected_directed_pairs": 650,
+      "all_endpoints_in_index": true,
+      "self_edges": 0
+    }
+  },
+  "limitations": [
+    "The graph records logical repository edges only; it does not establish live network connectivity or runtime activation.",
+    "The pre-patch scan found 25 local CROSSCONNECT files, each with 25 nodes and missing ZYGNUS-OMNI-REPO; ZYGNUS-OMNI-REPO itself had no local .phoenix/CROSSCONNECT.json. Six open PRs now propose correcting the federation, Phoenix, OMEGA-10, skill-lattice, method, and sovereign-intelligence copies; 19 other existing copies remain stale on main pending controlled propagation.",
+    "The six crossconnect PRs are open and mergeable but not merged; their green checks are branch evidence, not main-branch state.",
+    "No OpenTimestamps, Bitcoin, Arweave/AO, deployment, or payment-settlement verification was performed in this audit."
+  ],
+  "phoenix_repository_change": {
+    "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+    "pull_request": 4,
+    "pull_request_url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4",
+    "branch": "automation/phoenix-crossconnect-ci-status-20261103-1140",
+    "head_commit": "03f5081ba7437469a6e5b127082562bfb9bed139",
+    "phoenix_audit_run": {
+      "id": 41706336428,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41706336428",
+      "conclusion": "success"
+    },
+    "readback": {
+      "crossconnect_nodes": 26,
+      "includes_zygnus_omni_repo": true,
+      "readme_link_added": true,
+      "ci_status_evidence_appended": true
+    }
+  },
+  "spine_propagation": [
+    {
+      "repository": "Zygros/sovereign-federation",
+      "pr": 23,
+      "url": "https://github.com/Zygros/sovereign-federation/pull/23",
+      "head": "bce2beecec9d2ab8398d698b57d785a4a5a1fd73",
+      "ci_runs": [
+        41706207456,
+        41706678002
+      ],
+      "ci_conclusion": "success"
+    },
+    {
+      "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+      "pr": 4,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/4",
+      "head": "3660dc971fab3a898b5536b8455fd1daf9e2496a",
+      "ci_runs": [
+        41708321444,
+        41708321215
+      ],
+      "ci_conclusion": "success"
+    },
+    {
+      "repository": "Zygros/omega-10",
+      "pr": 4,
+      "url": "https://github.com/Zygros/omega-10/pull/4",
+      "head": "e5acea05e1bda6ff6915e5ea4d799bd6c9085d8d",
+      "ci_runs": [
+        41707544068,
+        41707544064
+      ],
+      "ci_conclusion": "success"
+    },
+    {
+      "repository": "Zygros/conzetian-skill-lattice",
+      "pr": 4,
+      "url": "https://github.com/Zygros/conzetian-skill-lattice/pull/4",
+      "head": "d5b47e64bc163b9c6051c39f181a045dfd141b55",
+      "ci_runs": [
+        41706798149,
+        41706785632
+      ],
+      "ci_conclusion": "success"
+    },
+    {
+      "repository": "Zygros/conzetian-method",
+      "pr": 1,
+      "url": "https://github.com/Zygros/conzetian-method/pull/1",
+      "head": "9f9a3a5daa9bfd0a9751fa598e80b4c8df17674d",
+      "ci_runs": [
+        41706847209,
+        41706847020
+      ],
+      "ci_conclusion": "success"
+    },
+    {
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "pr": 39,
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/39",
+      "head": "83cbb75206966080b0be9b98885e8063bce3cf18",
+      "ci_runs": [
+        41706879903,
+        41706879809
+      ],
+      "ci_conclusion": "success"
+    }
+  ],
+  "crossconnect_rollout": {
+    "canonical_index_nodes": 26,
+    "existing_local_crossconnect_copies": 25,
+    "proposed_corrections_in_open_prs": 6,
+    "remaining_existing_copies_stale_on_main": 19,
+    "zygnus_omni_repo_has_local_crossconnect": false,
+    "all_six_prs_open_and_mergeable_at_observation": true
+  },
+  "prior_crosslink_drift": {
+    "pr34": {
+      "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/34",
+      "merged": true,
+      "merge_commit": "5963d3bcf986514a265c8922669a224cc3f9caf6"
+    },
+    "pr6": {
+      "url": "https://github.com/Zygros/sovereign-federation/pull/6",
+      "merged": true,
+      "merge_commit": "827b0050d4a9ed180e2acbfe91d02d8438e3999f"
+    },
+    "current_docs_cross_links_contains_both": true
+  }
+}
