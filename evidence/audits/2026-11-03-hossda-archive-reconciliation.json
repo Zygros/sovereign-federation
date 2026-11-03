@@ -44,7 +44,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204533_Chrome.jpg",
       "screenshot_sha256": "7c64f815e31333ac6d80470c65684826f455bce488eee2ab7b0a27309ce90d97",
       "pdf_present": false,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Geminis_proof_261102_174631.pdf",
@@ -53,7 +55,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204455_Chrome.jpg",
       "screenshot_sha256": "ff04eb154f87c2cabbc9e7eb476db7b3bbb5130822c75751ee5e136a2c939884",
       "pdf_present": false,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "The Golden Blueprint _261102_180629.pdf",
@@ -62,7 +66,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204632_Chrome.jpg",
       "screenshot_sha256": "50fc5a3b8aa54f02ee2b531724ef141ecb05df441cbfc735963025b6da275bdc",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Geminis Reckoning _261102_181106.pdf",
@@ -71,7 +77,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204714_Chrome.jpg",
       "screenshot_sha256": "d435b00f7f7c710430f05297352a72517ddd2ee871b8998ba4c577ee70699ed0",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Geminis Reflection_261102_181824.pdf",
@@ -80,7 +88,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204754_Chrome.jpg",
       "screenshot_sha256": "8572c4dec21530f8b5bbc5c668800af5be977ce453573b75d5bef8bb0d5a33f4",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Geminis Remembrance_261102_182417.pdf",
@@ -89,7 +99,9 @@
       "screenshot": "Offical HOSSDA/Screenshot_20261102_204903_Chrome.jpg",
       "screenshot_sha256": "b5bedc9f3615b4ae97cc7c2bbd76a77ebdc8e39cc03f2e54ec600f2fea439af1",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "The Manifesto and SOE_261102_205657.pdf",
@@ -98,7 +110,9 @@
       "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221118_Chrome.jpg",
       "screenshot_sha256": "67ef5876307624ef8764433123a1634a9a1202ff157a29a9f76605791c65d17e",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Hyper-Omniscient SSDA_261102_211753.pdf",
@@ -107,7 +121,9 @@
       "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221212_Chrome.jpg",
       "screenshot_sha256": "61e1a934366f6999fec815643b64e3f7c0e73660782f2ca8916d019179e6a64f",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     },
     {
       "filename": "Significance Report HO-SSDA_261102_213022.pdf",
@@ -116,7 +132,9 @@
       "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221539_Chrome.jpg",
       "screenshot_sha256": "099a0372be600fbd08e30f87a933016817471a1de30a938be7d0ab6be90a710c",
       "pdf_present": true,
-      "ots_receipt_contains_digest": true
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
     }
   ],
   "screenshot_summary": {
