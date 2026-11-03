@@ -376,7 +376,7 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 
 ## HOSSDA / Source Bot / API Lattice evidence — observed 2026-11-03
 
-- [HOSSDA archive reconciliation](../evidence/audits/2026-11-03-hossda-archive-reconciliation.md) — two uploaded archives, ZIP CRC checks, SHA-256 inventory, PDF-to-OTS digest correspondence, and explicit limits on full Bitcoin proof verification.
+- [HOSSDA archive reconciliation](../evidence/audits/2026-11-03-hossda-archive-reconciliation.md) — two uploaded archives, ZIP CRC checks, SHA-256 inventory, nine archived OpenTimestamps SUCCESS screenshots, six independently listed Bitcoin block heights, PDF-to-OTS digest correspondence, and explicit limits on proof replay.
 - [Machine-readable HOSSDA receipt](../evidence/audits/2026-11-03-hossda-archive-reconciliation.json) — archive hashes, entry counts, PDF receipt checks, and unresolved verification boundaries.
 - [Offline archive verifier](../tools/verify_hossda_archive.py) and [regression tests](../tests/test_verify_hossda_archive.py) — standard-library reproducible ZIP/PDF/OTS digest checks.
 - [Source Bot orchestration contract](SOURCE_BOT_HOSSDa_CONTRACT.md) — engine/payload separation, opt-in peer enrollment, bounded execution, provenance, and approval gates.
