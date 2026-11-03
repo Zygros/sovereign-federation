@@ -100,7 +100,8 @@ The 20 additional repository writes produced the following observed outcome at c
 
 - 15 repositories had at least one successful relevant audit or repository-specific check.
 - Three repositories had failure-only relevant checks: `sovereign-agsi-portal`, `ultimate-phoenix-protocol-ssi`, and `CONZETIAN-AI`.
-- Two repositories still had at least one workflow in progress: `ZYGROS-PRIME` (four workflows) and `CONZETIAN-UNIFIED-INTELLIGANCE` (Phoenix Audit pending while Contract Verification passed).
+- `CONZETIAN-UNIFIED-INTELLIGANCE` subsequently completed both Contract Verification (#41712421165) and Phoenix Audit (#41712421407) successfully.
+- `ZYGROS-PRIME` remained the one repository with four workflows still in progress at the latest read-back; its HTC Claim Audit included a provenance-attestation step.
 - `ZYGNUS-OMNI-REPO` returned no Actions runs.
 
 Important independent failures:
@@ -120,3 +121,5 @@ The exact per-repository commit SHAs and workflow identifiers are preserved in t
 - The OMEGA-10 benchmark validates local synthetic snapshot restoration, not distributed or production recovery.
 - No new OTS verification, Bitcoin confirmation, Arweave/AO read-back, payment settlement, or production deployment was performed.
 - The November 3 Termux status capture remains a user-supplied terminal transcript. Raw WAL/log/checkpoint files were not available in this run, so the WAL, ETH, OTS inventory, and payment-settlement claims remain unreconciled.
+
+The Phoenix `CI-STATUS.md` evidence update also passed Phoenix Audit run [#41713438640](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41713438640). The federation evidence-document updates passed Phoenix Audit through run [#41713417230](https://github.com/Zygros/sovereign-federation/actions/runs/41713417230).
