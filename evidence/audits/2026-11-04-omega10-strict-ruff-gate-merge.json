@@ -1,0 +1,75 @@
+{
+  "schema": "conzetian.federation-audit/1",
+  "date": "2026-11-04",
+  "source_repository": "Zygros/omega-10",
+  "pull_request": 5,
+  "merged": true,
+  "merge_commit": "5259035a273ca616ba4b2f9477e6d8ff815fbb1b",
+  "strict_ruff_gate": true,
+  "previous_ruff_bypass_removed": true,
+  "ruff_findings_resolved": 15,
+  "files_changed": 9,
+  "pre_merge": {
+    "ci_run": 41905659058,
+    "phoenix_audit_run": 41905659162,
+    "python_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "pytest_each": 11,
+    "ruff": "All checks passed"
+  },
+  "post_merge": {
+    "ci_run": 41905813986,
+    "phoenix_audit_run": 41905813695,
+    "python_versions": [
+      "3.11",
+      "3.12"
+    ],
+    "pytest_each": 11,
+    "ruff": "All checks passed"
+  },
+  "benchmark": {
+    "components": 420,
+    "corrupted": 210,
+    "recovered": 210,
+    "recovery_rate": 1,
+    "append_only_history_preserved": true,
+    "ledger_valid": true,
+    "all_components_verified": true,
+    "ledger_events": 6
+  },
+  "artifacts": [
+    {
+      "runtime": "3.11",
+      "id": 13360865085,
+      "sha256": "fb7b54f3ee98923fce85bbc52db973be0a8183c3f8b4f33cb394edf21bf6b04f",
+      "independently_rehashed": true,
+      "ledger_chain_independently_valid": true
+    },
+    {
+      "runtime": "3.12",
+      "id": 13360320907,
+      "sha256": "e992ff7ce70656b2565a6078ab170e3004409040cd73e1bfbfbf332ffb5a23b7",
+      "independently_rehashed": true,
+      "ledger_chain_independently_valid": true
+    }
+  ],
+  "failure_history": {
+    "run": 41904139345,
+    "reason": "15 Ruff findings became blocking after the fail-open bypass was removed",
+    "resolved": true
+  },
+  "evidence_boundaries": {
+    "local_benchmark_only": true,
+    "distributed_recovery_not_established": true,
+    "external_agent_participation_not_established": true,
+    "production_deployment_not_claimed": true,
+    "independent_machine_reproduction_not_claimed": true
+  },
+  "links": {
+    "pr": "https://github.com/Zygros/omega-10/pull/5",
+    "report": "https://github.com/Zygros/omega-10/blob/main/evidence/audits/2026-11-04-strict-ruff-gate-merge.md",
+    "receipt": "https://github.com/Zygros/omega-10/blob/main/evidence/audits/2026-11-04-strict-ruff-gate-merge.json"
+  }
+}

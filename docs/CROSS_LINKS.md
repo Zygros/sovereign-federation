@@ -401,3 +401,14 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Evidence pair:** [Markdown report](../evidence/audits/2026-11-04-conzetian-ai-sanitizer-race-hardening.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-04-conzetian-ai-sanitizer-race-hardening.json).
 
 **Evidence boundary:** PR #6 is unmerged and main is unchanged. The original source blob remains in Git history; no history rewrite, fork/cache/backup cleanup, or provider-side credential rotation/revocation was performed. Pattern matches do not establish that any credential is live, and the six-pattern scan does not prove the absence of all possible secret formats.
+
+
+## OMEGA-10 strict Ruff gate restoration and post-merge Phoenix evidence — 2026-11-04
+
+- **Merge:** [OMEGA-10 PR #5](https://github.com/Zygros/omega-10/pull/5) merged as `5259035a273ca616ba4b2f9477e6d8ff815fbb1b`. The repository-wide `ruff check src tests` is now blocking; the prior `|| true` bypass was removed. Fifteen findings were corrected across nine files, with explicit type/range validation tests.
+- **Post-merge CI:** [41905813986](https://github.com/Zygros/omega-10/actions/runs/41905813986) passed on Python 3.11 and 3.12; each matrix job reported Ruff clean and 11 pytest cases passed. [Phoenix Audit 41905813695](https://github.com/Zygros/omega-10/actions/runs/41905813695) also passed.
+- **Bounded recovery fixture:** each runtime restored 210/210 deliberately corrupted components out of 420, preserved the ledger prefix, and reported a valid six-event hash chain.
+- **Artifact verification:** post-merge Python 3.11 and 3.12 artifacts [13360865085](https://github.com/Zygros/omega-10/actions/runs/41905813986/artifacts/13360865085) and [13360320907](https://github.com/Zygros/omega-10/actions/runs/41905813986/artifacts/13360320907) were downloaded and independently rehashed; both ZIP digests matched GitHub's reported digests, and both inner six-event ledger chains independently verified.
+- **Evidence pair:** [OMEGA-10 source report](https://github.com/Zygros/omega-10/blob/main/evidence/audits/2026-11-04-strict-ruff-gate-merge.md) and [machine-readable receipt](https://github.com/Zygros/omega-10/blob/main/evidence/audits/2026-11-04-strict-ruff-gate-merge.json); this federation also stores a [local audit report](../evidence/audits/2026-11-04-omega10-strict-ruff-gate-merge.md) and [JSON receipt](../evidence/audits/2026-11-04-omega10-strict-ruff-gate-merge.json).
+
+**Evidence boundary:** this is repository CI plus a deterministic local recovery fixture, not distributed recovery, external-agent participation, production deployment, or independent reproduction on another machine. The initial strict Ruff run failed on 15 findings; those were corrected, not bypassed.
