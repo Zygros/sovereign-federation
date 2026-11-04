@@ -29,18 +29,20 @@
         "name": "Phoenix Audit",
         "id": 41909782796,
         "conclusion": "success",
+        "tests_passed": 26,
         "secret_patterns_step": "success"
       },
       {
         "name": "Federation Inventory Tests",
         "id": 41909782929,
-        "conclusion": "success"
+        "conclusion": "success",
+        "tests_passed": 7
       },
       {
         "name": "Unified Dataset Redaction",
         "id": 41909782958,
         "conclusion": "success",
-        "sanitizer_tests": "passed",
+        "tests_passed": 8,
         "full_dataset_scan": "NO_MATCHES_FOUND",
         "commit_job": "skipped_no_new_redactions"
       }
