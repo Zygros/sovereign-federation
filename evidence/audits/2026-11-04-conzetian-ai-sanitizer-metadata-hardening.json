@@ -1,0 +1,98 @@
+{
+  "schema": "conzetian.evidence.sanitizer-metadata-hardening.v1",
+  "observed_at": "2026-11-04",
+  "source": {
+    "repository": "Zygros/CONZETIAN-AI",
+    "pull_request": 6,
+    "branch": "automation/federation-inventory-hardening-2026-11-04",
+    "head_commit": "9766fdec67c835d25b9d0291afcd1c2a871e1f43",
+    "state": "open",
+    "merged": false,
+    "default_branch_changed": false,
+    "commits": [
+      "ab8118fea66ea2cdeae9c8eff8c8996ffc14fea5",
+      "8a00a7550b650cd0dac140c84abb01844964dcf4",
+      "58841198ffc861f4a05a2912d704fec16abe7ade",
+      "9766fdec67c835d25b9d0291afcd1c2a871e1f43"
+    ]
+  },
+  "implementation": [
+    "Redact credential-like patterns from scalar source_id and source_path values before writing manifest records.",
+    "Omit non-scalar provenance metadata from the sidecar.",
+    "Fail closed if the temporary manifest contains any recognized credential pattern.",
+    "Recognize private-key blocks represented with JSON-escaped newlines.",
+    "Add regression tests for credential-shaped source_id, source_path, and JSON-escaped PEM fixtures."
+  ],
+  "verification": {
+    "workflow_runs": [
+      {
+        "name": "Phoenix Audit",
+        "id": 41909782796,
+        "conclusion": "success",
+        "secret_patterns_step": "success"
+      },
+      {
+        "name": "Federation Inventory Tests",
+        "id": 41909782929,
+        "conclusion": "success"
+      },
+      {
+        "name": "Unified Dataset Redaction",
+        "id": 41909782958,
+        "conclusion": "success",
+        "sanitizer_tests": "passed",
+        "full_dataset_scan": "NO_MATCHES_FOUND",
+        "commit_job": "skipped_no_new_redactions"
+      }
+    ],
+    "artifact": {
+      "id": 13362186854,
+      "name": "unified-repo-dataset-redaction-preview",
+      "size_bytes": 20705731,
+      "sha256": "83a6581e59160e2a508b427f9ebb1d69e8756ed6541626d6e66d97b042ef0323",
+      "github_digest_matched": true
+    },
+    "independent_readback": {
+      "sanitized_jsonl_bytes": 81741094,
+      "sanitized_jsonl_sha256": "e02969b251eb83856e46859e075c93128eb45a57e1cca6e43b48962b77d4087d",
+      "sidecar_sha256": "1e17c9520fa7638ce094fbf40518ef2ab9c3bc42e51cd2d9bf37af8969d123d9",
+      "parsed_json_object_records": 4278,
+      "invalid_or_nonobject_records": 0,
+      "recognized_pattern_classes": 6,
+      "dataset_matches": 0,
+      "sidecar_matches": 0,
+      "manifest_status": "NO_MATCHES_FOUND",
+      "manifest_redaction_count": 0,
+      "manifest_remaining_matches": 0,
+      "source_mutation": false,
+      "raw_values_recorded": false
+    },
+    "original_source_to_derivative_receipt": {
+      "original_bytes": 81741163,
+      "original_sha256": "58e1fe24e3c5567de9ccd463135aac0fefc2c58a43e3a5672ff52c19dd6c19c8",
+      "sanitized_sha256": "e02969b251eb83856e46859e075c93128eb45a57e1cca6e43b48962b77d4087d",
+      "records_preserved": 4278,
+      "records_redacted": 6,
+      "credential_like_matches_redacted": 7,
+      "pattern_counts": {
+        "openai_api_key": 2,
+        "telegram_bot_token": 4,
+        "github_token": 1
+      },
+      "remaining_recognized_matches": 0
+    }
+  },
+  "preserved_intermediate_failure": {
+    "run_id": 41909686638,
+    "conclusion": "failure",
+    "cause": "A synthetic PEM header in test source matched the repository's literal secret-pattern scanner.",
+    "correction": "The test now assembles the synthetic marker from string fragments; final Phoenix Audit passed."
+  },
+  "outstanding_boundaries": [
+    "Provider-side revocation and old-credential rejection are not verified.",
+    "The source blob remains in private Git history; no history rewrite or fork/cache/backup cleanup is claimed.",
+    "Pattern matches are not proof of live credentials.",
+    "ZYGROS-PRIME issue #3 remains open for BotFather revocation and old-token rejection.",
+    "CONZETIAN-UNIFIED-INTELLIGANCE issue #15 records prior public Dropbox edit links; available Dropbox connector actions do not expose link modification or revocation."
+  ]
+}
