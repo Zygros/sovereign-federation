@@ -1,0 +1,106 @@
+{
+  "schema": "conzetian.evidence.zgyros-prime-preflight-hardening.v1",
+  "observed_at": "2026-11-04",
+  "source": {
+    "repository": "Zygros/ZYGROS-PRIME",
+    "pull_request": 6,
+    "branch": "security/phoenix-preflight-2026-10-09",
+    "head_commit": "50cb96e75dc67ccfa808622468e7a71d5e3e0d62",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "mergeable": false,
+    "default_branch_changed": false
+  },
+  "changes": [
+    "Format scripts/omega_htc_sim.py for Black.",
+    "Format scripts/omega_federation_sim.py for Black.",
+    "Format tests/test_omega_htc_sim.py for Black.",
+    "Add the security preflight branch to the existing OmniNet Python CI push filter.",
+    "Add a read-only Black diff step before the enforced Black check."
+  ],
+  "verification": {
+    "workflow_runs": [
+      {
+        "name": "OmniNet Python CI",
+        "id": 41911501205,
+        "conclusion": "success",
+        "matrix": {
+          "3.10": {
+            "tests_passed": 15,
+            "compile": "success",
+            "lint": "success",
+            "black_check": "success",
+            "black_files_unchanged": 4
+          },
+          "3.11": {
+            "tests_passed": 15,
+            "compile": "success",
+            "lint": "success",
+            "black_check": "success",
+            "black_files_unchanged": 4
+          },
+          "3.12": {
+            "tests_passed": 15,
+            "compile": "success",
+            "lint": "success",
+            "black_check": "success",
+            "black_files_unchanged": 4
+          }
+        }
+      },
+      {
+        "name": "Omega HTC Simulation Tests",
+        "id": 41911501635,
+        "conclusion": "success"
+      },
+      {
+        "name": "Phoenix Audit",
+        "id": 41911501255,
+        "conclusion": "success",
+        "credential_pattern_scan": "success"
+      },
+      {
+        "name": "HTC Claim Audit",
+        "id": 41911501014,
+        "conclusion": "failure",
+        "deterministic_claim_audit": "success",
+        "artifact_upload": "success",
+        "provenance_attestation": "blocked_private_user_owned_repository"
+      }
+    ],
+    "claim_audit_artifact": {
+      "id": 13360914932,
+      "name": "htc-claim-audit",
+      "size_bytes": 666,
+      "sha256": "57f81471bad897eed2f89c584d221b935b6308602bc35629dc51afa6d49981ee",
+      "github_digest_matched": true,
+      "entries": {
+        "latest_claim_audit.json": {
+          "bytes": 1158,
+          "sha256": "bccc487a9a08ab20764183462c9e4573e905bfb0dfc5458b3abfa688658f076a"
+        }
+      },
+      "claims": {
+        "total": 10,
+        "verified": 4,
+        "refuted": 0,
+        "unresolved": 6
+      }
+    },
+    "attestation_blocker": {
+      "provider": "GitHub Actions artifact attestation",
+      "message": "Feature not available for user-owned private repositories.",
+      "required_visibility": "public",
+      "visibility_changed": false,
+      "attestation_created": false
+    }
+  },
+  "limitations": [
+    "PR #6 remains draft, open, unmerged, and GitHub reported mergeable=false.",
+    "No production deployment or live distributed integration is established.",
+    "No GitHub artifact provenance attestation was created.",
+    "No repository visibility change was made.",
+    "Six claims remain unresolved and were not promoted."
+  ]
+}
