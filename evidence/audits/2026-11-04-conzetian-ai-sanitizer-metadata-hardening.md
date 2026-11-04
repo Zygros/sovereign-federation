@@ -24,9 +24,9 @@ Final PR head: `9766fdec67c835d25b9d0291afcd1c2a871e1f43`.
 
 | Check | Workflow run | Result |
 |---|---:|---|
-| Phoenix Audit, including Secret patterns | [41909782796](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782796) | SUCCESS |
-| Federation Inventory Tests | [41909782929](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782929) | SUCCESS |
-| Unified Dataset Redaction | [41909782958](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782958) | SUCCESS |
+| Phoenix Audit, including Secret patterns (26 tests passed) | [41909782796](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782796) | SUCCESS |
+| Federation Inventory Tests (7 tests passed) | [41909782929](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782929) | SUCCESS |
+| Unified Dataset Redaction (8 sanitizer tests passed) | [41909782958](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41909782958) | SUCCESS |
 
 The sanitizer regression-test step passed, the full 4,278-record dataset was reprocessed, and the idempotence scan returned `NO_MATCHES_FOUND` with zero remaining matches. The commit job was correctly skipped because the current derivative required no additional redactions.
 
