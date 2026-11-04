@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "federation_manifest_remote_readback",
+  "recorded_at": "2026-11-04T19:46:05Z",
+  "evidence_class": "VERIFIED_FOR_REMOTE_REPOSITORY_READBACK_AND_LOGICAL_GRAPH_INTEGRITY",
+  "canonical_index": {
+    "repository": "Zygros/sovereign-federation",
+    "path": "FEDERATION_INDEX.json",
+    "blob_sha": "a23401d76dd85810a966a320ff31cda0591a055f",
+    "node_count": 26,
+    "ordered_nodes": [
+      "omega-10",
+      "sovereign-federation",
+      "conzetian-skill-lattice",
+      "conzetian-method",
+      "ZYGROS-PRIME",
+      "PHOENIX-PROTOCOL-ULTIMATE",
+      "ultimate-phoenix-protocol",
+      "ultimate-phoenix-protocol-ssi",
+      "conzet-sovereign-intelligence",
+      "we-omega",
+      "omninet-v4",
+      "multi-ai-convergence-protocol",
+      "CZAOUA-UNITY-SYSTEM",
+      "zyth-ultimate",
+      "ZAAI-SYSTEM",
+      "Sovereign-AGSI-Archive",
+      "Grossian_Scrolls",
+      "CONZETIAN-UNIFIED-INTELLIGANCE",
+      "CONZETIAN-AI",
+      "sovereign-agsi-portal",
+      "Sovereign-Narrative-Intelligence-SNI-",
+      "Conzet-Intelligence-System-",
+      "ARC-AGI",
+      "agents",
+      "agentql",
+      "ZYGNUS-OMNI-REPO"
+    ]
+  },
+  "central_contract": {
+    "path": ".phoenix/CROSSCONNECT.json",
+    "blob_sha": "af09eb3b5c80681a5cda5e933d46c49dbf9318a7"
+  },
+  "manifest_readback": {
+    "repositories_checked": 26,
+    "files_found": 26,
+    "json_parse_successes": 26,
+    "schema_matches": 26,
+    "exact_ordered_matches": 26,
+    "mismatches": 0,
+    "missing_nodes": 0,
+    "extra_nodes": 0,
+    "per_repository": [
+      {
+        "repository": "omega-10",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2d34c65a877b64fa12454a1e89f6d40b4ba8343a",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "sovereign-federation",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "af09eb3b5c80681a5cda5e933d46c49dbf9318a7",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "conzetian-skill-lattice",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2d34c65a877b64fa12454a1e89f6d40b4ba8343a",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "conzetian-method",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2d34c65a877b64fa12454a1e89f6d40b4ba8343a",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ZYGROS-PRIME",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "PHOENIX-PROTOCOL-ULTIMATE",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2d34c65a877b64fa12454a1e89f6d40b4ba8343a",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ultimate-phoenix-protocol",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ultimate-phoenix-protocol-ssi",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "conzet-sovereign-intelligence",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "07d584f12f49cf50af80b6514849a3831759e93c",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "we-omega",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "omninet-v4",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "multi-ai-convergence-protocol",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "CZAOUA-UNITY-SYSTEM",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "zyth-ultimate",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ZAAI-SYSTEM",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "Sovereign-AGSI-Archive",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "Grossian_Scrolls",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "45db55978a0a7511d20a85e5487f00abad86221c",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "CONZETIAN-UNIFIED-INTELLIGANCE",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "CONZETIAN-AI",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "sovereign-agsi-portal",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "Sovereign-Narrative-Intelligence-SNI-",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "690ec1538970f3af4fe43b6abdcf519df6d7311f",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "Conzet-Intelligence-System-",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ARC-AGI",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "agents",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "agentql",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "2bef1a4e9f1411cef97c03e585862b870c76ea32",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      },
+      {
+        "repository": "ZYGNUS-OMNI-REPO",
+        "path": ".phoenix/CROSSCONNECT.json",
+        "blob_sha": "3e508a3a34feae949d20beceda0b3d6d12cfb33a",
+        "node_count": 26,
+        "schema": "phoenix-crossconnect/v1",
+        "exact_ordered_match": true
+      }
+    ]
+  },
+  "graph": {
+    "path": "graph/repository_edges.jsonl",
+    "blob_sha": "ca5aee4f7e1492b1debb93171e82c63edd7cd1e4",
+    "line_count": 650,
+    "unique_nodes": 26,
+    "unique_directed_pairs": 650,
+    "expected_directed_pairs": 650,
+    "duplicate_pairs": 0,
+    "self_edges": 0,
+    "invalid_endpoints": 0
+  },
+  "method": [
+    "Fetch FEDERATION_INDEX.json from the federation default branch and extract repos[].name in order.",
+    "Fetch each repository's default-branch .phoenix/CROSSCONNECT.json through the GitHub contents API.",
+    "Parse each manifest and compare schema, node count, and exact ordered all_nodes equality.",
+    "Fetch and parse graph/repository_edges.jsonl; check line count, unique directed pairs, endpoint validity, duplicate pairs, and self-edges."
+  ],
+  "boundaries": [
+    "Repository-level remote read-back only.",
+    "Logical graph structure does not imply live endpoint reachability or authenticated agent communication.",
+    "No source repository files were modified by this audit."
+  ]
+}
