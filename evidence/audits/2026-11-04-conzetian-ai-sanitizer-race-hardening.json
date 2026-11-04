@@ -1,0 +1,97 @@
+{
+  "schema": "conzetian.federation-audit/1",
+  "report_date": "2026-11-04",
+  "title": "CONZETIAN-AI dataset sanitizer publication-race hardening",
+  "source_repository": "Zygros/CONZETIAN-AI",
+  "pull_request": 6,
+  "pull_request_state": "open_unmerged",
+  "base_branch": "main",
+  "remediation_branch": "automation/federation-inventory-hardening-2026-11-04",
+  "tested_head": "0fda964e0a1c1d6e8ef329716591f09b9893841a",
+  "commits": {
+    "sanitizer_fix": "782314e43350cfb55ed4c7c8f69896ea2080fde7",
+    "initial_race_tests": "47718e597166a1d6a5466ff0d6e910d30597259c",
+    "corrected_test_fixtures_and_final_head": "0fda964e0a1c1d6e8ef329716591f09b9893841a"
+  },
+  "changes": [
+    "Replace overwrite-capable os.replace publication with atomic same-filesystem os.link publication.",
+    "Record temporary-file device/inode identity before publication.",
+    "Rollback only paths that still identify the file created by this invocation.",
+    "Add output-path and manifest-path concurrency regression tests."
+  ],
+  "verification": {
+    "phoenix_audit": {
+      "run_id": 41904974231,
+      "conclusion": "success",
+      "tests_passed": 24
+    },
+    "federation_inventory": {
+      "run_id": 41904973917,
+      "conclusion": "success",
+      "tests_run": 7
+    },
+    "dataset_redaction": {
+      "run_id": 41904974121,
+      "conclusion": "success",
+      "sanitizer_tests_passed": 6,
+      "commit_job": "skipped_no_new_redactions"
+    },
+    "push_phoenix_audit": {
+      "run_id": 41904964021,
+      "conclusion": "success"
+    },
+    "push_dataset_redaction": {
+      "run_id": 41904963987,
+      "conclusion": "success"
+    }
+  },
+  "intermediate_failure": {
+    "run_ids": [
+      41904912178,
+      41904912477,
+      41904904806,
+      41904904882
+    ],
+    "cause": "Two new race-test fixtures initially wrote a literal backslash-n, so the sanitizer correctly rejected the invalid JSONL. The fixtures were corrected in commit 0fda964e0a1c1d6e8ef329716591f09b9893841a.",
+    "final_head_all_listed_workflows_passed": true
+  },
+  "artifact": {
+    "id": 13359742575,
+    "name": "unified-repo-dataset-redaction-preview",
+    "github_digest": "sha256:8a0314b292132960c508d53975884fc67918b0a1a70b5b63839a4e4538ed41e3",
+    "independently_recalculated_zip_sha256": "8a0314b292132960c508d53975884fc67918b0a1a70b5b63839a4e4538ed41e3",
+    "zip_digest_match": true,
+    "dataset_bytes": 81741094,
+    "dataset_sha256": "e02969b251eb83856e46859e075c93128eb45a57e1cca6e43b48962b77d4087d",
+    "jsonl_records": 4278,
+    "all_records_valid_json_objects": true,
+    "independent_recognized_pattern_matches": 0,
+    "current_run_status": "NO_MATCHES_FOUND",
+    "current_run_redaction_count": 0,
+    "current_run_remaining_matches": 0
+  },
+  "original_redaction": {
+    "source_bytes": 81741163,
+    "source_sha256": "58e1fe24e3c5567de9ccd463135aac0fefc2c58a43e3a5672ff52c19dd6c19c8",
+    "derivative_sha256": "e02969b251eb83856e46859e075c93128eb45a57e1cca6e43b48962b77d4087d",
+    "records_preserved": 4278,
+    "records_redacted": 6,
+    "recognized_matches_redacted": 7,
+    "original_source_blob_retained_in_history": true
+  },
+  "evidence_boundaries": {
+    "main_branch_changed": false,
+    "pull_request_merged": false,
+    "git_history_rewritten": false,
+    "provider_revocation_or_rotation": false,
+    "forks_caches_or_external_backups_cleaned": false,
+    "recognized_patterns_prove_no_other_secret_formats": false,
+    "logical_federation_link_is_not_live_runtime_connectivity": true
+  },
+  "links": {
+    "pull_request": "https://github.com/Zygros/CONZETIAN-AI/pull/6",
+    "sanitizer": "https://github.com/Zygros/CONZETIAN-AI/blob/automation/federation-inventory-hardening-2026-11-04/scripts/sanitize_unified_dataset.py",
+    "tests": "https://github.com/Zygros/CONZETIAN-AI/blob/automation/federation-inventory-hardening-2026-11-04/tests/test_sanitize_unified_dataset.py",
+    "source_redaction_receipt": "https://github.com/Zygros/CONZETIAN-AI/blob/automation/federation-inventory-hardening-2026-11-04/evidence/audits/2026-11-04-unified-dataset-redaction.json"
+  }
+}
