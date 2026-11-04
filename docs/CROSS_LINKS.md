@@ -5,6 +5,15 @@ Always Add. Never replace a repo with another. Every major node should point her
 
 ## Total integration entry point
 
+## Fresh status reconciliation — 2026-11-04
+
+- **Visibility-aware health correction:** [conzet-sovereign-intelligence PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) is merged (merge commit `83bd18545e5614987017088677321a1508530313`). It separates 21 public repositories from 5 private nodes and retains `REPOS` as a compatibility alias. Its mocked regression tests do not establish live reachability of every public URL.
+- **Phoenix Audit source-probe correction:** [PR #31](https://github.com/Zygros/conzet-sovereign-intelligence/pull/31) is merged (merge commit `7f97238a6d334ee772b4cd30ca149b46d136e2db`). The correction was rechecked by [Phoenix Audit run #40014081660](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/40014081660); the current merged-main proof cycle also ran [OmniNet Python CI #41712020856](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020856) and [Phoenix Audit #41712020994](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/41712020994).
+- **A2A / action-receipt contracts:** [2026-11-04 CI revalidation](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-11-04-a2a-receipt-contract-revalidation.md) — 100 tests passed in each Python 3.8–3.11 matrix job; includes envelope, localhost round-trip, acceptance, and receipt-validator tests. [Machine-readable record](https://github.com/Zygros/conzet-sovereign-intelligence/blob/main/evidence/audits/2026-11-04-a2a-receipt-contract-revalidation.json).
+
+Earlier PR #30/#31 status lines below are preserved as dated historical observations; this section records their current merged state. The CI evidence remains scoped to the tests and workflows listed, not production deployment or live federation connectivity.
+
+
 - [2026-11-04 federation manifest remote read-back](../evidence/audits/2026-11-04-federation-manifest-readback.md) — fresh direct fetch and exact ordered comparison of all 26 default-branch manifests; 26/26 match the canonical index; 650/650 logical directed edges verified. [Machine-readable receipt](../evidence/audits/2026-11-04-federation-manifest-readback.json).
 - [2026-11-03 full federation propagation and receipt hardening](../evidence/audits/2026-11-03-federation-propagation-and-receipt-hardening.md) — 26/26 manifests exactly match the canonical index; six core PRs merged; 19 manifests updated and one new ZYGNUS manifest created; Phoenix and OMEGA artifacts independently rehashed. [Machine-readable JSON](../evidence/audits/2026-11-03-federation-propagation-and-receipt-hardening.json).
 - [2026-11-03 Phoenix vertical-slice revalidation](../evidence/audits/2026-11-03-phoenix-vertical-slice-revalidation.md) — proof-cycle receipts, OMEGA-10 local recovery artifacts, and the six merged core-spine changes.
