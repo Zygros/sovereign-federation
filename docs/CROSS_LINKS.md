@@ -389,3 +389,15 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Sanitized evidence:** [Markdown checkpoint](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.json).
 
 **Evidence boundary:** the preserved dataset was not opened or modified; the pattern is not classified as a confirmed live credential; no credential rotation, dataset deletion/redaction, production deployment, or external anchor is claimed.
+
+
+## CONZETIAN-AI dataset sanitizer publication-race hardening — 2026-11-04
+
+- **Source PR:** private [CONZETIAN-AI PR #6](https://github.com/Zygros/CONZETIAN-AI/pull/6) remains open and unmerged. The remediation branch adds atomic no-overwrite hard-link publication and inode-guarded rollback to the streaming dataset sanitizer.
+- **Regression coverage:** two new race tests verify that a concurrent output file or manifest is preserved and that rollback removes only the output created by the sanitizer invocation.
+- **Final-head verification:** Phoenix Audit [41904974231](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41904974231) passed 24 tests; Federation Inventory Tests [41904973917](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41904973917) ran 7 tests successfully; Unified Dataset Redaction [41904974121](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41904974121) passed all 6 sanitizer tests and the full 4,278-record idempotence scan.
+- **Artifact:** [workflow artifact 13359742575](https://github.com/Zygros/CONZETIAN-AI/actions/runs/41904974121/artifacts/13359742575) was downloaded and independently rehashed. ZIP SHA-256 matched GitHub's digest `8a0314b292132960c508d53975884fc67918b0a1a70b5b63839a4e4538ed41e3`; the inner 81,741,094-byte JSONL digest matched `e02969b251eb83856e46859e075c93128eb45a57e1cca6e43b48962b77d4087d`. All 4,278 records parsed as JSON objects and an independent scan of the six implemented pattern classes found zero matches.
+- **Sanitization history:** the earlier source-to-derivative receipt records 6 records / 7 credential-like matches redacted while preserving all 4,278 records. The current run returned `NO_MATCHES_FOUND`, zero new redactions, and zero remaining recognized matches.
+- **Evidence pair:** [Markdown report](../evidence/audits/2026-11-04-conzetian-ai-sanitizer-race-hardening.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-04-conzetian-ai-sanitizer-race-hardening.json).
+
+**Evidence boundary:** PR #6 is unmerged and main is unchanged. The original source blob remains in Git history; no history rewrite, fork/cache/backup cleanup, or provider-side credential rotation/revocation was performed. Pattern matches do not establish that any credential is live, and the six-pattern scan does not prove the absence of all possible secret formats.
