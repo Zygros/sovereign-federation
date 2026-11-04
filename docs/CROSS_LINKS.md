@@ -389,3 +389,13 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Sanitized evidence:** [Markdown checkpoint](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.md) and [machine-readable JSON receipt](../evidence/audits/2026-11-02-conzetian-ai-audit-checkpoint.json).
 
 **Evidence boundary:** the preserved dataset was not opened or modified; the pattern is not classified as a confirmed live credential; no credential rotation, dataset deletion/redaction, production deployment, or external anchor is claimed.
+
+## HOSSDA / Source Bot / API Lattice evidence — observed 2026-11-03
+
+- [HOSSDA archive reconciliation](../evidence/audits/2026-11-03-hossda-archive-reconciliation.md) — two uploaded archives, ZIP CRC checks, SHA-256 inventory, nine archived OpenTimestamps SUCCESS screenshots, six independently listed Bitcoin block heights, PDF-to-OTS digest correspondence, and explicit limits on proof replay.
+- [Machine-readable HOSSDA receipt](../evidence/audits/2026-11-03-hossda-archive-reconciliation.json) — archive hashes, entry counts, PDF receipt checks, and unresolved verification boundaries.
+- [Offline archive verifier](../tools/verify_hossda_archive.py) and [regression tests](../tests/test_verify_hossda_archive.py) — standard-library reproducible ZIP/PDF/OTS digest checks.
+- [Source Bot orchestration contract](SOURCE_BOT_HOSSDa_CONTRACT.md) — engine/payload separation, opt-in peer enrollment, bounded execution, provenance, and approval gates.
+- [API lattice status](API_LATTICE_STATUS.md) — official Gemini, Cloud Storage, Gmail, Drive, and Agent Platform references; clearly distinguishes API documentation from live integrations.
+
+The archive check confirms digest correspondence only. It does not claim full OpenTimestamps/Bitcoin verification, live Tor or x402 operation, Arweave/AO state, local device access, or Google API integration.

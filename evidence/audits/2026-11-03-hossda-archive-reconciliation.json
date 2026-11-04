@@ -1,0 +1,161 @@
+{
+  "schema": "conzetian.hossda.archive-evidence.v1",
+  "author": "Justin Neal Thomas Conzet",
+  "observation_date": "2026-11-03",
+  "archives": [
+    {
+      "filename": "Offical HOSSDA.zip",
+      "size_bytes": 16641157,
+      "sha256": "b5a1d9763532be85eeeb94f159b432bb6715b5a32a673a83433a6d7046ccc320",
+      "zip_crc": "PASS",
+      "entries": 46,
+      "counts": {
+        "pdf": 10,
+        "ots": 21,
+        "image": 15
+      }
+    },
+    {
+      "filename": "HOSSDA_Master_Archive_261102.zip",
+      "size_bytes": 4593386,
+      "sha256": "b1fdf0a6d74e73f95a9fadc6d3b61ddba6c89dcf61ee272b1329c7b9ce9626e6",
+      "zip_crc": "PASS",
+      "entries": 12,
+      "counts": {
+        "pdf": 3,
+        "ots": 6,
+        "image": 3
+      }
+    }
+  ],
+  "pdf_instances": 13,
+  "unique_pdf_sha256_count": 10,
+  "all_pdf_digests_in_sibling_ots": true,
+  "master_archive_receipt": {
+    "receipt": "Offical HOSSDA/HOSSDA_Master_Archive_261102.zip.ots",
+    "digest_match": true,
+    "scope": "digest-presence-only"
+  },
+  "screenshot_attestations": [
+    {
+      "filename": "STATUS REPORT — 195,943 CLICKS_261102_174726.pdf",
+      "sha256": "46091cc05043878b6861cb4785e04f78fb063103a8b01636b670bb70b9c1536d",
+      "block_height": 974329,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204533_Chrome.jpg",
+      "screenshot_sha256": "7c64f815e31333ac6d80470c65684826f455bce488eee2ab7b0a27309ce90d97",
+      "pdf_present": false,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Geminis_proof_261102_174631.pdf",
+      "sha256": "680e1e12e6ceb45784e919398929e73ac913b9e962f96aa65c0ee291deeb6fd5",
+      "block_height": 974329,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204455_Chrome.jpg",
+      "screenshot_sha256": "ff04eb154f87c2cabbc9e7eb476db7b3bbb5130822c75751ee5e136a2c939884",
+      "pdf_present": false,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "The Golden Blueprint _261102_180629.pdf",
+      "sha256": "d8090963f4675eed69003667a4f7e74b59652b75a64ac188ad43133c571ec8ca",
+      "block_height": 974333,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204632_Chrome.jpg",
+      "screenshot_sha256": "50fc5a3b8aa54f02ee2b531724ef141ecb05df441cbfc735963025b6da275bdc",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Geminis Reckoning _261102_181106.pdf",
+      "sha256": "8a8f59c6f4029186329274de72c7323544c886b3bc842a59cac62c4c7f18707f",
+      "block_height": 974333,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204714_Chrome.jpg",
+      "screenshot_sha256": "d435b00f7f7c710430f05297352a72517ddd2ee871b8998ba4c577ee70699ed0",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Geminis Reflection_261102_181824.pdf",
+      "sha256": "88aa2b51b63c193e4fd3e5b5005039e5880a1193debb40dee995e847167a1fcc",
+      "block_height": 974333,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204754_Chrome.jpg",
+      "screenshot_sha256": "8572c4dec21530f8b5bbc5c668800af5be977ce453573b75d5bef8bb0d5a33f4",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Geminis Remembrance_261102_182417.pdf",
+      "sha256": "f7e383989753a18fa82b6ea3f0eb5f225435c35c89169710093748909f41d6a9",
+      "block_height": 974334,
+      "screenshot": "Offical HOSSDA/Screenshot_20261102_204903_Chrome.jpg",
+      "screenshot_sha256": "b5bedc9f3615b4ae97cc7c2bbd76a77ebdc8e39cc03f2e54ec600f2fea439af1",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "The Manifesto and SOE_261102_205657.pdf",
+      "sha256": "68c35e4ce3eb9e8bdaa65f904f6722d2cca42246059a94d31a03c87102790b19",
+      "block_height": 974347,
+      "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221118_Chrome.jpg",
+      "screenshot_sha256": "67ef5876307624ef8764433123a1634a9a1202ff157a29a9f76605791c65d17e",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Hyper-Omniscient SSDA_261102_211753.pdf",
+      "sha256": "3b884007c911df261a7f3cb54e06888e2964920fee4887b44fa49ea615248734",
+      "block_height": 974351,
+      "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221212_Chrome.jpg",
+      "screenshot_sha256": "61e1a934366f6999fec815643b64e3f7c0e73660782f2ca8916d019179e6a64f",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    },
+    {
+      "filename": "Significance Report HO-SSDA_261102_213022.pdf",
+      "sha256": "d2ddab6ac026a8406520a1ac976b7ee9cac18b6463e03eb3474bfd97ca755a94",
+      "block_height": 974352,
+      "screenshot": "Offical HOSSDA/HOSSDA_Master_Archive_261102/Screenshot_20261102_221539_Chrome.jpg",
+      "screenshot_sha256": "099a0372be600fbd08e30f87a933016817471a1de30a938be7d0ab6be90a710c",
+      "pdf_present": true,
+      "ots_receipt_contains_digest": true,
+      "screenshot_hash_match": true,
+      "evidence_class": "User-supplied OpenTimestamps SUCCESS screenshot; screenshot bytes and digest correspondence checked; full proof not replayed here."
+    }
+  ],
+  "screenshot_summary": {
+    "total": 9,
+    "screenshot_hash_matches": 9,
+    "pdf_targets_present": 7,
+    "pdf_targets_missing": 2,
+    "block_heights": [
+      974329,
+      974333,
+      974334,
+      974347,
+      974351,
+      974352
+    ]
+  },
+  "limits": [
+    "Screenshots are user-supplied; screenshot bytes verified and text manually transcribed",
+    "No independent OTS proof replay or Bitcoin Merkle-path validation",
+    "Public block data confirms height existence, not screenshot authenticity",
+    "No device/Tor/x402/Arweave/AO/Google API runtime access",
+    "No authorship or copyright ownership determination"
+  ]
+}
