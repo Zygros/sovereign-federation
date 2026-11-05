@@ -5,6 +5,14 @@ Always Add. Never replace a repo with another. Every major node should point her
 
 ## Total integration entry point
 
+## Fresh status reconciliation — 2026-11-05
+
+- **ZYGROS-PRIME strict CI:** [PR #10](https://github.com/Zygros/ZYGROS-PRIME/pull/10) is open and ready for review. Final-head OmniNet Python CI passed across Python 3.8–3.11 with three canonical tests per version; Phoenix Audit, Repository Quality Gate, and HTC Claim Audit passed. The claim receipt classifies 10 claims as 4 verified, 0 refuted, and 6 unresolved. [Execution report](../evidence/audits/2026-11-05-zygros-prime-ci-and-launcher-preflight.md) · [Machine-readable receipt](../evidence/audits/2026-11-05-zygros-prime-ci-and-launcher-preflight.json).
+- **Phoenix/Ghost launcher preflight:** [ZYGROS-PRIME PR #9](https://github.com/Zygros/ZYGROS-PRIME/pull/9) is open and ready for review. Six token-store assertions and fourteen fail-closed/positive-path launcher assertions passed; Phoenix Audit, Repository Quality Gate, and HTC Claim Audit passed. Python 3.8–3.10 passed on the inherited matrix; Python 3.11 was still in checkout at observation time. The inherited formatter/type checks are non-blocking and are not counted as strict evidence; PR #10 addresses that gap.
+- **Evidence boundaries:** both PRs remain unmerged. GitHub skipped external provenance attestation for the private repository. No deployment, payment settlement, Bitcoin/Arweave anchor, or Termux WAL reconciliation is claimed. Connected Dropbox search did not return the November 3 checkpoint or raw WAL/OTS bundle.
+- **Credential hygiene:** current-default-branch code-search spot checks found no token-prefix matches in CONZETIAN-UNIFIED-INTELLIGANCE; this does not scan Git history or verify issuer-side revocation. Its Aikido credential-removal PR #6 remains non-mergeable pending separate history and rotation work.
+
+Earlier PR #9/#10 status lines below are preserved as dated historical observations; this section records the 2026-11-05 source heads and workflow evidence.
 ## Fresh status reconciliation — 2026-11-04
 
 - **Visibility-aware health correction:** [conzet-sovereign-intelligence PR #30](https://github.com/Zygros/conzet-sovereign-intelligence/pull/30) is merged (merge commit `83bd18545e5614987017088677321a1508530313`). It separates 21 public repositories from 5 private nodes and retains `REPOS` as a compatibility alias. Its mocked regression tests do not establish live reachability of every public URL.
