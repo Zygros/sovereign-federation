@@ -1,0 +1,167 @@
+{
+  "schema_version": "1.0",
+  "report_date": "2026-11-05",
+  "observed_at": "2026-11-05T20:55:00Z",
+  "repository_inventory": {
+    "owner": "Zygros",
+    "accessible_repositories": 26,
+    "public": 21,
+    "private": 5,
+    "push_permission": 26,
+    "scope": "GitHub connection inventory only"
+  },
+  "workstreams": [
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 10,
+      "title": "ci: make canonical Python verification blocking and archive-scoped",
+      "branch": "ci/strict-canonical-python-2026-11-05",
+      "head_sha": "b3a90f19709252508d445928ca25f44999aeac91",
+      "state": "open_ready_for_review_unmerged",
+      "workflows": [
+        {
+          "name": "OmniNet Python CI",
+          "run_id": 42106866449,
+          "conclusion": "success",
+          "python_versions": ["3.8", "3.9", "3.10", "3.11"],
+          "canonical_tests_per_version": 3
+        },
+        {
+          "name": "Phoenix Audit",
+          "run_id": 42106866317,
+          "conclusion": "success",
+          "canonical_tests": 3
+        },
+        {
+          "name": "Repository Quality Gate",
+          "run_id": 42106866292,
+          "conclusion": "success"
+        },
+        {
+          "name": "HTC Claim Audit",
+          "run_id": 42106866590,
+          "conclusion": "success",
+          "claim_count": 10,
+          "verified": 4,
+          "refuted": 0,
+          "unresolved": 6,
+          "artifact_id": 13451972559,
+          "artifact_sha256": "f0c97b496e8ff1625425fc88419a98c1a0e0a082629f6f8ab6f073d84847a576"
+        }
+      ],
+      "changes": [
+        "blocking formatter/type/test checks",
+        "maintained-root scope",
+        "archive exclusion",
+        "types-requests dependency",
+        "canonical test scope",
+        "three deterministic regression tests"
+      ],
+      "limits": [
+        "phoenix_omega.py compile-checked only",
+        "private-repository provenance attestation skipped",
+        "no deployment or external anchor claimed"
+      ]
+    },
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 9,
+      "title": "fix: fail closed before deployment when Phoenix/Ghost runtimes are missing",
+      "branch": "fix/launcher-runtime-preflight-2026-11-05",
+      "head_sha": "b2d3c77b0f879ae1857bd10b17e58b3187a93aa3",
+      "state": "open_ready_for_review_unmerged",
+      "workflows": [
+        {
+          "name": "Phoenix Launcher Safety Tests",
+          "run_id": 42107167223,
+          "conclusion": "success",
+          "token_store_assertions": 6,
+          "launcher_preflight_assertions": 14
+        },
+        {
+          "name": "Phoenix Audit",
+          "run_id": 42107167254,
+          "conclusion": "success"
+        },
+        {
+          "name": "Repository Quality Gate",
+          "run_id": 42107167454,
+          "conclusion": "success"
+        },
+        {
+          "name": "HTC Claim Audit",
+          "run_id": 42107167407,
+          "conclusion": "success",
+          "artifact_id": 13453136135,
+          "artifact_sha256": "57da8eff529ac583861616cc4cd00618eb95385c278179509f21d29b639c8a05"
+        },
+        {
+          "name": "OmniNet Python CI",
+          "run_id": 42107167408,
+          "conclusion": "in_progress_at_observation",
+          "passed_versions": ["3.8", "3.9", "3.10"],
+          "pending_version": "3.11",
+          "pending_stage": "checkout"
+        }
+      ],
+      "changes": [
+        "script-relative Phoenix runtime check",
+        "mode-specific Ghost runtime preflight",
+        "stubbed tmux positive-path test",
+        "fail-closed missing-runtime tests"
+      ],
+      "limits": [
+        "actual runtimes absent from default branch at observation",
+        "no credential validation or deployment",
+        "inherited workflow contains non-blocking formatter/type checks"
+      ]
+    }
+  ],
+  "security_observations": {
+    "current_default_branch_searches": [
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
+        "pattern": "ghp_",
+        "result_paths": [".github/workflows/phoenix-audit.yml"],
+        "interpretation": "scanner pattern only; not a full secret scan"
+      },
+      {
+        "repository": "Zygros/ZYGROS-PRIME",
+        "pattern": "github_pat_",
+        "matches": 0
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "pattern": "ghp_",
+        "matches": 0
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "pattern": "github_pat_",
+        "matches": 0
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "pattern": "AKIA",
+        "matches": 0
+      }
+    ],
+    "limitations": [
+      "Git history not scanned",
+      "issuer-side credential rotation not verified",
+      "CONZETIAN-UNIFIED-INTELLIGANCE PR #6 remains non-mergeable"
+    ]
+  },
+  "dropbox_search": {
+    "exact_checkpoint_search_matches": 0,
+    "phoenix_wal_log_matches": 0,
+    "result": "No November 3 raw checkpoint/WAL/OTS bundle found in connected Dropbox search; generic OTS search returned older documents."
+  },
+  "non_claims": [
+    "no production deployment",
+    "no payment settlement verification",
+    "no Bitcoin or Arweave anchor",
+    "no Termux WAL/OTS reconciliation",
+    "no private-repository external provenance attestation"
+  ]
+}
