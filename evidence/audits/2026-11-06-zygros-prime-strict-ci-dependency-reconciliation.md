@@ -103,3 +103,5 @@ A second review of the newly restored dependency installation identified an oppo
 - Final-head HTC Claim Audit: https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655557 — success; artifact 13538405446, SHA-256 `fe35809cac8bc460c72b686224ffb7576d4a266c56307342bf85c22639bf322d`.
 
 These are final-head results for `82e3a218`; they supersede the earlier 8fe5c4e checkpoint for PR #10. The artifacts contain dependency inventories, not credentials or production secrets. Artifact retention is 14 days, so the committed JSON receipt preserves their identifiers and digests after expiration.
+
+The final-head HTC Claim Audit job log reports `claim_count: 10`, `verified: 4`, `refuted: 0`, and `unresolved: 6`. The uploaded artifact digest was printed by the GitHub Actions upload step and matches the artifact metadata returned by GitHub; it was not independently recomputed from downloaded ZIP bytes in this cycle.
