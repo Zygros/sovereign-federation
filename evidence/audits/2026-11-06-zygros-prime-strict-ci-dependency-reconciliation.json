@@ -1,0 +1,179 @@
+{
+  "schema": "conzetian.phoenix.execution.v1",
+  "observed_at_utc": "2026-11-06T20:10:36Z",
+  "repository_inventory": {
+    "owner": "Zygros",
+    "total": 26,
+    "public": 21,
+    "private": 5,
+    "meaning": "connected inventory snapshot; not runtime health"
+  },
+  "changes": [
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 10,
+      "branch": "ci/strict-canonical-python-2026-11-05",
+      "head_sha": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
+      "previous_head_sha": "b3a90f19709252508d445928ca25f44999aeac91",
+      "commit_sha": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
+      "files": [
+        ".github/workflows/python-ci.yml"
+      ],
+      "change": "restore installation of declared requirements.txt before strict CI tools",
+      "workflow": {
+        "id": 42285809483,
+        "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42285809483",
+        "conclusion": "success",
+        "matrix": [
+          {
+            "python": "3.8",
+            "conclusion": "success",
+            "pytest_passed": 3,
+            "mypy_files": 11,
+            "mypy_errors": 0
+          },
+          {
+            "python": "3.9",
+            "conclusion": "success",
+            "pytest_passed": 3,
+            "mypy_files": 11,
+            "mypy_errors": 0
+          },
+          {
+            "python": "3.10",
+            "conclusion": "success",
+            "pytest_passed": 3,
+            "mypy_files": 11,
+            "mypy_errors": 0
+          },
+          {
+            "python": "3.11",
+            "conclusion": "success",
+            "pytest_passed": 3,
+            "mypy_files": 11,
+            "mypy_errors": 0
+          }
+        ],
+        "required_steps": [
+          "requirements.txt installation",
+          "strict CI tools installation",
+          "compileall/py_compile",
+          "critical flake8",
+          "Black tests/",
+          "mypy maintained roots",
+          "pytest tests/"
+        ]
+      },
+      "pr_state": "open",
+      "mergeable": true,
+      "merged": false
+    },
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 9,
+      "branch": "fix/launcher-runtime-preflight-2026-11-05",
+      "head_sha": "b2d3c77b0f879ae1857bd10b17e58b3187a93aa3",
+      "workflow_runs": [
+        {
+          "id": 42107167223,
+          "name": "Phoenix Launcher Safety Tests",
+          "conclusion": "success",
+          "token_store_pass_assertions": 6,
+          "launcher_preflight_pass_assertions": 14,
+          "tmux": "stubbed"
+        },
+        {
+          "id": 42107167254,
+          "name": "Phoenix Audit",
+          "conclusion": "success"
+        },
+        {
+          "id": 42107167454,
+          "name": "Repository Quality Gate",
+          "conclusion": "success"
+        },
+        {
+          "id": 42107167407,
+          "name": "HTC Claim Audit",
+          "conclusion": "success"
+        },
+        {
+          "id": 42107167408,
+          "name": "OmniNet Python CI",
+          "conclusion": "success",
+          "python_matrix": [
+            "3.8",
+            "3.9",
+            "3.10",
+            "3.11"
+          ]
+        }
+      ],
+      "pr_state": "open",
+      "mergeable": true,
+      "merged": false
+    },
+    {
+      "repository": "Zygros/CONZETIAN-AI",
+      "pull_request": 6,
+      "head_sha": "9766fdec67c835d25b9d0291afcd1c2a871e1f43",
+      "workflow_runs": [
+        {
+          "id": 41909782929,
+          "name": "Federation Inventory Tests",
+          "conclusion": "success"
+        },
+        {
+          "id": 41909782796,
+          "name": "Phoenix Audit",
+          "conclusion": "success"
+        },
+        {
+          "id": 41909782958,
+          "name": "Unified Dataset Redaction",
+          "conclusion": "success"
+        }
+      ],
+      "pr_state": "open",
+      "mergeable": true,
+      "merged": false,
+      "blocker": "original credential-bearing blob remains in private Git history; provider-side revocation is unverified; no history rewrite performed"
+    }
+  ],
+  "predecessor_head_evidence": {
+    "repository": "Zygros/ZYGROS-PRIME",
+    "head_sha": "b3a90f19709252508d445928ca25f44999aeac91",
+    "runs": [
+      {
+        "id": 42106866317,
+        "name": "Phoenix Audit",
+        "conclusion": "success"
+      },
+      {
+        "id": 42106866292,
+        "name": "Repository Quality Gate",
+        "conclusion": "success"
+      },
+      {
+        "id": 42106866590,
+        "name": "HTC Claim Audit",
+        "conclusion": "success",
+        "claim_count": 10,
+        "verified": 4,
+        "refuted": 0,
+        "unresolved": 6,
+        "artifact_id": 13451972559,
+        "artifact_sha256": "f0c97b496e8ff1625425fc88419a98c1a0e0a082629f6f8ab6f073d84847a576"
+      }
+    ],
+    "note": "The follow-up commit changes only the Python CI dependency-install steps; these runs were not rerun on the final head."
+  },
+  "limitations": [
+    "No PR was merged.",
+    "No production deployment or live tmux session occurred.",
+    "No payment settlement or external Bitcoin/Arweave/OpenTimestamps anchor was verified.",
+    "Private-repository provenance attestation was skipped by GitHub.",
+    "Termux raw WAL/checkpoint/OTS source bundle remains unavailable in connected evidence sources.",
+    "Dropbox was not accessed."
+  ]
+}
