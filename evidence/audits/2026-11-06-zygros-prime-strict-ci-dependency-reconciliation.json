@@ -1,6 +1,6 @@
 {
   "schema": "conzetian.phoenix.execution.v1",
-  "observed_at_utc": "2026-11-06T20:10:36Z",
+  "observed_at_utc": "2026-11-06T20:16:22Z",
   "repository_inventory": {
     "owner": "Zygros",
     "total": 26,
@@ -13,16 +13,16 @@
       "repository": "Zygros/ZYGROS-PRIME",
       "pull_request": 10,
       "branch": "ci/strict-canonical-python-2026-11-05",
-      "head_sha": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
-      "previous_head_sha": "b3a90f19709252508d445928ca25f44999aeac91",
-      "commit_sha": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
+      "head_sha": "82e3a218a637d2051ff63a8cd1fddcea5b1d4486",
+      "previous_head_sha": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
+      "commit_sha": "82e3a218a637d2051ff63a8cd1fddcea5b1d4486",
       "files": [
         ".github/workflows/python-ci.yml"
       ],
       "change": "restore installation of declared requirements.txt before strict CI tools",
       "workflow": {
-        "id": 42285809483,
-        "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42285809483",
+        "id": 42286655494,
+        "url": "https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655494",
         "conclusion": "success",
         "matrix": [
           {
@@ -30,38 +30,72 @@
             "conclusion": "success",
             "pytest_passed": 3,
             "mypy_files": 11,
-            "mypy_errors": 0
+            "mypy_errors": 0,
+            "pip_check": "No broken requirements found.",
+            "environment_artifact_id": 13536904897,
+            "environment_artifact_sha256": "36283adb61c65d80b920e223fdf5cac7f18b62070afd204d8465e57c29f55df3"
           },
           {
             "python": "3.9",
             "conclusion": "success",
             "pytest_passed": 3,
             "mypy_files": 11,
-            "mypy_errors": 0
+            "mypy_errors": 0,
+            "pip_check": "No broken requirements found.",
+            "environment_artifact_id": 13538675177,
+            "environment_artifact_sha256": "e1909159a5d8bdcfafda63c6cefec8af73de0fe0a40136ae995737759ee09ca7"
           },
           {
             "python": "3.10",
             "conclusion": "success",
             "pytest_passed": 3,
             "mypy_files": 11,
-            "mypy_errors": 0
+            "mypy_errors": 0,
+            "pip_check": "No broken requirements found.",
+            "environment_artifact_id": 13536739998,
+            "environment_artifact_sha256": "59e23955c3a2169f571b482dc799182cdb92f69aa12d41f76c662cea2e99c7dc"
           },
           {
             "python": "3.11",
             "conclusion": "success",
             "pytest_passed": 3,
             "mypy_files": 11,
-            "mypy_errors": 0
+            "mypy_errors": 0,
+            "pip_check": "No broken requirements found.",
+            "environment_artifact_id": 13537782407,
+            "environment_artifact_sha256": "9043aab230a310fabccd7fc8b133e95940ad2920a542cd6eb7653515d1c796f6"
+          }
+        ],
+        "final_head_other_runs": [
+          {
+            "id": 42286655560,
+            "name": "Phoenix Audit",
+            "conclusion": "success"
+          },
+          {
+            "id": 42286655626,
+            "name": "Repository Quality Gate",
+            "conclusion": "success"
+          },
+          {
+            "id": 42286655557,
+            "name": "HTC Claim Audit",
+            "conclusion": "success",
+            "artifact_id": 13538405446,
+            "artifact_sha256": "fe35809cac8bc460c72b686224ffb7576d4a266c56307342bf85c22639bf322d"
           }
         ],
         "required_steps": [
           "requirements.txt installation",
           "strict CI tools installation",
+          "pip check",
+          "pip freeze --all",
           "compileall/py_compile",
           "critical flake8",
           "Black tests/",
           "mypy maintained roots",
-          "pytest tests/"
+          "pytest tests/",
+          "upload exact environment artifact"
         ]
       },
       "pr_state": "open",
@@ -175,5 +209,15 @@
     "Private-repository provenance attestation was skipped by GitHub.",
     "Termux raw WAL/checkpoint/OTS source bundle remains unavailable in connected evidence sources.",
     "Dropbox was not accessed."
-  ]
+  ],
+  "follow_on": {
+    "previous_final_head": "8fe5c4ea3f12a8095bbf382eb5662895a48d30d3",
+    "final_head": "82e3a218a637d2051ff63a8cd1fddcea5b1d4486",
+    "additional_controls": [
+      "pip check",
+      "pip freeze --all",
+      "one environment artifact per Python matrix job"
+    ],
+    "artifact_retention_days": 14
+  }
 }
