@@ -5,6 +5,17 @@ Always Add. Never replace a repo with another. Every major node should point her
 
 ## Total integration entry point
 
+## Fresh status reconciliation — 2026-11-06
+
+- **ZYGROS-PRIME strict CI dependency reconciliation:** [PR #10](https://github.com/Zygros/ZYGROS-PRIME/pull/10) final head `8fe5c4ea3f12a8095bbf382eb5662895a48d30d3` restores declared `requirements.txt` installation before strict CI tooling. [OmniNet Python CI #42285809483](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42285809483) passed across Python 3.8–3.11; each job installed declared dependencies, passed compile/lint/Black/mypy, reported 3 canonical tests passed, and mypy reported no issues in 11 source files. PR remains open, mergeable, and unmerged.
+- **Phoenix/Ghost launcher preflight:** [PR #9](https://github.com/Zygros/ZYGROS-PRIME/pull/9) remains open and mergeable. Its launcher workflow [#42107167223](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42107167223) passed six token-store and fourteen launcher-preflight assertions; the local dual-runtime test used a stubbed tmux. Phoenix Audit, Repository Quality Gate, HTC Claim Audit, and all four inherited Python matrix jobs completed successfully. No production deployment or real tmux session is claimed.
+- **CONZETIAN-AI dataset sanitizer:** [PR #6](https://github.com/Zygros/CONZETIAN-AI/pull/6) has successful final-branch Federation Inventory Tests, Phoenix Audit, and Unified Dataset Redaction workflows. It remains unmerged because its original credential-bearing blob remains in private Git history and provider-side revocation is unverified; no history rewrite or issuer-side revocation is claimed.
+- **Evidence boundaries:** the three non-Python-CI checks for PR #10 are predecessor-head evidence from `b3a90f19709252508d445928ca25f44999aeac91`; the final-head dependency follow-up was validated by Python CI #42285809483. GitHub skipped external provenance attestation for the private ZYGROS-PRIME repository. No deployment, payment settlement, external timestamp/Bitcoin/Arweave anchor, or Termux WAL reconciliation is claimed. Dropbox was not accessed.
+- [Full execution report](../evidence/audits/2026-11-06-zygros-prime-strict-ci-dependency-reconciliation.md) · [Machine-readable receipt](../evidence/audits/2026-11-06-zygros-prime-strict-ci-dependency-reconciliation.json).
+
+Earlier dated sections below are preserved as historical observations. This section records the 2026-11-06 final-head and predecessor-head distinctions.
+
+
 ## Fresh status reconciliation — 2026-11-05
 
 - **ZYGROS-PRIME strict CI:** [PR #10](https://github.com/Zygros/ZYGROS-PRIME/pull/10) is open and ready for review. Final-head OmniNet Python CI passed across Python 3.8–3.11 with three canonical tests per version; Phoenix Audit, Repository Quality Gate, and HTC Claim Audit passed. The claim receipt classifies 10 claims as 4 verified, 0 refuted, and 6 unresolved. [Execution report](../evidence/audits/2026-11-05-zygros-prime-ci-and-launcher-preflight.md) · [Machine-readable receipt](../evidence/audits/2026-11-05-zygros-prime-ci-and-launcher-preflight.json).
