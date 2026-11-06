@@ -82,7 +82,12 @@
             "name": "HTC Claim Audit",
             "conclusion": "success",
             "artifact_id": 13538405446,
-            "artifact_sha256": "fe35809cac8bc460c72b686224ffb7576d4a266c56307342bf85c22639bf322d"
+            "artifact_sha256": "fe35809cac8bc460c72b686224ffb7576d4a266c56307342bf85c22639bf322d",
+            "claim_count": 10,
+            "verified": 4,
+            "refuted": 0,
+            "unresolved": 6,
+            "artifact_digest_source": "GitHub Actions upload log and artifact metadata; not independently recomputed from downloaded ZIP bytes"
           }
         ],
         "required_steps": [
