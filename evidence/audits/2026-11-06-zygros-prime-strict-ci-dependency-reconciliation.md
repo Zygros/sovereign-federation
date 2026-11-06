@@ -84,3 +84,22 @@ The PR remains open and mergeable, but it is not promoted. The PR's own evidence
 4. Inspect the CONZETIAN-AI PR #6 workflow runs and the PR's explicit historical-secret/revocation limitations.
 
 This report distinguishes final-head evidence from predecessor-head evidence and fixture tests from production behavior.
+
+
+## Follow-on reproducibility hardening — final head 2026-11-06
+
+A second review of the newly restored dependency installation identified an opportunity to make the environment itself auditable. The workflow now runs `pip check`, captures `pip freeze --all` for each Python version, and uploads one version-specific environment artifact per matrix job.
+
+- Follow-on commit / final head: `82e3a218a637d2051ff63a8cd1fddcea5b1d4486`.
+- Final-head OmniNet Python CI: https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655494 — success on all four Python versions.
+- Each job reported `No broken requirements found.`, `3 passed`, and `Success: no issues found in 11 source files`.
+- Four environment artifacts were uploaded with 14-day retention:
+  - Python 3.8 artifact 13536904897, SHA-256 `36283adb61c65d80b920e223fdf5cac7f18b62070afd204d8465e57c29f55df3`.
+  - Python 3.9 artifact 13538675177, SHA-256 `e1909159a5d8bdcfafda63c6cefec8af73de0fe0a40136ae995737759ee09ca7`.
+  - Python 3.10 artifact 13536739998, SHA-256 `59e23955c3a2169f571b482dc799182cdb92f69aa12d41f76c662cea2e99c7dc`.
+  - Python 3.11 artifact 13537782407, SHA-256 `9043aab230a310fabccd7fc8b133e95940ad2920a542cd6eb7653515d1c796f6`.
+- Final-head Phoenix Audit: https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655560 — success.
+- Final-head Repository Quality Gate: https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655626 — success.
+- Final-head HTC Claim Audit: https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42286655557 — success; artifact 13538405446, SHA-256 `fe35809cac8bc460c72b686224ffb7576d4a266c56307342bf85c22639bf322d`.
+
+These are final-head results for `82e3a218`; they supersede the earlier 8fe5c4e checkpoint for PR #10. The artifacts contain dependency inventories, not credentials or production secrets. Artifact retention is 14 days, so the committed JSON receipt preserves their identifiers and digests after expiration.
