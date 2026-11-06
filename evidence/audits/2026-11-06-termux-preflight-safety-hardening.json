@@ -1,0 +1,112 @@
+{
+  "schema": "conzetian.mobile-preflight.evidence.v1",
+  "observed_at_utc": "2026-11-06T20:24:15Z",
+  "repository": "Zygros/conzet-sovereign-intelligence",
+  "branch": "termux-preflight-safety-2026-11-06",
+  "final_head": "1dc7926b72023472bfbf140e01209813d6739e3f",
+  "commits": [
+    {
+      "sha": "153d7c381954c7802c546ae3245b558f015b2680",
+      "path": "scripts/termux_preflight.sh",
+      "message": "feat(mobile): add safe Termux preflight"
+    },
+    {
+      "sha": "5bc99033fe04b5c223bec1aaee0cbcc2c34cc224",
+      "path": "scripts/test_termux_preflight.sh",
+      "message": "test(mobile): cover Termux preflight safety gates"
+    },
+    {
+      "sha": "eb17c678365be37d612b8c0d03edc7f2d199d61c",
+      "path": ".github/workflows/termux-preflight.yml",
+      "message": "ci(mobile): verify Termux preflight safety"
+    },
+    {
+      "sha": "1dc7926b72023472bfbf140e01209813d6739e3f",
+      "path": "scripts/test_termux_preflight.sh",
+      "message": "test(mobile): align help assertion with documented safety text"
+    }
+  ],
+  "current_main_compare": {
+    "status": "ahead",
+    "ahead_by": 4,
+    "behind_by": 0
+  },
+  "pull_request": {
+    "number": 40,
+    "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/40",
+    "state": "open",
+    "draft": true,
+    "mergeable": true,
+    "merged": false,
+    "changed_files": 3,
+    "additions": 315,
+    "deletions": 0
+  },
+  "superseded_draft": {
+    "number": 29,
+    "url": "https://github.com/Zygros/conzet-sovereign-intelligence/pull/29",
+    "state": "open",
+    "draft": true,
+    "mergeable": false,
+    "behind_by": 40,
+    "changed": false
+  },
+  "prior_issue": {
+    "run_id": 42287761175,
+    "conclusion": "failure",
+    "cause": "test expected a literal help phrase absent from the documented usage text",
+    "resolution_commit": "1dc7926b72023472bfbf140e01209813d6739e3f"
+  },
+  "final_runs": [
+    {
+      "id": 42287793798,
+      "event": "push",
+      "name": "Termux Preflight Safety",
+      "conclusion": "success"
+    },
+    {
+      "id": 42287793547,
+      "event": "push",
+      "name": "Phoenix Audit",
+      "conclusion": "success"
+    },
+    {
+      "id": 42287950297,
+      "event": "pull_request",
+      "name": "Termux Preflight Safety",
+      "conclusion": "success"
+    },
+    {
+      "id": 42287950242,
+      "event": "pull_request",
+      "name": "Phoenix Audit",
+      "conclusion": "success"
+    },
+    {
+      "id": 42287950216,
+      "event": "pull_request",
+      "name": "OmniNet Python CI",
+      "conclusion": "success",
+      "python_matrix": [
+        "3.8",
+        "3.9",
+        "3.10",
+        "3.11"
+      ]
+    }
+  ],
+  "regression_groups": [
+    "help path is side-effect free",
+    "unknown options are rejected",
+    "default mode avoids pkg/pytest, preserves base mode 0755, creates private per-run directories, and verifies report checksum",
+    "pytest requires explicit opt-in and receives the requested target",
+    "pkg installation requires explicit opt-in and is intercepted by a stub"
+  ],
+  "safety_correction": "Only newly created per-run directories are chmodded 0700; caller-supplied base directories and pre-existing children are not chmodded.",
+  "limitations": [
+    "No Android/Termux device execution.",
+    "No phone files or permissions were inspected or modified.",
+    "No package installation, network/API call, agent/service launch, paid call, or deployment occurred.",
+    "PR #40 remains draft and unmerged; PR #29 remains unchanged."
+  ]
+}
