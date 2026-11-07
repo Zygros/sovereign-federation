@@ -126,5 +126,57 @@
       "merged": false,
       "latest_checks": "success"
     }
-  ]
+  ],
+  "archive_follow_up": {
+    "observed_repository": "Zygros/ZYGROS-PRIME",
+    "observed_default_branch_commit": "0c2ccbf05d37db5adc223df31ad2fed7aa7b6339",
+    "findings": [
+      {
+        "path": "Downloaded/phoenix_api.py",
+        "pattern": "API_SECRET defaults to phoenix-api-secret"
+      },
+      {
+        "path": "Downloaded/phoenix_api-1.py",
+        "pattern": "API_SECRET defaults to phoenix-api-secret"
+      },
+      {
+        "path": "Downloaded/phoenix_node_genesis.py",
+        "pattern": "walk_paths accepts caller paths; no ARCHIVE_ROOT match found in repository search"
+      },
+      {
+        "path": "Phoenix Protocol/maia_framework_orchestrator.py",
+        "pattern": "dynamic import from supplied path without trusted-root check"
+      },
+      {
+        "path": "Phoenix Protocol/maia_framework_orchestrator_1.py",
+        "pattern": "dynamic import from supplied path without trusted-root check"
+      }
+    ],
+    "related_open_mirror_prs": [
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "number": 1,
+        "topic": "API bearer authentication",
+        "state": "open",
+        "mergeable": true
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "number": 2,
+        "topic": "archive-root path containment",
+        "state": "open",
+        "mergeable": false
+      },
+      {
+        "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+        "number": 5,
+        "topic": "plugin trusted-directory validation",
+        "state": "open",
+        "mergeable": true
+      }
+    ],
+    "changed": false,
+    "deployment_relevance": "not established",
+    "reason_unchanged": "Historical/Downloaded archive copies were not rewritten without source-of-truth and deployment reconciliation."
+  }
 }
