@@ -99,3 +99,13 @@ The current GitHub state still shows these earlier implementation PRs open, merg
 - [conzet-sovereign-intelligence #40](https://github.com/Zygros/conzet-sovereign-intelligence/pull/40): safe Termux preflight.
 
 No merge was performed in this cycle.
+
+## Follow-up archive findings — 2026-11-07
+
+A targeted read-only search of the current `ZYGROS-PRIME` default-branch snapshot at `0c2ccbf05d37db5adc223df31ad2fed7aa7b6339` found additional historical copies that still contain unsafe patterns:
+
+- `Downloaded/phoenix_api.py` and `Downloaded/phoenix_api-1.py` use the fallback `API_SECRET = os.getenv("API_SECRET", "phoenix-api-secret")`.
+- `Downloaded/phoenix_node_genesis.py` exposes `walk_paths()` that accepts absolute paths and uses `os.path.abspath`; a repository search found no `ARCHIVE_ROOT` containment control in this snapshot.
+- `Phoenix Protocol/maia_framework_orchestrator.py` and `Phoenix Protocol/maia_framework_orchestrator_1.py` still use `spec_from_file_location` on the supplied plugin path without a trust-root check.
+
+These are repository-content findings, not evidence that any of the archived scripts are currently deployed or reachable. They were left unchanged to avoid silently rewriting historical/Downloaded material. The active-source plugin fix in this report applies to `PHOENIX-PROTOCOL-ULTIMATE` only. The corresponding mirrored proposals in `CONZETIAN-UNIFIED-INTELLIGANCE` (#1 authentication, #2 path containment, #5 plugin trust) remain separate open PRs. Their current code and deployment relevance require a separate source-of-truth review.
