@@ -1,0 +1,130 @@
+{
+  "schema": "conzetian.federation.audit.v1",
+  "observed_at_utc": "2026-11-07T20:32:00Z",
+  "topic": "MAIA plugin trust-boundary hardening",
+  "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+  "pull_request": {
+    "number": 5,
+    "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/5",
+    "state": "open",
+    "draft": true,
+    "mergeable": true,
+    "merged": false,
+    "branch": "security/maia-plugin-trust-2026-11-07",
+    "base_branch": "main",
+    "base_commit": "36e571cb869dd2dd1124451109eb8b6acd8873f2",
+    "source_head_commit": "5ee54f4d6b6079aa3b7a6940cadec0667df15518",
+    "tested_merge_commit": "454703e9dbc860426e4ddd453a41e558e21ddd54"
+  },
+  "implementation": {
+    "source_file": "core/phoenix/scripts/maia_framework_orchestrator.py",
+    "tests_file": "tests/test_maia_plugin_security.py",
+    "workflow_file": ".github/workflows/maia-plugin-security.yml",
+    "documentation_file": "core/phoenix/docs/MAIA_PLUGIN_TRUST.md",
+    "readme_file": "core/phoenix/README.md",
+    "regression_cases": 10,
+    "behaviors": [
+      "trusted_plugin_dirs allowlist with existing demonstration roots preserved",
+      "realpath canonicalization and commonpath containment",
+      "regular .py file requirement",
+      "parent traversal, sibling-prefix and symlink escape rejection",
+      "filesystem root cannot be a trust root",
+      "manifest type and name validation before registration",
+      "failed module entries removed from sys.modules",
+      "unique module names for loaded plugins"
+    ]
+  },
+  "verification": {
+    "focused_workflow": {
+      "name": "MAIA Plugin Trust Tests",
+      "run_id": 42411485237,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42411485237",
+      "conclusion": "success",
+      "python": "3.11.18",
+      "compile": "passed",
+      "tests_passed": 10,
+      "evidence_receipt": "passed",
+      "bundle_hashing": "passed",
+      "artifact_upload": "passed"
+    },
+    "phoenix_audit": {
+      "run_id": 42411485240,
+      "url": "https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42411485240",
+      "conclusion": "success",
+      "pytest_cases_passed": 29,
+      "compile": "passed",
+      "credential_pattern_scan": "passed",
+      "federation_contract": "passed",
+      "crossconnect": "CROSSCONNECT OK",
+      "non_applicable_builds": [
+        "Node",
+        "Go",
+        "Rust",
+        "Java"
+      ]
+    },
+    "push_runs": [
+      {
+        "name": "MAIA Plugin Trust Tests",
+        "run_id": 42411480931,
+        "conclusion": "success"
+      },
+      {
+        "name": "Phoenix Audit",
+        "run_id": 42411480896,
+        "conclusion": "success"
+      }
+    ]
+  },
+  "artifact": {
+    "name": "maia-plugin-trust-evidence",
+    "id": 13589777617,
+    "run_id": 42411485237,
+    "size_bytes": 2136,
+    "github_digest": "sha256:1aa293090d347ab3895a63ff498dd3a5ee457439e7ce3321974c9213b4b0b9ea",
+    "independently_downloaded": true,
+    "independent_zip_sha256": "1aa293090d347ab3895a63ff498dd3a5ee457439e7ce3321974c9213b4b0b9ea",
+    "inner_manifest_verified": true,
+    "expires_at": "2027-02-05T20:31:45Z",
+    "tested_commit": "454703e9dbc860426e4ddd453a41e558e21ddd54",
+    "source_head_commit": "5ee54f4d6b6079aa3b7a6940cadec0667df15518",
+    "base_commit": "36e571cb869dd2dd1124451109eb8b6acd8873f2"
+  },
+  "boundaries": {
+    "sandbox": false,
+    "production_deployment": false,
+    "external_services_used": false,
+    "paid_api_used": false,
+    "external_anchors_created": false,
+    "default_branch_modified": false,
+    "pr_merged": false,
+    "trusted_directories_require_operator_only_write_access": true
+  },
+  "related_open_prs": [
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "number": 9,
+      "state": "open",
+      "mergeable": true,
+      "merged": false,
+      "latest_checks": "success"
+    },
+    {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "number": 10,
+      "state": "open",
+      "mergeable": true,
+      "merged": false,
+      "latest_checks": "success"
+    },
+    {
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "number": 40,
+      "state": "open",
+      "draft": true,
+      "mergeable": true,
+      "merged": false,
+      "latest_checks": "success"
+    }
+  ]
+}
