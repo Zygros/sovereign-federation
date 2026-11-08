@@ -1,0 +1,115 @@
+{
+  "schema": "conzetian.phoenix-maia-trust-hardening.evidence.v1",
+  "recorded_at_utc": "2026-11-08T20:37:13Z",
+  "workstreams": [
+    {
+      "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+      "pull_request": 5,
+      "branch": "security/maia-plugin-trust-2026-11-07",
+      "head_sha": "e4312edd3a55c8dad64832ba592a596f75bf113e",
+      "base_sha": "36e571cb869dd2dd1124451109eb8b6acd8873f2",
+      "tested_merge_commit": "33baf707eaf3f89988b7e3395648eeab46f7064d",
+      "state": "open",
+      "draft": true,
+      "mergeable": true,
+      "merged": false,
+      "focused_workflow": {
+        "name": "MAIA Plugin Trust Tests",
+        "run_id": 42520602862,
+        "result": "success",
+        "python": "3.11.18",
+        "tests_passed": 15
+      },
+      "audit_workflow": {
+        "name": "Phoenix Audit",
+        "run_id": 42520602858,
+        "result": "success",
+        "pytest_passed": 34,
+        "credential_pattern_scan": "passed",
+        "federation_contract": "passed"
+      },
+      "artifact": {
+        "id": 13633535138,
+        "name": "maia-plugin-trust-evidence",
+        "zip_size_bytes": 2464,
+        "github_sha256": "c94461aa062bdf930dfe4b4b2a9c4e73cb546230ccc14566b554e24e41c6f0dc",
+        "independent_zip_hash_match": true,
+        "inner_manifest_match": true,
+        "retention_days": 90
+      },
+      "file_sha256": {
+        ".github/workflows/maia-plugin-security.yml": "8535b106d49db437b23209c1763492787b0fdfb298f18858659f95ca016bfa83",
+        "core/phoenix/README.md": "5915170eb712d348838c48940557e80dfb4ccba3de9124348c02563b3c62291a",
+        "core/phoenix/docs/MAIA_PLUGIN_TRUST.md": "26845b920c4972b64a5b957cf2db26a5dedc21aa3e2d5b60c2f3d59ed9ea2a62",
+        "core/phoenix/scripts/maia_framework_orchestrator.py": "da16405f7b361f34959e693e7d76cbdd1a8a8a780a737a14690fef8f8b733096",
+        "tests/test_maia_plugin_security.py": "7cfee467a754c56b082c36942f1f8e200fcc86d2364746f35af21c6574c9ab16"
+      }
+    },
+    {
+      "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+      "pull_request": 5,
+      "branch": "fix/aikido-security-code-audit-97974299-9wzs",
+      "head_sha": "44029fe1e77ff5e82ef0dca3ce439003635e808c",
+      "base_sha": "3b934e96803f4aef232734e0cfdb1a727ed6084a",
+      "tested_merge_commit": "65317eb029f8924f76a3d0f85be2a11298b8fd8d",
+      "state": "open",
+      "draft": false,
+      "mergeable": true,
+      "merged": false,
+      "mirror_count": 4,
+      "identical_git_blob_sha": "bf9260c5f10324baffd33fdde6fb310866bfb2c0",
+      "focused_workflow": {
+        "name": "MAIA Mirror Plugin Trust Tests",
+        "run_id": 42520998188,
+        "result": "success",
+        "python": "3.11.18",
+        "unittest_methods_passed": 6,
+        "per_mirror_security_case_executions": 20
+      },
+      "audit_workflow": {
+        "name": "Phoenix Audit",
+        "run_id": 42520998333,
+        "result": "success",
+        "pytest_passed": 19,
+        "subtests_passed": 23,
+        "source_discovery_probes": "passed",
+        "credential_pattern_scan": "passed"
+      },
+      "contract_workflow": {
+        "name": "Conzetian Contract Verification",
+        "run_id": 42520998127,
+        "result": "success"
+      },
+      "api_policy_workflow": {
+        "name": "Phoenix API Key Policy",
+        "run_id": 42520998470,
+        "result": "success"
+      },
+      "artifact": {
+        "id": 13633034237,
+        "name": "maia-mirror-plugin-trust-evidence",
+        "zip_size_bytes": 2431,
+        "github_sha256": "65a5d2e7fc2fa52db70969ff8c5a9b8521b79437b7fd9386d676cc929bf6f7b3",
+        "independent_zip_hash_match": true,
+        "inner_manifest_match": true,
+        "retention_days": 90
+      },
+      "file_sha256": {
+        "source-repositories/PHOENIX-PROTOCOL-ULTIMATE/core/phoenix/scripts/maia_framework_orchestrator.py": "3eeb893c735eb8c563c76b6c2e9334f281916358b27e05f7c63eb544a55d4f6a",
+        "source-repositories/ZYGROS-PRIME/Phoenix Protocol/maia_framework_orchestrator.py": "3eeb893c735eb8c563c76b6c2e9334f281916358b27e05f7c63eb544a55d4f6a",
+        "source-repositories/ZYGROS-PRIME/Phoenix Protocol/maia_framework_orchestrator_1.py": "3eeb893c735eb8c563c76b6c2e9334f281916358b27e05f7c63eb544a55d4f6a",
+        "source-repositories/conzet-sovereign-intelligence/scripts/maia_framework_orchestrator.py": "3eeb893c735eb8c563c76b6c2e9334f281916358b27e05f7c63eb544a55d4f6a",
+        "tests/test_maia_plugin_mirrors.py": "80ab502bed1c99617db8c8f5e79e0e7b9760b703e9b5368ab15ef27b5b71716b",
+        "docs/MAIA_PLUGIN_TRUST_BOUNDARY.md": "a604a631e487dc4744369ca0931329c3e71415575ac0af6f2d6b0c11f4c6d04b",
+        ".github/workflows/maia-plugin-mirrors.yml": "0621a9d7bba58b86cd6edec82e7191fb30bde7891d419dbc3b5a70e5087379b7"
+      }
+    }
+  ],
+  "limitations": [
+    "The in-process allowlist is not a sandbox.",
+    "Processes sharing the same OS identity are not isolated.",
+    "GitHub-hosted tests do not establish Android/Termux execution or production deployment.",
+    "No external provenance attestation or timestamp anchor was created in this cycle.",
+    "Both source PRs remain unmerged and the default branches were not modified."
+  ]
+}
