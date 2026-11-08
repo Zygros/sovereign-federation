@@ -1,0 +1,67 @@
+{
+  "schema": "conzetian.phoenix-archive-root-descriptor.evidence.v1",
+  "recorded_at_utc": "2026-11-08T20:50:45Z",
+  "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGIANCE",
+  "pull_request": 17,
+  "branch": "security/archive-root-descriptor-read-2026-11-08",
+  "head_sha": "84f883237dc98b700f6aa0b14e8af05361329b6e",
+  "base_sha": "e4e378e4b6d76d7ed9f1726fd2a50a923f08707f",
+  "tested_merge_commit": "2d32634e30d436b436f17514bcb681593e865f4d",
+  "state": "open",
+  "draft": true,
+  "mergeable": true,
+  "merged": false,
+  "superseded_pr": {
+    "number": 2,
+    "state": "open",
+    "mergeable": false,
+    "modified": false
+  },
+  "focused_workflow": {
+    "name": "Phoenix Archive Root Descriptor Tests",
+    "run_id": 42522100248,
+    "result": "success",
+    "python": "3.11.18",
+    "unittest_methods_passed": 7
+  },
+  "audit_workflow": {
+    "name": "Phoenix Audit",
+    "run_id": 42522100286,
+    "result": "success",
+    "pytest_passed": 20,
+    "subtests_passed": 3,
+    "source_discovery": "passed"
+  },
+  "contract_workflow": {
+    "name": "Conzetian Contract Verification",
+    "run_id": 42522100261,
+    "result": "success"
+  },
+  "api_key_policy_workflow": {
+    "name": "Phoenix API Key Policy",
+    "run_id": 42522100249,
+    "result": "success"
+  },
+  "artifact": {
+    "id": 13633916996,
+    "name": "phoenix-archive-root-descriptor-evidence",
+    "zip_size_bytes": 1576,
+    "github_sha256": "07305d12e36050ed4178c0e62d05805b33e81d10a079b2e3d5661e471be17639",
+    "independent_zip_hash_match": true,
+    "inner_manifest_match": true,
+    "retention_days": 90
+  },
+  "files_sha256": {
+    ".github/workflows/archive-root-descriptor-tests.yml": "c0d39ea3547c1ab52c6ac568f16748817f4f154c4570431d305f26272fc9bda4",
+    "docs/ARCHIVE_ROOT_DESCRIPTOR_INGESTION.md": "d8aaeb8eabb7f728624f060b498f560177b52f264b5afd9ec940874257057a6d",
+    "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_node_genesis.py": "4e0aca542572086fc779ef3a2e84257af6c6559cb87ebeaaf5cfee898f64a7fd",
+    "tests/test_archive_root_descriptor_read.py": "800bee34b50417c6f27f5d19a0b23a7fed74bfa88c9c4f2c0bd023258298224c"
+  },
+  "limitations": [
+    "The source is a preserved Downloaded archive snapshot, not confirmed active runtime code.",
+    "The default branch remains unchanged until PR #17 is reviewed and merged.",
+    "Tests use AST-extracted helpers and temporary fixtures; Flask/ChromaDB were not imported or started.",
+    "No production API, database, credentials, or Android/Termux runtime was accessed.",
+    "The implementation is not a sandbox for the application process."
+  ]
+}
