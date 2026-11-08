@@ -1,0 +1,106 @@
+{
+  "schema": "conzetian.phoenix.archive-root-descriptor.multipart-hardening.v1",
+  "recorded_at": "2026-11-08T21:00:00Z",
+  "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+  "pull_request": {
+    "number": 17,
+    "title": "[Phoenix] Bind archive ingestion to validated file descriptors",
+    "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/17",
+    "branch": "security/archive-root-descriptor-read-2026-11-08",
+    "base": "main",
+    "state": "open",
+    "draft": true,
+    "mergeable": true,
+    "merged": false,
+    "source_head_sha": "cca5e61f7d17a8eaa9d56d0e9cfa040ec4f6c781",
+    "tested_pr_merge_commit": "bdcfbb10deb5f54c0e60c5664b08877ee2993d06",
+    "base_commit": "e4e378e4b6d76d7ed9f1726fd2a50a923f08707f"
+  },
+  "findings": [
+    {
+      "id": "multipart-archive-root-regression",
+      "severity": "high",
+      "description": "Multipart uploads were written to /tmp/<filename> and passed through read_file_text(), which now requires the configured archive root. This made uploads fail when the root was unset or /tmp was outside the root and created an avoidable predictable temporary path.",
+      "status": "fixed",
+      "correction": "Multipart uploads now pass the already-read filename/blob bytes to _extract_text_from_bytes() directly; no temporary file is created."
+    },
+    {
+      "id": "filesystem-root-as-archive-root",
+      "severity": "high",
+      "description": "ARCHIVE_ROOT=/ could satisfy directory and permission checks, effectively allowing path ingestion to traverse the filesystem root.",
+      "status": "fixed",
+      "correction": "configure_archive_root() now rejects the canonical filesystem root and disables path-based ingestion."
+    }
+  ],
+  "implementation": {
+    "source_file": "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_node_genesis.py",
+    "test_file": "tests/test_archive_root_descriptor_read.py",
+    "documentation_file": "docs/ARCHIVE_ROOT_DESCRIPTOR_INGESTION.md",
+    "changes": [
+      "Shared in-memory extractor for TXT, Markdown, PDF, and DOCX bytes.",
+      "Path-based reads remain bound to validated archive file descriptors.",
+      "Multipart upload no longer writes to /tmp or routes upload bytes through ARCHIVE_ROOT.",
+      "Filesystem-root ARCHIVE_ROOT is rejected."
+    ],
+    "source_commits": [
+      "a7942a9442632809b7803d6884fd3ff9b0b07567",
+      "b8980c2bdef5f6a5c0930846072ac5ee3d47bf0f"
+    ],
+    "test_commits": [
+      "7e6ba98051225f988e06e23de895a101286e1c1e",
+      "24113934e5087a11b414c486d2472b6d00eb7c90"
+    ],
+    "documentation_commits": [
+      "99a7c42bee9c4ed1b4b008ec2936935f5e222440",
+      "cca5e61f7d17a8eaa9d56d0e9cfa040ec4f6c781"
+    ]
+  },
+  "verification": {
+    "focused_tests": {
+      "workflow": "Phoenix Archive Root Descriptor Tests",
+      "run_id": 42522778153,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778153",
+      "conclusion": "success",
+      "python": "3.11.18",
+      "tests_passed": 12
+    },
+    "phoenix_audit": {
+      "run_id": 42522778147,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778147",
+      "conclusion": "success",
+      "tests_passed": 25,
+      "subtests_passed": 3
+    },
+    "api_key_policy": {
+      "run_id": 42522778318,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778318",
+      "conclusion": "success",
+      "tests_passed": 11
+    },
+    "contract_verification": {
+      "run_id": 42522778165,
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778165",
+      "conclusion": "success",
+      "tests_passed": 2
+    },
+    "artifact": {
+      "id": 13634540024,
+      "name": "phoenix-archive-root-descriptor-evidence",
+      "url": "https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778153/artifacts/13634540024",
+      "size_bytes": 1694,
+      "github_sha256": "23e7b7fd62357e6b3060ff167d922bd5d964cb20616e059f5817b0dd984ce5e2",
+      "independently_calculated_zip_sha256": "23e7b7fd62357e6b3060ff167d922bd5d964cb20616e059f5817b0dd984ce5e2",
+      "zip_digest_match": true,
+      "internal_sha256_manifest": "verified",
+      "receipt_test_count": 12,
+      "receipt_tested_commit": "bdcfbb10deb5f54c0e60c5664b08877ee2993d06",
+      "receipt_source_head": "cca5e61f7d17a8eaa9d56d0e9cfa040ec4f6c781"
+    }
+  },
+  "limitations": [
+    "The modified file is a preserved Downloaded archive snapshot; production deployment relevance is not established.",
+    "Tests do not start Flask or ChromaDB and do not exercise a live production route.",
+    "No production credentials, database, paid service, external anchor, or Android/Termux runtime was accessed.",
+    "PR #17 remains draft/open/unmerged; default branch unchanged."
+  ]
+}
