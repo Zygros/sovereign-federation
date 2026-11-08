@@ -1,0 +1,76 @@
+{
+  "schema": "conzetian.phoenix-api-bearer-contract.evidence.v1",
+  "recorded_at_utc": "2026-11-08T20:42:56Z",
+  "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+  "pull_request": 1,
+  "branch": "fix/aikido-security-code-audit-97973653-bqra",
+  "head_sha": "6fff7cb9650c0c8aae0fc52402fea81d1774669c",
+  "base_sha": "3b934e96803f4aef232734e0cfdb1a727ed6084a",
+  "state": "open",
+  "draft": false,
+  "mergeable": true,
+  "merged": false,
+  "archive_copy_count": 2,
+  "archive_files": [
+    "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_api.py",
+    "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_api-1.py"
+  ],
+  "identical_archive_blob_sha": "00568cbec015cf6c186511162c3db02b129c0079",
+  "focused_workflow": {
+    "name": "Phoenix API Bearer Token Contract Tests",
+    "run_id": 42521465734,
+    "result": "success",
+    "python": "3.11.18",
+    "unittest_methods_passed": 3
+  },
+  "final_pr_workflows": [
+    {
+      "name": "Phoenix API Bearer Token Contract Tests",
+      "run_id": 42521467851,
+      "result": "success"
+    },
+    {
+      "name": "Phoenix Audit",
+      "run_id": 42521467889,
+      "result": "success",
+      "pytest_passed": 16,
+      "subtests_passed": 7,
+      "credential_pattern_scan": "passed"
+    },
+    {
+      "name": "Conzetian Contract Verification",
+      "run_id": 42521467842,
+      "result": "success",
+      "tests_passed": 2
+    },
+    {
+      "name": "Phoenix API Key Policy",
+      "run_id": 42521467934,
+      "result": "success"
+    }
+  ],
+  "artifact": {
+    "id": 13633577075,
+    "name": "phoenix-api-bearer-contract-evidence",
+    "zip_size_bytes": 1587,
+    "github_sha256": "3ef80ed1c2ca5b06224fda3d2daa0444a453900ef232c064d2311901a18b3357",
+    "independent_zip_hash_match": true,
+    "inner_manifest_match": true,
+    "retention_days": 90
+  },
+  "files_sha256": {
+    ".github/workflows/phoenix-api-bearer-contract.yml": "dc10b5f138ad69e831de7548906729f2926a4ce86a98f7097006efc4b1542d76",
+    "api-auth-contract-results.txt": "9f882b1d4c5e1a16d10f180005ae9a33008a02c39a3e45db26ba03cc11e29e28",
+    "docs/API_BEARER_TOKEN_ARCHIVE_POLICY.md": "0438f6bdec000ab2848d5b4d694e276717db02dd458df662d60dd41c491a3b02",
+    "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_api-1.py": "3f6995e863724f0b99c71143650891a5f561a4a040ae41a18cdb3ebb1907e5f3",
+    "source-repositories/ZYGROS-PRIME/Downloaded/phoenix_api.py": "3f6995e863724f0b99c71143650891a5f561a4a040ae41a18cdb3ebb1907e5f3",
+    "tests/test_downloaded_api_auth_contract.py": "4a747a1eb429dfca310dadbd62e526688636334ea21e76f4d59a9fb51f43cebb"
+  },
+  "limitations": [
+    "The two files are preserved Downloaded archive snapshots, not confirmed active runtime sources.",
+    "The default branch still contains the old fallback until the PR is reviewed and merged.",
+    "Tests execute extracted AST code and controlled fixtures; they do not import or start FastAPI.",
+    "No production credential was read, rotated, or revoked.",
+    "No service deployment or external API request occurred."
+  ]
+}
