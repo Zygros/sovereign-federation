@@ -57,4 +57,4 @@ This verifies the deterministic local proof machinery, tamper detection, repair/
 
 Both M.A.I.A. PRs remain open and unmerged. No production deployment or external anchor was performed. The changes are reviewable branch commits with successful CI evidence, not a claim of production activation.
 
-A reproducible local evidence bundle was also preserved in the conversation runtime; its SHA-256 is `4bf407d34b27e01d803b048a65a6bd4c263adc06e60d99add48a8af6dc1816ce`.
+A reproducible local evidence bundle was also preserved in the conversation runtime; its SHA-256 is `08f749a06bb43cc91ea48a8815fa7c9e6fe717500c8a1bb4fc297c3e7b5d1a9f`.
