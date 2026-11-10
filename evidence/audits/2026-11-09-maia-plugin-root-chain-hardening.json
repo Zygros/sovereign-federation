@@ -97,5 +97,121 @@
     "live_federation_connectivity": false,
     "both_security_prs_merged": false
   },
-  "local_bundle_sha256": "08f749a06bb43cc91ea48a8815fa7c9e6fe717500c8a1bb4fc297c3e7b5d1a9f"
+  "local_bundle_sha256": "08f749a06bb43cc91ea48a8815fa7c9e6fe717500c8a1bb4fc297c3e7b5d1a9f",
+  "owner_boundary_remediation": {
+    "captured_date": "2026-11-10",
+    "rule": "POSIX plugin files, descendant directories, trusted roots, and all ancestors must be owned by root or effective service UID; sticky writable ancestors are allowed only for trusted owners; descriptor ownership is checked before and after read and compared with path metadata.",
+    "zygros_prime": {
+      "repository": "Zygros/ZYGROS-PRIME",
+      "pull_request": 11,
+      "branch": "security/maia-plugin-trust-root-chain-2026-11-09",
+      "head_commit": "69ae91e3a73e3eb5f4a522ed2d843d0254c2afc6",
+      "workflow_runs": [
+        {
+          "name": "MAIA Plugin Trust Tests",
+          "run_id": 42899478288,
+          "conclusion": "success",
+          "unittest_methods": 8,
+          "python": "3.11.18"
+        },
+        {
+          "name": "HTC Claim Audit",
+          "run_id": 42899478326,
+          "conclusion": "success"
+        },
+        {
+          "name": "Phoenix Audit",
+          "run_id": 42899478416,
+          "conclusion": "success"
+        },
+        {
+          "name": "Repository Quality Gate",
+          "run_id": 42899478190,
+          "conclusion": "success"
+        },
+        {
+          "name": "OmniNet Python CI",
+          "run_id": 42899478872,
+          "conclusion": "success"
+        }
+      ],
+      "artifact": {
+        "id": 13803010367,
+        "zip_sha256": "bea515871ec63e0e252543b798230e1287ba1fc831f5dcd664314c937142e8c1",
+        "receipt_self_hash_verified": true
+      },
+      "review_threads": {
+        "p1_resolved": true,
+        "medium_resolved": true
+      }
+    },
+    "phoenix_protocol_ultimate": {
+      "repository": "Zygros/PHOENIX-PROTOCOL-ULTIMATE",
+      "pull_request": 5,
+      "branch": "security/maia-plugin-trust-2026-11-07",
+      "head_commit": "801f321e1a6831a178237c0271532bb710b506b8",
+      "workflow_runs": [
+        {
+          "name": "MAIA Plugin Trust Tests",
+          "run_id": 42899611987,
+          "conclusion": "success",
+          "unittest_methods": 17,
+          "python": "3.11.18"
+        },
+        {
+          "name": "Phoenix Audit",
+          "run_id": 42899610112,
+          "conclusion": "success"
+        }
+      ],
+      "artifact": {
+        "id": 13802666114,
+        "zip_sha256": "d8aba14893de54e9aa0f831a3d8d3003e2e92d054dbd5aaae2dab23305957b29",
+        "internal_manifest_verified": true
+      }
+    },
+    "conzetian_unified_intelligance": {
+      "repository": "Zygros/CONZETIAN-UNIFIED-INTELLIGANCE",
+      "pull_request": 5,
+      "branch": "fix/aikido-security-code-audit-97974299-9wzs",
+      "head_commit": "81d344cb0baff9ac951550a6293681e10dada483",
+      "mirrored_orchestrators": 4,
+      "workflow_runs": [
+        {
+          "name": "MAIA Mirror Plugin Trust Tests",
+          "run_id": 42899722312,
+          "conclusion": "success",
+          "unittest_methods": 8,
+          "python": "3.11.18"
+        },
+        {
+          "name": "Phoenix Audit",
+          "run_id": 42899722330,
+          "conclusion": "success"
+        },
+        {
+          "name": "Phoenix API Key Policy",
+          "run_id": 42899722346,
+          "conclusion": "success"
+        },
+        {
+          "name": "Conzetian Contract Verification",
+          "run_id": 42899722249,
+          "conclusion": "success"
+        }
+      ],
+      "artifact": {
+        "id": 13802746276,
+        "zip_sha256": "d97d22a9f52b00868ecea331808b0aa4de3cd64f27f583ee130d569b077edaf7",
+        "internal_manifest_verified": true
+      }
+    },
+    "promotion_boundary": {
+      "source_prs_open_unmerged": true,
+      "default_branches_modified": false,
+      "deployment": false,
+      "external_anchors": false,
+      "live_federation_connectivity": false
+    }
+  }
 }
