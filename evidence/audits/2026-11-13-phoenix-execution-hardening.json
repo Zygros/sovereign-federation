@@ -1,0 +1,69 @@
+{
+  "schema": "conzetian.phoenix.execution-evidence.v1",
+  "date": "2026-11-13/14",
+  "items": [
+    {
+      "name": "Termux preflight failure-evidence hardening",
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "pull_request": 40,
+      "head": "459e7b3ab1d92cc2f8e2214c71a5eb7e89b9ee54",
+      "workflow": {
+        "id": 43535804461,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      "other_workflows": [
+        {
+          "id": 43535804460,
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 43535804475,
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "name": "M.A.I.A. duplicate plugin-name guard",
+      "repository": "Zygros/conzet-sovereign-intelligence",
+      "pull_request": 41,
+      "head": "be8a832ef4a77f0b074311867ff91720e444c06c",
+      "hosted_ci": "pending",
+      "initial_hosted_run": {
+        "id": 43535863038,
+        "status": "completed",
+        "conclusion": "failure",
+        "details": "16 passed, 1 failed: fixture escaped newline error; corrected in follow-up commit"
+      },
+      "followup_commit": "be8a832ef4a77f0b074311867ff91720e444c06c",
+      "followup_hosted_ci": {
+        "id": 43535930823,
+        "status": "completed",
+        "conclusion": "success",
+        "tests_passed": 17
+      },
+      "other_workflows": [
+        {
+          "id": 43535930922,
+          "status": "in_progress"
+        },
+        {
+          "id": 43535930878,
+          "status": "in_progress"
+        }
+      ]
+    },
+    {
+      "name": "A17 restore fail-closed guard",
+      "repository": "Zygros/phoenix-survival-backup",
+      "pull_request": 1,
+      "head": "631b3a0311cab3851a237206f8d19f75f385162a",
+      "hosted_ci": "pending",
+      "device_execution": false
+    }
+  ],
+  "federation_pull_request": 24,
+  "evidence_boundary": "Open PRs only; no merge, deployment, device execution, or external anchor."
+}

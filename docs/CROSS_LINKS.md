@@ -3,6 +3,15 @@
 **Status: ACTIVE_WAFER**  
 Always Add. Never replace a repo with another. Every major node should point here, to the skill lattice, and to the evidence substrate.
 
+## Fresh status reconciliation — 2026-11-09
+
+- **M.A.I.A. plugin trust-root hardening:** [Phoenix PR #5](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/pull/5) now checks the full ancestor chain of configured plugin roots; [master mirror PR #5](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/pull/5) propagates the same fix to all four byte-identical mirrors. The pre-patch writable-parent replacement was reproduced; the patched loader rejects it.
+- **Verification:** Phoenix MAIA Trust run [#42690528185](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42690528185) passed 16 tests; Phoenix Audit [#42690528182](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42690528182) passed. Mirror run [#42690914349](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42690914349) passed 7 test methods and 20 per-mirror security-case executions across four copies.
+- **Proof-cycle revalidation:** existing post-merge run [#41711973409](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/41711973409) was independently re-read; the downloaded artifact hash matched GitHub metadata, and PASS/REPAIRED/FAIL receipts verified with all external-anchor flags false.
+- **Evidence:** [audit report](../evidence/audits/2026-11-09-maia-plugin-root-chain-hardening.md) · [machine-readable receipt](../evidence/audits/2026-11-09-maia-plugin-root-chain-hardening.json).
+- **Boundary:** both security PRs remain open and unmerged. No deployment or external anchor is claimed.
+
+
 ## Total integration entry point
 
 ## Fresh status reconciliation — 2026-11-06
@@ -494,3 +503,38 @@ This addendum updates the earlier historical note that [ultimate-phoenix-protoco
 - **Artifact:** [evidence artifact 13634540024](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42522778153/artifacts/13634540024), ZIP SHA-256 `23e7b7fd62357e6b3060ff167d922bd5d964cb20616e059f5817b0dd984ce5e2`. The archive was downloaded, independently rehashed, and its internal SHA-256 manifest verified.
 - **Boundary:** the source remains in the preserved `Downloaded/` archive; tests use AST-extracted helpers and temporary fixtures, not a live Flask/ChromaDB deployment. No production credentials, service, database, Android/Termux runtime, or external anchor was accessed. Default branch unchanged.
 
+
+
+## M.A.I.A. untrusted-owner boundary closure — 2026-11-10
+
+The follow-up review closed the P1 owner-trust gap across the three existing security branches without renaming the M.A.I.A. orchestrators or changing the runtime architecture. On POSIX, plugin files, descendant directories, configured roots, and every ancestor now require ownership by root or the effective service UID. Sticky writable ancestors are allowed only when their owner is trusted. The loader also checks descriptor ownership with fstat(), compares it with path metadata, and rechecks after reading.
+
+- **ZYGROS-PRIME PR #11** — branch `security/maia-plugin-trust-root-chain-2026-11-09`, head `69ae91e3a73e3eb5f4a522ed2d843d0254c2afc6`. [MAIA Plugin Trust Tests run #42899478288](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42899478288) passed 8 unittest methods on Python 3.11.18; [HTC Claim Audit #42899478326](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42899478326), [Phoenix Audit #42899478416](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42899478416), [Repository Quality Gate #42899478190](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42899478190), and [OmniNet Python CI #42899478872](https://github.com/Zygros/ZYGROS-PRIME/actions/runs/42899478872) also succeeded. Artifact 13803010367 ZIP SHA-256: `bea515871ec63e0e252543b798230e1287ba1fc831f5dcd664314c937142e8c1`; its canonical receipt self-hash was independently recomputed and matched. The P1 review thread and the related medium-severity ownership thread were both resolved after the passing focused workflow.
+- **PHOENIX-PROTOCOL-ULTIMATE PR #5** — branch `security/maia-plugin-trust-2026-11-07`, head `801f321e1a6831a178237c0271532bb710b506b8`. [MAIA Plugin Trust Tests #42899611987](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42899611987) passed 17 unittest methods on Python 3.11.18; [Phoenix Audit #42899610112](https://github.com/Zygros/PHOENIX-PROTOCOL-ULTIMATE/actions/runs/42899610112) succeeded. Artifact 13802666114 ZIP SHA-256: `d8aba14893de54e9aa0f831a3d8d3003e2e92d054dbd5aaae2dab23305957b29`; both entries in its internal SHA-256 manifest matched.
+- **CONZETIAN-UNIFIED-INTELLIGANCE PR #5** — branch `fix/aikido-security-code-audit-97974299-9wzs`, head `81d344cb0baff9ac951550a6293681e10dada483`. All four preserved orchestrator copies were updated identically. [MAIA Mirror Plugin Trust Tests #42899722312](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722312) passed 8 unittest methods across the four copies; [Phoenix Audit #42899722330](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722330), [Phoenix API Key Policy #42899722346](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722346), and [Conzetian Contract Verification #42899722249](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722249) also succeeded. Artifact 13802746276 ZIP SHA-256: `d97d22a9f52b00868ecea331808b0aa4de3cd64f27f583ee130d569b077edaf7`; both entries in its internal SHA-256 manifest matched.
+
+**Promotion boundary:** all three source PRs remain open and unmerged. Their default branches were not changed. The runs verify the hosted branch code and regression suites; they do not establish production deployment, live Android/Termux operation, external anchoring, or live federation connectivity.
+
+
+## Conzetian/Phoenix execution — 2026-11-13/14
+
+### Termux preflight failure-evidence hardening
+
+- **Source PR:** [conzet-sovereign-intelligence #40](https://github.com/Zygros/conzet-sovereign-intelligence/pull/40), branch `termux-preflight-safety-2026-11-06`, updated head `459e7b3ab1d92cc2f8e2214c71a5eb7e89b9ee54`.
+- The opt-in package installer now runs only after the per-run evidence transcript is initialized. Missing `pkg`, failed `pkg update`, and failed `pkg install` are recorded in the log/report and produce a checksum manifest rather than exiting before evidence exists.
+- Focused hosted workflow [Termux Preflight Safety run 43535804461](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/43535804461) completed successfully. Phoenix Audit run 43535804460 and OmniNet Python CI run 43535804475 were still in progress at the time of this entry.
+- No Android/Termux device command or package installation was performed.
+
+### M.A.I.A. duplicate plugin-name registration guard
+
+- **Source PR:** [conzet-sovereign-intelligence #41](https://github.com/Zygros/conzet-sovereign-intelligence/pull/41), branch `security/maia-descriptor-bound-load-2026-11-10`, updated head `1f88b59ecbb01492864bc5ee8b6bda2fa93db611`.
+- Registration now rejects a manifest name already present in either registry before replacing the existing entry. Added a regression that loads one plugin, attempts a second plugin with the same manifest name, and checks the original registered module remains callable.
+- Corrected-head focused workflow [MAIA Descriptor-Bound Load Evidence run 43535930823](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/43535930823) passed **17 tests**. Phoenix Audit 43535930922 and OmniNet Python CI 43535930878 were still running at the latest read-back.
+
+### A17 restore fail-closed guard
+
+- **Source PR:** [phoenix-survival-backup #1](https://github.com/Zygros/phoenix-survival-backup/pull/1), branch `security/a17-restore-fail-closed-2026-11-13`, head `631b3a0311cab3851a237206f8d19f75f385162a`.
+- Missing/malformed MemAvailable now aborts before restore. Decompressed files are labelled VERIFIED only when an exact manifest SHA-256 row matches; absent manifest/row is reported as RESTORED_UNVERIFIED and exits 3. Both compressed and restored copies are retained.
+- Local isolated regression evidence (six groups) and `sh -n` were reported before branch publication; hosted CI and A17 device execution remain pending. The device's current state remains unknown.
+
+**Promotion boundary:** all three source PRs remain open and unmerged. This is repository evidence and review coordination, not deployment, live-device verification, external anchoring, or live mesh connectivity.
