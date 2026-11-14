@@ -35,10 +35,25 @@
         "id": 43535863038,
         "status": "completed",
         "conclusion": "failure",
-        "details": "16 passed, 1 failed because the fixture emitted literal backslash-n in the temporary Python plugin source"
+        "details": "16 passed, 1 failed: fixture escaped newline error; corrected in follow-up commit"
       },
       "followup_commit": "be8a832ef4a77f0b074311867ff91720e444c06c",
-      "followup_hosted_ci": "not_yet_returned"
+      "followup_hosted_ci": {
+        "id": 43535930823,
+        "status": "completed",
+        "conclusion": "success",
+        "tests_passed": 17
+      },
+      "other_workflows": [
+        {
+          "id": 43535930922,
+          "status": "in_progress"
+        },
+        {
+          "id": 43535930878,
+          "status": "in_progress"
+        }
+      ]
     },
     {
       "name": "A17 restore fail-closed guard",
