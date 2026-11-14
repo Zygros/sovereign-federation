@@ -529,7 +529,7 @@ The follow-up review closed the P1 owner-trust gap across the three existing sec
 
 - **Source PR:** [conzet-sovereign-intelligence #41](https://github.com/Zygros/conzet-sovereign-intelligence/pull/41), branch `security/maia-descriptor-bound-load-2026-11-10`, updated head `1f88b59ecbb01492864bc5ee8b6bda2fa93db611`.
 - Registration now rejects a manifest name already present in either registry before replacing the existing entry. Added a regression that loads one plugin, attempts a second plugin with the same manifest name, and checks the original registered module remains callable.
-- Hosted workflow evidence was not yet returned at this update; no test success is claimed for this commit.
+- Corrected-head focused workflow [MAIA Descriptor-Bound Load Evidence run 43535930823](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/43535930823) passed **17 tests**. Phoenix Audit 43535930922 and OmniNet Python CI 43535930878 were still running at the latest read-back.
 
 ### A17 restore fail-closed guard
 
