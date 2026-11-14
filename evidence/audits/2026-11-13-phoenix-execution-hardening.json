@@ -15,11 +15,13 @@
       "other_workflows": [
         {
           "id": 43535804460,
-          "status": "in_progress"
+          "status": "completed",
+          "conclusion": "success"
         },
         {
           "id": 43535804475,
-          "status": "in_progress"
+          "status": "completed",
+          "conclusion": "success"
         }
       ]
     },
@@ -27,8 +29,16 @@
       "name": "M.A.I.A. duplicate plugin-name guard",
       "repository": "Zygros/conzet-sovereign-intelligence",
       "pull_request": 41,
-      "head": "1f88b59ecbb01492864bc5ee8b6bda2fa93db611",
-      "hosted_ci": "pending"
+      "head": "be8a832ef4a77f0b074311867ff91720e444c06c",
+      "hosted_ci": "pending",
+      "initial_hosted_run": {
+        "id": 43535863038,
+        "status": "completed",
+        "conclusion": "failure",
+        "details": "16 passed, 1 failed because the fixture emitted literal backslash-n in the temporary Python plugin source"
+      },
+      "followup_commit": "be8a832ef4a77f0b074311867ff91720e444c06c",
+      "followup_hosted_ci": "not_yet_returned"
     },
     {
       "name": "A17 restore fail-closed guard",
