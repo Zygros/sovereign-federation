@@ -514,3 +514,27 @@ The follow-up review closed the P1 owner-trust gap across the three existing sec
 - **CONZETIAN-UNIFIED-INTELLIGANCE PR #5** — branch `fix/aikido-security-code-audit-97974299-9wzs`, head `81d344cb0baff9ac951550a6293681e10dada483`. All four preserved orchestrator copies were updated identically. [MAIA Mirror Plugin Trust Tests #42899722312](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722312) passed 8 unittest methods across the four copies; [Phoenix Audit #42899722330](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722330), [Phoenix API Key Policy #42899722346](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722346), and [Conzetian Contract Verification #42899722249](https://github.com/Zygros/CONZETIAN-UNIFIED-INTELLIGANCE/actions/runs/42899722249) also succeeded. Artifact 13802746276 ZIP SHA-256: `d97d22a9f52b00868ecea331808b0aa4de3cd64f27f583ee130d569b077edaf7`; both entries in its internal SHA-256 manifest matched.
 
 **Promotion boundary:** all three source PRs remain open and unmerged. Their default branches were not changed. The runs verify the hosted branch code and regression suites; they do not establish production deployment, live Android/Termux operation, external anchoring, or live federation connectivity.
+
+
+## Conzetian/Phoenix execution — 2026-11-13/14
+
+### Termux preflight failure-evidence hardening
+
+- **Source PR:** [conzet-sovereign-intelligence #40](https://github.com/Zygros/conzet-sovereign-intelligence/pull/40), branch `termux-preflight-safety-2026-11-06`, updated head `459e7b3ab1d92cc2f8e2214c71a5eb7e89b9ee54`.
+- The opt-in package installer now runs only after the per-run evidence transcript is initialized. Missing `pkg`, failed `pkg update`, and failed `pkg install` are recorded in the log/report and produce a checksum manifest rather than exiting before evidence exists.
+- Focused hosted workflow [Termux Preflight Safety run 43535804461](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/43535804461) completed successfully. Phoenix Audit run 43535804460 and OmniNet Python CI run 43535804475 were still in progress at the time of this entry.
+- No Android/Termux device command or package installation was performed.
+
+### M.A.I.A. duplicate plugin-name registration guard
+
+- **Source PR:** [conzet-sovereign-intelligence #41](https://github.com/Zygros/conzet-sovereign-intelligence/pull/41), branch `security/maia-descriptor-bound-load-2026-11-10`, updated head `1f88b59ecbb01492864bc5ee8b6bda2fa93db611`.
+- Registration now rejects a manifest name already present in either registry before replacing the existing entry. Added a regression that loads one plugin, attempts a second plugin with the same manifest name, and checks the original registered module remains callable.
+- Hosted workflow evidence was not yet returned at this update; no test success is claimed for this commit.
+
+### A17 restore fail-closed guard
+
+- **Source PR:** [phoenix-survival-backup #1](https://github.com/Zygros/phoenix-survival-backup/pull/1), branch `security/a17-restore-fail-closed-2026-11-13`, head `631b3a0311cab3851a237206f8d19f75f385162a`.
+- Missing/malformed MemAvailable now aborts before restore. Decompressed files are labelled VERIFIED only when an exact manifest SHA-256 row matches; absent manifest/row is reported as RESTORED_UNVERIFIED and exits 3. Both compressed and restored copies are retained.
+- Local isolated regression evidence (six groups) and `sh -n` were reported before branch publication; hosted CI and A17 device execution remain pending. The device's current state remains unknown.
+
+**Promotion boundary:** all three source PRs remain open and unmerged. This is repository evidence and review coordination, not deployment, live-device verification, external anchoring, or live mesh connectivity.
