@@ -12,9 +12,9 @@ This append-only receipt records three branch-level changes.
 ## M.A.I.A. duplicate registration
 
 - Source: [conzet-sovereign-intelligence PR #41](https://github.com/Zygros/conzet-sovereign-intelligence/pull/41)
-- Head: `1f88b59ecbb01492864bc5ee8b6bda2fa93db611`
+- Head: `be8a832ef4a77f0b074311867ff91720e444c06c`
 - Duplicate plugin manifest names are rejected without replacing the first registered module.
-- Hosted test evidence was pending at recording time.
+- The first hosted focused run failed because the new test fixture wrote literal backslash-n sequences into its temporary plugin source (16 passed, 1 failed). The fixture was corrected in follow-up commit `be8a832ef4a77f0b074311867ff91720e444c06c`; a new hosted run for that corrected head had not yet appeared in the workflow read-back.
 
 ## A17 restore guard
 
