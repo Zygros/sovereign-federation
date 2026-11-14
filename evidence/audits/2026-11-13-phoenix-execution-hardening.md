@@ -14,7 +14,7 @@ This append-only receipt records three branch-level changes.
 - Source: [conzet-sovereign-intelligence PR #41](https://github.com/Zygros/conzet-sovereign-intelligence/pull/41)
 - Head: `be8a832ef4a77f0b074311867ff91720e444c06c`
 - Duplicate plugin manifest names are rejected without replacing the first registered module.
-- The first hosted focused run failed because the new test fixture wrote literal backslash-n sequences into its temporary plugin source (16 passed, 1 failed). The fixture was corrected in follow-up commit `be8a832ef4a77f0b074311867ff91720e444c06c`; a new hosted run for that corrected head had not yet appeared in the workflow read-back.
+- The first hosted focused run failed because the new test fixture wrote literal backslash-n sequences into its temporary plugin source (16 passed, 1 failed). The fixture was corrected in follow-up commit `be8a832ef4a77f0b074311867ff91720e444c06c`. The corrected-head [MAIA Descriptor-Bound Load Evidence run 43535930823](https://github.com/Zygros/conzet-sovereign-intelligence/actions/runs/43535930823) completed successfully: **17 passed**. Phoenix Audit run 43535930922 and OmniNet Python CI run 43535930878 were still in progress at the latest read-back.
 
 ## A17 restore guard
 
